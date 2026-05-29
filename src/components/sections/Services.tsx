@@ -13,28 +13,28 @@ const services: Service[] = [
     icon: "◈",
     title: "Diseño y Desarrollo",
     description:
-      "Creamos productos digitales a medida: sitios web, aplicaciones móviles y plataformas escalables con las tecnologías más modernas.",
+      "Tu idea, convertida en producto real. Desarrollamos sitios web, aplicaciones y plataformas a medida que funcionan, escalan y se ven bien.",
     tags: ["React", "Next.js", "Node.js", "React Native"],
   },
   {
     icon: "⬡",
     title: "Hosting e Infraestructura",
     description:
-      "Desplegamos y gestionamos tu infraestructura en la nube con alta disponibilidad, monitoreo continuo y optimización de costos.",
+      "Tu aplicación siempre disponible, sin que tengas que preocuparte por servidores. Gestionamos la nube para que tú te enfoques en el negocio.",
     tags: ["AWS", "GCP", "Docker", "Kubernetes"],
   },
   {
     icon: "◎",
     title: "Consultoría Tecnológica",
     description:
-      "Analizamos tu stack actual y te acompañamos en la toma de decisiones técnicas para escalar de forma inteligente y eficiente.",
+      "¿No sabes por dónde empezar o sientes que tu tecnología no te acompaña? Te ayudamos a tomar las decisiones correctas antes de invertir.",
     tags: ["Arquitectura", "Code Review", "Tech Strategy"],
   },
   {
     icon: "⬢",
     title: "Ciberseguridad",
     description:
-      "Protegemos tus sistemas con auditorías de seguridad, pruebas de penetración, hardening y planes de respuesta a incidentes.",
+      "Un solo incidente puede costar más que años de prevención. Auditamos, reforzamos y protegemos tus sistemas antes de que sea tarde.",
     tags: ["Pentesting", "SIEM", "Hardening", "ISO 27001"],
     accent: true,
   },
@@ -42,7 +42,7 @@ const services: Service[] = [
     icon: "◉",
     title: "Inteligencia Artificial",
     description:
-      "Integramos y desarrollamos soluciones de IA: desde chatbots y automatizaciones hasta modelos personalizados para tu industria.",
+      "Automatiza lo repetitivo, potencia tu equipo y toma mejores decisiones con IA integrada en tus procesos — sin reemplazar a las personas.",
     tags: ["LLMs", "RAG", "Automatización", "ML"],
     accent: true,
   },
@@ -61,7 +61,7 @@ export default function Services() {
             className="text-4xl md:text-5xl font-semibold leading-tight max-w-2xl"
             style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
           >
-            Todo lo que tu negocio digital necesita
+            Soluciones para cada etapa de tu crecimiento
           </h2>
         </FadeIn>
 

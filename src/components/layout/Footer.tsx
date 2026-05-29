@@ -4,12 +4,13 @@ import Logo from "@/components/ui/Logo";
 const links = [
   { label: "Servicios", href: "#servicios" },
   { label: "Nosotros", href: "#nosotros" },
+  { label: "Precios", href: "#precios" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 const socials = [
-  { label: "LinkedIn", href: "https://linkedin.com/company/innovatio-it" },
-  { label: "GitHub", href: "https://github.com/innovatio-it" },
+  { label: "GitHub", href: "https://github.com/Felipe-Innovatio" },
 ];
 
 export default function Footer() {
@@ -24,7 +25,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <Logo size="md" />
             <p className="text-sm max-w-xs leading-relaxed" style={{ color: "var(--muted)" }}>
-              Desarrollo de software, ciberseguridad e inteligencia artificial para empresas que quieren crecer.
+              Ingenieros informáticos chilenos que combinan IA y rigor profesional para entregar tecnología que funciona.
             </p>
             <a
               href="mailto:contacto@innovatio-it.com"
@@ -81,9 +82,19 @@ export default function Footer() {
           <p className="text-xs" style={{ color: "var(--muted)" }}>
             © {new Date().getFullYear()} Innovatio-IT. Todos los derechos reservados.
           </p>
-          <p className="text-xs" style={{ color: "var(--muted)" }}>
-            Hecho con Next.js · Desplegado en Vercel
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacidad"
+              className="text-xs transition-opacity hover:opacity-70"
+              style={{ color: "var(--muted)" }}
+            >
+              Política de Privacidad
+            </Link>
+            <span className="text-xs" style={{ color: "var(--muted)" }}>·</span>
+            <p className="text-xs" style={{ color: "var(--muted)" }}>
+              Santiago, Chile
+            </p>
+          </div>
         </div>
       </div>
     </footer>

@@ -7,6 +7,7 @@ import Logo from "@/components/ui/Logo";
 const navLinks = [
   { label: "Servicios", href: "#servicios" },
   { label: "Nosotros", href: "#nosotros" },
+  { label: "Precios", href: "#precios" },
   { label: "Contacto", href: "#contacto" },
 ];
 
