@@ -10,6 +10,7 @@ import type { SimpleIcon } from "simple-icons";
 interface Tech {
   name: string;
   icon?: SimpleIcon;
+  color?: string;
   url?: string;
 }
 
@@ -27,9 +28,9 @@ const technologies: Tech[] = [
   { name: "GraphQL", icon: siGraphql, url: "https://graphql.org/" },
   { name: "Supabase", icon: siSupabase, url: "https://supabase.com/" },
   // Cloud
-  { name: "AWS", url: "https://aws.amazon.com/" },
+  { name: "AWS", color: "#FF9900", url: "https://aws.amazon.com/" },
   { name: "Google Cloud", icon: siGooglecloud, url: "https://cloud.google.com/" },
-  { name: "Azure", url: "https://azure.microsoft.com/" },
+  { name: "Azure", color: "#0089D6", url: "https://azure.microsoft.com/" },
   { name: "Docker", icon: siDocker, url: "https://www.docker.com/" },
   { name: "Kubernetes", icon: siKubernetes, url: "https://kubernetes.io/" },
   { name: "Terraform", icon: siTerraform, url: "https://www.terraform.io/" },
@@ -41,7 +42,7 @@ const technologies: Tech[] = [
   { name: "MySQL", icon: siMysql, url: "https://www.mysql.com/" },
   { name: "Firebase", icon: siFirebase, url: "https://firebase.google.com/" },
   // IA Cloud
-  { name: "OpenAI", url: "https://openai.com/" },
+  { name: "OpenAI", color: "#74AA9C", url: "https://openai.com/" },
   { name: "Anthropic", icon: siAnthropic, url: "https://anthropic.com/" },
   { name: "Gemini", icon: siGooglegemini, url: "https://gemini.google.com/" },
   { name: "AWS Bedrock", url: "https://aws.amazon.com/bedrock/" },
@@ -52,7 +53,7 @@ const technologies: Tech[] = [
 ];
 
 function iconColor(hex: string): string {
-  if (hex === "FFFFFF" || hex === "000000") return "var(--muted)";
+  if (hex === "FFFFFF" || hex === "000000") return "var(--foreground)";
   return `#${hex}`;
 }
 
@@ -91,22 +92,23 @@ export default function TechStack() {
               rel="noopener noreferrer"
               className="flex items-center gap-2.5 mx-5 shrink-0 hover:opacity-80 transition-opacity"
             >
-              {tech.icon && (
+              {tech.icon ? (
                 <svg
                   role="img"
                   viewBox="0 0 24 24"
                   width="15"
                   height="15"
                   aria-hidden="true"
-                  style={{
-                    fill: iconColor(tech.icon.hex),
-                    opacity: 0.7,
-                    flexShrink: 0,
-                  }}
+                  style={{ fill: iconColor(tech.icon.hex), opacity: 0.7, flexShrink: 0 }}
                 >
                   <path d={tech.icon.path} />
                 </svg>
-              )}
+              ) : tech.color ? (
+                <span
+                  className="w-2 h-2 rounded-full shrink-0"
+                  style={{ background: tech.color, opacity: 0.8 }}
+                />
+              ) : null}
               <span
                 className="text-sm font-medium whitespace-nowrap"
                 style={{ color: "var(--muted)" }}
