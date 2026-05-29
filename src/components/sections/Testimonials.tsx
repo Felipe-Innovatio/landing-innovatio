@@ -55,12 +55,20 @@ export default function Testimonials() {
                 className="card-hover p-8 rounded-2xl border flex flex-col gap-6 h-full"
                 style={{ borderColor: "var(--border)", background: "var(--background)" }}
               >
-                {/* Stars */}
-                <div className="flex gap-1">
-                  {Array.from({ length: 5 }).map((_, s) => (
-                    <span key={s} style={{ color: "var(--accent)", fontSize: "14px" }}>★</span>
-                  ))}
-                </div>
+                {/* Quote mark */}
+                <span
+                  style={{
+                    fontFamily: "Georgia, serif",
+                    fontSize: "52px",
+                    lineHeight: "1",
+                    color: "var(--accent)",
+                    opacity: 0.25,
+                    display: "block",
+                    marginBottom: "-8px",
+                  }}
+                >
+                  &ldquo;
+                </span>
 
                 <p className="text-sm leading-relaxed flex-1" style={{ color: "var(--muted)" }}>
                   &ldquo;{t.quote}&rdquo;

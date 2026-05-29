@@ -1,16 +1,28 @@
 import FadeIn from "@/components/ui/FadeIn";
 
-const stats = [
-  { value: "IA", label: "Potenciados por inteligencia artificial" },
-  { value: "5", label: "Áreas de servicio" },
-  { value: "100%", label: "Rigor profesional" },
+const differentiators = [
+  {
+    number: "01",
+    title: "Ingenieros, no freelancers",
+    body: "Equipo estable de titulados en ingeniería informática. Sin subcontratos, sin sorpresas de calidad.",
+  },
+  {
+    number: "02",
+    title: "IA como multiplicador",
+    body: "Usamos IA para entregar más rápido — y criterio profesional para asegurar que cada línea resista producción.",
+  },
+  {
+    number: "03",
+    title: "Código real, sin plantillas",
+    body: "Cada proyecto parte desde cero: arquitectura, stack y diseño pensados para tu caso, no para todos.",
+  },
 ];
 
 export default function About() {
   return (
     <section id="nosotros" className="py-28 px-6" style={{ background: "var(--surface)" }}>
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center">
+        <div className="grid md:grid-cols-2 gap-16 items-start">
 
           <FadeIn>
             <span className="text-xs font-semibold uppercase tracking-widest mb-4 block" style={{ color: "var(--accent)" }}>
@@ -32,18 +44,33 @@ export default function About() {
             </p>
           </FadeIn>
 
-          <div className="grid grid-cols-3 gap-4">
-            {stats.map((stat, i) => (
-              <FadeIn key={stat.label} delay={i * 120}>
+          <div className="flex flex-col gap-0">
+            {differentiators.map((item, i) => (
+              <FadeIn key={item.number} delay={i * 100}>
                 <div
-                  className="p-6 rounded-2xl border text-center h-full"
-                  style={{ borderColor: "var(--border)", background: "var(--background)" }}
+                  className="py-6 flex gap-6 items-start"
+                  style={{ borderBottom: i < differentiators.length - 1 ? "1px solid var(--border)" : "none" }}
                 >
-                  <div className="text-3xl font-semibold mb-2 gradient-text">
-                    {stat.value}
-                  </div>
-                  <div className="text-xs leading-snug" style={{ color: "var(--muted)" }}>
-                    {stat.label}
+                  <span
+                    className="font-bold shrink-0 leading-none select-none"
+                    style={{
+                      fontSize: "13px",
+                      color: "var(--accent)",
+                      opacity: 0.5,
+                      letterSpacing: "0.04em",
+                      paddingTop: "3px",
+                      fontVariantNumeric: "tabular-nums",
+                    }}
+                  >
+                    {item.number}
+                  </span>
+                  <div>
+                    <p className="text-sm font-semibold mb-1" style={{ color: "var(--foreground)" }}>
+                      {item.title}
+                    </p>
+                    <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+                      {item.body}
+                    </p>
                   </div>
                 </div>
               </FadeIn>

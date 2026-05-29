@@ -9,12 +9,6 @@ export default function CtaBanner() {
           className="max-w-5xl mx-auto rounded-3xl p-12 md:p-16 text-center relative overflow-hidden"
           style={{ background: "var(--surface)", border: "1px solid var(--accent-dim)" }}
         >
-          {/* Subtle glow */}
-          <div
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full blur-3xl opacity-10 pointer-events-none"
-            style={{ background: "var(--accent)" }}
-          />
-
           <div className="relative z-10">
             <span
               className="inline-block text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full border mb-6"
@@ -29,7 +23,7 @@ export default function CtaBanner() {
             >
               ¿Tu negocio está listo para
               <br />
-              <span className="gradient-text">dar el siguiente paso?</span>
+              <em style={{ fontStyle: "italic", color: "var(--accent)", fontWeight: "inherit" }}>dar el siguiente paso?</em>
             </h2>
 
             <p className="text-lg max-w-xl mx-auto mb-10" style={{ color: "var(--muted)" }}>

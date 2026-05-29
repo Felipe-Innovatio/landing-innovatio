@@ -355,7 +355,7 @@ export default function Pricing() {
                 <ul className="flex flex-col gap-2.5 flex-1 mb-8">
                   {tier.features.map((feat) => (
                     <li key={feat} className="flex items-start gap-2.5 text-sm" style={{ color: "var(--muted)" }}>
-                      <span style={{ color: "var(--accent)", flexShrink: 0, marginTop: "1px" }}>✓</span>
+                      <span style={{ color: "var(--accent-dim)", flexShrink: 0, marginTop: "2px", fontSize: "10px" }}>—</span>
                       {feat}
                     </li>
                   ))}
@@ -380,18 +380,18 @@ export default function Pricing() {
         {/* Bottom note */}
         <FadeIn delay={240}>
           <div
-            className="mt-12 p-6 rounded-2xl flex flex-col md:flex-row items-start md:items-center gap-4"
-            style={{ border: "1px solid var(--border)", background: "var(--background)" }}
+            className="mt-12 py-5 px-6 rounded-r-2xl"
+            style={{
+              borderLeft: "3px solid var(--accent)",
+              background: "var(--background)",
+            }}
           >
-            <div className="text-2xl">💡</div>
-            <div>
-              <p className="text-sm font-medium mb-1" style={{ color: "var(--foreground)" }}>
-                ¿Por qué no la opción más barata?
-              </p>
-              <p className="text-sm" style={{ color: "var(--muted)" }}>
-                En Chile puedes encontrar webs desde $100.000 — son plantillas WordPress hechas en días por personas sin formación en ingeniería. Nosotros desarrollamos con código real, ingenieros titulados y tecnologías modernas. La diferencia se nota en rendimiento, seguridad y escalabilidad.
-              </p>
-            </div>
+            <p className="text-sm font-semibold mb-2" style={{ color: "var(--foreground)" }}>
+              ¿Por qué no la opción más barata?
+            </p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
+              En Chile puedes encontrar webs desde $100.000 — son plantillas WordPress hechas en días por personas sin formación en ingeniería. Nosotros desarrollamos con código real, ingenieros titulados y tecnologías modernas. La diferencia se nota en rendimiento, seguridad y escalabilidad.
+            </p>
           </div>
         </FadeIn>
 

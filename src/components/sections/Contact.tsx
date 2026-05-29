@@ -76,14 +76,14 @@ export default function Contact() {
             className="p-10 rounded-2xl border text-center"
             style={{ borderColor: "var(--border)", background: "var(--surface)" }}
           >
-            <div
-              className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4"
-              style={{ background: "rgba(55,138,221,0.12)", color: "var(--accent)", fontSize: "20px" }}
+            <p
+              className="text-xs font-semibold uppercase tracking-widest mb-3"
+              style={{ color: "var(--accent)" }}
             >
-              ✓
-            </div>
+              Enviado
+            </p>
             <p className="font-semibold text-lg mb-2" style={{ color: "var(--foreground)" }}>
-              ¡Mensaje enviado!
+              ¡Mensaje recibido!
             </p>
             <p className="text-sm" style={{ color: "var(--muted)" }}>
               Te respondemos a <span style={{ color: "var(--accent-light)" }}>contacto@innovatio-it.com</span> a la brevedad.

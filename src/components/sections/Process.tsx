@@ -53,23 +53,25 @@ export default function Process() {
         {/* Steps */}
         <div className="grid md:grid-cols-4 gap-0 relative">
 
-          {/* Connector line — visible solo en desktop */}
+          {/* Connector line */}
           <div
-            className="hidden md:block absolute top-8 left-[12.5%] right-[12.5%] h-px pointer-events-none"
-            style={{ background: "linear-gradient(to right, transparent, var(--accent-dim) 20%, var(--accent-dim) 80%, transparent)" }}
+            className="hidden md:block absolute top-[38px] left-[12.5%] right-[12.5%] h-px pointer-events-none"
+            style={{ background: "linear-gradient(to right, transparent, var(--border) 20%, var(--border) 80%, transparent)" }}
           />
 
           {steps.map((step, i) => (
             <FadeIn key={step.number} delay={i * 100} className="relative">
               <div className="flex flex-col items-center md:items-start text-center md:text-left px-6 pb-8 md:pb-0">
 
-                {/* Number circle */}
+                {/* Step number */}
                 <div
-                  className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center mb-6 font-semibold text-sm border-2"
+                  className="relative z-10 mb-5 font-bold leading-none select-none"
                   style={{
-                    borderColor: "var(--accent)",
-                    background: "var(--background)",
+                    fontSize: "64px",
                     color: "var(--accent)",
+                    opacity: 0.15,
+                    letterSpacing: "-0.04em",
+                    fontVariantNumeric: "tabular-nums",
                   }}
                 >
                   {step.number}

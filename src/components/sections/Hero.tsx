@@ -40,10 +40,9 @@ export default function Hero() {
       <div className="relative z-10 max-w-5xl mx-auto text-center flex flex-col items-center">
 
         <span
-          className="inline-flex items-center gap-2 text-xs font-semibold px-4 py-1.5 rounded-full border mb-8 uppercase tracking-widest"
+          className="inline-flex items-center text-xs font-semibold px-4 py-1.5 rounded-full border mb-8 uppercase tracking-widest"
           style={{ borderColor: "var(--accent-dim)", color: "var(--accent-light)", background: "rgba(55,138,221,0.08)" }}
         >
-          <span className="w-1.5 h-1.5 rounded-full inline-block" style={{ background: "var(--accent)" }} />
           Innovatio-IT · Soluciones tecnológicas
         </span>
 
@@ -52,7 +51,7 @@ export default function Hero() {
           style={{ color: "var(--foreground)", letterSpacing: "-0.03em" }}
         >
           Tecnología que{" "}
-          <span className="gradient-text">transforma</span>
+          <em style={{ fontStyle: "italic", color: "var(--accent)", fontWeight: "inherit" }}>transforma</em>
           <br />
           tu negocio
         </h1>
