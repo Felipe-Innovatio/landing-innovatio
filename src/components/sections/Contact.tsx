@@ -84,7 +84,7 @@ export default function Contact() {
               ¡Mensaje enviado!
             </p>
             <p className="text-sm" style={{ color: "var(--muted)" }}>
-              Te respondemos a <span style={{ color: "var(--accent-light)" }}>admin@innovatio-it.com</span> a la brevedad.
+              Te respondemos a <span style={{ color: "var(--accent-light)" }}>contacto@innovatio-it.com</span> a la brevedad.
             </p>
           </div>
         ) : (
