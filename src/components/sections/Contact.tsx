@@ -12,7 +12,7 @@ const schema = z.object({
   email: z.string().email("Email inválido"),
   service: z.string().min(1, "Selecciona un servicio"),
   message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
-  privacy: z.literal(true, { errorMap: () => ({ message: "Debes aceptar la política de privacidad" }) }),
+  privacy: z.literal(true, { message: "Debes aceptar la política de privacidad" }),
 });
 
 type FormData = z.infer<typeof schema>;
