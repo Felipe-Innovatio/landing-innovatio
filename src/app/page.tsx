@@ -7,6 +7,7 @@ import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
 // import Testimonials from "@/components/sections/Testimonials";
 import CtaBanner from "@/components/sections/CtaBanner";
+import Faq from "@/components/sections/Faq";
 import Contact from "@/components/sections/Contact";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
@@ -22,6 +23,7 @@ export default function Home() {
         <Process />
         {/* <Testimonials /> */}
         <CtaBanner />
+        <Faq />
         <Contact />
       </main>
       <Footer />
