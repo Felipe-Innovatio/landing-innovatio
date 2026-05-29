@@ -1,9 +1,9 @@
 import {
   siReact, siNextdotjs, siTypescript, siTailwindcss, siVuedotjs,
   siNodedotjs, siPython, siFastapi, siGraphql, siSupabase,
-  siAmazonwebservices, siGooglecloud, siMicrosoftazure, siDocker, siKubernetes, siTerraform, siLinux,
+  siGooglecloud, siDocker, siKubernetes, siTerraform, siLinux,
   siPostgresql, siMongodb, siRedis, siMysql, siFirebase,
-  siOpenai, siAnthropic, siGooglegemini, siOllama, siLangchain, siHuggingface,
+  siAnthropic, siGooglegemini, siOllama, siLangchain, siHuggingface,
 } from "simple-icons";
 import type { SimpleIcon } from "simple-icons";
 
@@ -27,9 +27,9 @@ const technologies: Tech[] = [
   { name: "GraphQL", icon: siGraphql, url: "https://graphql.org/" },
   { name: "Supabase", icon: siSupabase, url: "https://supabase.com/" },
   // Cloud
-  { name: "AWS", icon: siAmazonwebservices, url: "https://aws.amazon.com/" },
+  { name: "AWS", url: "https://aws.amazon.com/" },
   { name: "Google Cloud", icon: siGooglecloud, url: "https://cloud.google.com/" },
-  { name: "Azure", icon: siMicrosoftazure, url: "https://azure.microsoft.com/" },
+  { name: "Azure", url: "https://azure.microsoft.com/" },
   { name: "Docker", icon: siDocker, url: "https://www.docker.com/" },
   { name: "Kubernetes", icon: siKubernetes, url: "https://kubernetes.io/" },
   { name: "Terraform", icon: siTerraform, url: "https://www.terraform.io/" },
@@ -41,7 +41,7 @@ const technologies: Tech[] = [
   { name: "MySQL", icon: siMysql, url: "https://www.mysql.com/" },
   { name: "Firebase", icon: siFirebase, url: "https://firebase.google.com/" },
   // IA Cloud
-  { name: "OpenAI", icon: siOpenai, url: "https://openai.com/" },
+  { name: "OpenAI", url: "https://openai.com/" },
   { name: "Anthropic", icon: siAnthropic, url: "https://anthropic.com/" },
   { name: "Gemini", icon: siGooglegemini, url: "https://gemini.google.com/" },
   { name: "AWS Bedrock", url: "https://aws.amazon.com/bedrock/" },
