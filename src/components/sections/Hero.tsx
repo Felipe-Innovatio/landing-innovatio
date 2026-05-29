@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 const stats = [
-  { value: "5+", label: "Tecnologías core" },
-  { value: "3", label: "Áreas de servicio" },
-  { value: "100%", label: "Compromiso" },
+  { value: "IA", label: "Potenciados por inteligencia artificial" },
+  { value: "5", label: "Áreas de servicio" },
+  { value: "100%", label: "Rigor profesional" },
 ];
 
 export default function Hero() {
@@ -61,9 +61,8 @@ export default function Hero() {
           className="text-lg md:text-xl max-w-2xl mb-12 leading-relaxed"
           style={{ color: "var(--muted)" }}
         >
-          Desarrollo de software, ciberseguridad e inteligencia artificial.
-          Soluciones escalables, seguras y de alto rendimiento — adaptadas
-          a cada negocio.
+          Convertimos tus desafíos tecnológicos en soluciones reales.
+          Velocidad de entrega con IA, calidad garantizada por ingenieros expertos.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">

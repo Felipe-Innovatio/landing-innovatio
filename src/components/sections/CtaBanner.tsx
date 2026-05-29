@@ -45,11 +45,11 @@ export default function CtaBanner() {
                 Hablemos →
               </Link>
               <a
-                href="mailto:admin@innovatio-it.com"
+                href="mailto:contacto@innovatio-it.com"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full font-medium text-sm border transition-all hover:border-opacity-60"
                 style={{ borderColor: "var(--border)", color: "var(--muted)" }}
               >
-                admin@innovatio-it.com
+                contacto@innovatio-it.com
               </a>
             </div>
           </div>

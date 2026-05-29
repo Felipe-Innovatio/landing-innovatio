@@ -1,9 +1,9 @@
 import FadeIn from "@/components/ui/FadeIn";
 
 const stats = [
-  { value: "100%", label: "Proyectos entregados" },
-  { value: "5+", label: "Tecnologías core" },
-  { value: "3", label: "Áreas de servicio" },
+  { value: "IA", label: "Potenciados por inteligencia artificial" },
+  { value: "5", label: "Áreas de servicio" },
+  { value: "100%", label: "Rigor profesional" },
 ];
 
 export default function About() {
@@ -20,13 +20,15 @@ export default function About() {
               Tecnología de alto nivel para negocios que quieren crecer
             </h2>
             <p className="leading-relaxed mb-4" style={{ color: "var(--muted)" }}>
-              Diseñamos, desarrollamos y protegemos productos digitales personalizados,
-              aprovechando la inteligencia artificial y las mejores prácticas de
-              ciberseguridad para ofrecer resultados extraordinarios.
+              En Innovatio-IT no solo escribimos código — resolvemos problemas.
+              Somos ingenieros informáticos especializados en distintas áreas que
+              trabajan juntos para entregar soluciones que realmente funcionan
+              en producción.
             </p>
             <p className="leading-relaxed" style={{ color: "var(--muted)" }}>
-              Combinamos experiencia técnica con una visión orientada al negocio,
-              para que cada solución que construimos genere impacto real y medible.
+              Usamos inteligencia artificial para movernos más rápido, y criterio
+              profesional para asegurarnos de que cada línea de código sea sólida.
+              El resultado: proyectos entregados en menos tiempo, sin sorpresas.
             </p>
           </FadeIn>
 

@@ -27,11 +27,11 @@ export default function Footer() {
               Desarrollo de software, ciberseguridad e inteligencia artificial para empresas que quieren crecer.
             </p>
             <a
-              href="mailto:admin@innovatio-it.com"
+              href="mailto:contacto@innovatio-it.com"
               className="text-sm transition-opacity hover:opacity-80"
               style={{ color: "var(--accent-light)" }}
             >
-              admin@innovatio-it.com
+              contacto@innovatio-it.com
             </a>
           </div>
 
