@@ -4,12 +4,12 @@ import Logo from "@/components/ui/Logo";
 const links = [
   { label: "Servicios", href: "#servicios" },
   { label: "Nosotros", href: "#nosotros" },
+  { label: "FAQ", href: "#faq" },
   { label: "Contacto", href: "#contacto" },
 ];
 
 const socials = [
-  { label: "LinkedIn", href: "https://linkedin.com/company/innovatio-it" },
-  { label: "GitHub", href: "https://github.com/innovatio-it" },
+  { label: "GitHub", href: "https://github.com/Felipe-Innovatio" },
 ];
 
 export default function Footer() {
@@ -24,7 +24,7 @@ export default function Footer() {
           <div className="flex flex-col gap-3">
             <Logo size="md" />
             <p className="text-sm max-w-xs leading-relaxed" style={{ color: "var(--muted)" }}>
-              Desarrollo de software, ciberseguridad e inteligencia artificial para empresas que quieren crecer.
+              Ingenieros informáticos chilenos que combinan IA y rigor profesional para entregar tecnología que funciona.
             </p>
             <a
               href="mailto:contacto@innovatio-it.com"
