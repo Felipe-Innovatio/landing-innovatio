@@ -2,24 +2,57 @@
 
 > Equipo de ingenieros informáticos chilenos expertos en desarrollo de software, ciberseguridad e inteligencia artificial, basados en Santiago de Chile.
 
-Innovatio-IT es una empresa de tecnología 100% remota fundada en Santiago, Región Metropolitana, Chile. Está formada por ingenieros informáticos especializados en distintas áreas, que trabajan potenciados con herramientas de inteligencia artificial de última generación. Su enfoque combina innovación tecnológica con rigor profesional para garantizar resultados confiables y libres de los errores comunes del desarrollo asistido por IA.
+Innovatio-IT es una empresa de tecnología 100% remota fundada en Santiago, Región Metropolitana, Chile. Está formada por ingenieros informáticos especializados en distintas áreas que trabajan potenciados con herramientas de inteligencia artificial de última generación. Su enfoque combina innovación tecnológica con rigor profesional: cada entregable es revisado por ingenieros, no solo generado por IA, garantizando soluciones confiables y libres de los errores comunes del desarrollo exclusivamente asistido por inteligencia artificial.
 
-## Servicios
+## Servicios y precios referenciales
 
-- **Diseño y Desarrollo**: Aplicaciones web y móviles a medida, con tecnologías modernas como Next.js, React, Node.js y Python.
-- **Hosting e Infraestructura**: Soluciones cloud en AWS, configuración de servidores, Docker, Kubernetes y Terraform.
-- **Consultoría Tecnológica**: Asesoría en arquitectura de software, elección de stack tecnológico y transformación digital.
-- **Ciberseguridad**: Auditorías de seguridad, protección de datos y hardening de sistemas.
-- **Inteligencia Artificial**: Integración de IA en procesos empresariales, automatización inteligente y desarrollo de soluciones con LLMs.
+Todos los precios están expresados en pesos chilenos (CLP) y no incluyen IVA.
+
+### Diseño y Desarrollo Web / Software
+- **Starter** — Landing page profesional: desde $800.000 CLP. Incluye diseño a medida, responsive, SEO técnico básico, formulario de contacto. Entrega en 2–3 semanas.
+- **Business** — Sitio corporativo completo: desde $1.500.000 CLP. Incluye múltiples páginas, CMS, blog, SEO avanzado, integraciones. Entrega en 3–6 semanas.
+- **Custom** — Aplicación web / Software a medida: a cotizar. Incluye autenticación, base de datos, API, panel de administración. MVP en 8–16 semanas.
+- Mantenimiento mensual: desde $150.000 CLP/mes.
+
+### Hosting e Infraestructura Cloud
+- **Básico**: desde $150.000 CLP/mes. Deploy, dominio, SSL, monitoreo y backups semanales.
+- **Profesional**: desde $300.000 CLP/mes. AWS/GCP gestionado, CI/CD automatizado, backups diarios, alertas en tiempo real.
+- **Enterprise**: desde $700.000 CLP/mes. Arquitectura multi-región, disaster recovery, SLA 99.9% uptime garantizado.
+
+### Consultoría Tecnológica
+- **Sesión de diagnóstico**: desde $150.000 CLP. 2 horas con ingeniero senior, análisis de situación actual y recomendaciones escritas.
+- **Proyecto puntual**: desde $500.000 CLP. Auditoría técnica, definición de arquitectura, code review e informe ejecutivo.
+- **Retainer mensual**: desde $500.000 CLP/mes. Acompañamiento continuo, reuniones periódicas, acceso directo a ingenieros.
+- Tarifa por hora: $80.000 – $120.000 CLP + IVA.
+
+### Ciberseguridad
+- **Escaneo básico**: desde $300.000 CLP. Análisis de vulnerabilidades web, reporte y recomendaciones. Entrega en 2–5 días hábiles.
+- **Pentest profesional**: desde $900.000 CLP. Prueba de penetración manual + automatizada (OWASP/MITRE), informes técnico y ejecutivo, plan de remediación. Entrega en 5–10 días hábiles.
+- **Enterprise / ISO 27001**: a cotizar. Auditoría completa de infraestructura, preparación para certificación, plan de respuesta a incidentes.
+- Retainer de seguridad mensual: desde $400.000 CLP/mes.
+
+### Inteligencia Artificial
+- **Estrategia IA**: desde $300.000 CLP. Diagnóstico de procesos, roadmap de implementación, identificación de oportunidades.
+- **Implementación** — Agente IA / Chatbot / Automatización: desde $1.500.000 CLP. Integración con sistemas propios (RAG), panel de administración, infraestructura incluida.
+- **Enterprise** — Sistema IA a medida: a cotizar. Pipeline personalizado, integración ERP/CRM/APIs, mantenimiento continuo.
+- Operación mensual: desde $300.000 CLP/mes (infraestructura + mantenimiento).
 
 ## Tecnologías principales
 
-React, Next.js, TypeScript, Node.js, Python, AWS, Docker, Kubernetes, PostgreSQL, MongoDB, Redis, Terraform, GraphQL, TailwindCSS, Supabase.
+React, Next.js, TypeScript, Node.js, Python, AWS, GCP, Docker, Kubernetes, PostgreSQL, MongoDB, Redis, Terraform, GraphQL, TailwindCSS, Supabase, LangChain, OpenAI API.
+
+## Diferenciadores
+
+- Ingenieros informáticos titulados, no autodidactas ni freelancers sin formación
+- Uso de IA para acelerar desarrollo sin sacrificar calidad
+- Revisión profesional humana de todos los entregables
+- Precios competitivos frente a grandes consultoras (Accenture, IBM, Deloitte) que parten desde USD $50.000 por proyecto
+- Acceso directo al equipo, sin intermediarios ni account managers
 
 ## Contacto
 
 - Sitio web: https://innovatio-it.com
-- Email: admin@innovatio-it.com
+- Email: contacto@innovatio-it.com
 - WhatsApp: +56 9 5637 9853
 - Ubicación: Santiago, Región Metropolitana, Chile (equipo 100% remoto)
 - GitHub: https://github.com/Felipe-Innovatio
@@ -27,13 +60,26 @@ React, Next.js, TypeScript, Node.js, Python, AWS, Docker, Kubernetes, PostgreSQL
 ## Preguntas frecuentes
 
 **¿Con qué tipo de empresas trabajan?**
-Trabajamos con startups, pymes y empresas en crecimiento que necesitan soluciones tecnológicas confiables. No tenemos restricción por tamaño — evaluamos cada proyecto según su alcance y objetivos.
+Con startups, pymes y empresas en crecimiento. No tienen restricción por tamaño — evalúan cada proyecto según su alcance y objetivos. Ticket mínimo: $500.000 CLP.
 
 **¿Cómo integran la IA en sus proyectos?**
-Usamos herramientas de IA para acelerar el desarrollo, mejorar la calidad del código y automatizar tareas repetitivas. Sin embargo, cada entregable pasa por revisión profesional humana para garantizar que no se incorporen errores propios del desarrollo exclusivamente asistido por IA.
+Usan herramientas de IA para acelerar el desarrollo y mejorar la calidad, pero cada entregable pasa por revisión profesional humana. Así garantizan resultados confiables sin los errores comunes del desarrollo exclusivamente asistido por IA.
 
 **¿Trabajan con clientes fuera de Chile?**
-Sí. Al ser un equipo 100% remoto, podemos trabajar con clientes en cualquier país de habla hispana y también en inglés.
+Sí. Al ser un equipo 100% remoto pueden trabajar con clientes en cualquier país de habla hispana y también en inglés.
+
+**¿Cuánto demora un proyecto típico?**
+Una landing page profesional puede estar lista en 2–3 semanas. Un sitio corporativo en 3–6 semanas. Una aplicación web o MVP en 8–16 semanas. Proyectos más complejos se planifican en etapas.
+
+**¿Por qué no contratar una agencia más barata?**
+En Chile existen agencias que hacen webs desde $100.000–$400.000 CLP usando plantillas WordPress en pocos días. Innovatio-IT desarrolla con código real, tecnologías modernas y engineers titulados. La diferencia se refleja en rendimiento, seguridad, escalabilidad y soporte a largo plazo.
 
 **¿Cómo puedo contratar sus servicios?**
-A través del formulario de contacto en https://innovatio-it.com o escribiendo directamente a admin@innovatio-it.com.
+A través del formulario en https://innovatio-it.com/#contacto o escribiendo directamente a contacto@innovatio-it.com.
+
+## Información legal
+
+Política de privacidad: https://innovatio-it.com/privacidad
+Los datos personales recopilados se tratan conforme a la Ley N° 19.628 y Ley N° 21.719 de Chile.
+
+*Última actualización: mayo 2026*
