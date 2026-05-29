@@ -1,16 +1,18 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import FadeIn from "@/components/ui/FadeIn";
 
 const schema = z.object({
-  name: z.string().min(2, "Ingresá al menos 2 caracteres"),
+  name: z.string().min(2, "Ingresa al menos 2 caracteres"),
   email: z.string().email("Email inválido"),
-  service: z.string().min(1, "Seleccioná un servicio"),
+  service: z.string().min(1, "Selecciona un servicio"),
   message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
+  privacy: z.literal(true, { errorMap: () => ({ message: "Debes aceptar la política de privacidad" }) }),
 });
 
 type FormData = z.infer<typeof schema>;
@@ -159,6 +161,30 @@ export default function Contact() {
                 style={{ ...inputStyle, borderColor: errors.message ? "#f87171" : "var(--border)" }}
               />
               {errors.message && <span style={errorStyle}>{errors.message.message}</span>}
+            </div>
+
+            <div className="flex flex-col gap-1.5">
+              <label className="flex items-start gap-3 cursor-pointer">
+                <input
+                  type="checkbox"
+                  {...register("privacy")}
+                  className="mt-0.5 flex-shrink-0"
+                  style={{ accentColor: "var(--accent)", width: "16px", height: "16px" }}
+                />
+                <span className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
+                  He leído y acepto la{" "}
+                  <Link
+                    href="/privacidad"
+                    target="_blank"
+                    className="underline transition-opacity hover:opacity-70"
+                    style={{ color: "var(--accent-light)" }}
+                  >
+                    Política de Privacidad
+                  </Link>
+                  {" "}y autorizo el tratamiento de mis datos personales para gestionar mi consulta.
+                </span>
+              </label>
+              {errors.privacy && <span style={errorStyle}>{errors.privacy.message}</span>}
             </div>
 
             {serverError && (

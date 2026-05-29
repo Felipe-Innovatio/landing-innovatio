@@ -4,6 +4,7 @@ import Logo from "@/components/ui/Logo";
 const links = [
   { label: "Servicios", href: "#servicios" },
   { label: "Nosotros", href: "#nosotros" },
+  { label: "Precios", href: "#precios" },
   { label: "FAQ", href: "#faq" },
   { label: "Contacto", href: "#contacto" },
 ];
@@ -81,9 +82,19 @@ export default function Footer() {
           <p className="text-xs" style={{ color: "var(--muted)" }}>
             © {new Date().getFullYear()} Innovatio-IT. Todos los derechos reservados.
           </p>
-          <p className="text-xs" style={{ color: "var(--muted)" }}>
-            Hecho con Next.js · Desplegado en Vercel
-          </p>
+          <div className="flex items-center gap-4">
+            <Link
+              href="/privacidad"
+              className="text-xs transition-opacity hover:opacity-70"
+              style={{ color: "var(--muted)" }}
+            >
+              Política de Privacidad
+            </Link>
+            <span className="text-xs" style={{ color: "var(--muted)" }}>·</span>
+            <p className="text-xs" style={{ color: "var(--muted)" }}>
+              Santiago, Chile
+            </p>
+          </div>
         </div>
       </div>
     </footer>
