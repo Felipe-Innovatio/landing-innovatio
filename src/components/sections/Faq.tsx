@@ -73,7 +73,7 @@ export default function Faq() {
                   aria-expanded={openIndex === index}
                   style={{ cursor: "pointer", background: "transparent", border: "none" }}
                 >
-                  <span className="font-medium text-base" style={{ color: "var(--foreground)" }}>
+                  <span className="font-medium text-lg" style={{ color: "var(--foreground)" }}>
                     {faq.question}
                   </span>
                   <span
@@ -98,7 +98,7 @@ export default function Faq() {
                   }}
                 >
                   <p
-                    className="px-6 pb-5 text-sm leading-relaxed"
+                    className="px-6 pb-5 text-base leading-relaxed"
                     style={{ color: "var(--muted)" }}
                   >
                     {faq.answer}
