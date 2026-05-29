@@ -1,20 +1,41 @@
 const technologies = [
+  // Frontend
   { name: "React", color: "#61DAFB" },
   { name: "Next.js", color: "#ffffff" },
   { name: "TypeScript", color: "#3178C6" },
+  { name: "TailwindCSS", color: "#38BDF8" },
+  { name: "Vue.js", color: "#42B883" },
+  // Backend
   { name: "Node.js", color: "#68A063" },
   { name: "Python", color: "#FFD43B" },
+  { name: "FastAPI", color: "#009688" },
+  { name: "GraphQL", color: "#E10098" },
+  { name: "Supabase", color: "#3ECF8E" },
+  // Cloud
   { name: "AWS", color: "#FF9900" },
+  { name: "Google Cloud", color: "#4285F4" },
+  { name: "Azure", color: "#0089D6" },
   { name: "Docker", color: "#2496ED" },
   { name: "Kubernetes", color: "#326CE5" },
+  { name: "Terraform", color: "#7B42BC" },
+  { name: "Linux", color: "#FCC624" },
+  // Datos
   { name: "PostgreSQL", color: "#336791" },
   { name: "MongoDB", color: "#47A248" },
   { name: "Redis", color: "#DC382D" },
-  { name: "Terraform", color: "#7B42BC" },
-  { name: "GraphQL", color: "#E10098" },
-  { name: "Linux", color: "#FCC624" },
-  { name: "TailwindCSS", color: "#38BDF8" },
-  { name: "Supabase", color: "#3ECF8E" },
+  { name: "MySQL", color: "#4479A1" },
+  { name: "Firebase", color: "#FFCA28" },
+  // IA Cloud
+  { name: "OpenAI", color: "#74AA9C" },
+  { name: "Claude", color: "#CC785C" },
+  { name: "Gemini", color: "#4285F4" },
+  { name: "AWS Bedrock", color: "#FF9900" },
+  { name: "Cohere", color: "#39594D" },
+  // IA Local
+  { name: "Ollama", color: "#ffffff" },
+  { name: "LangChain", color: "#1C8C5E" },
+  { name: "LlamaIndex", color: "#6929C4" },
+  { name: "HuggingFace", color: "#FFD21E" },
 ];
 
 export default function TechStack() {
