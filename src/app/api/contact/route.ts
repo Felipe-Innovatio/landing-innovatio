@@ -1,6 +1,24 @@
 import { Resend } from "resend";
 import { z } from "zod";
 import { NextResponse } from "next/server";
+import type { NextRequest } from "next/server";
+
+// Simple in-memory rate limiter: max 3 requests per IP per 10 minutes
+const rateMap = new Map<string, { count: number; resetAt: number }>();
+const LIMIT = 3;
+const WINDOW_MS = 10 * 60 * 1000;
+
+function checkRateLimit(ip: string): boolean {
+  const now = Date.now();
+  const entry = rateMap.get(ip);
+  if (!entry || now > entry.resetAt) {
+    rateMap.set(ip, { count: 1, resetAt: now + WINDOW_MS });
+    return true;
+  }
+  if (entry.count >= LIMIT) return false;
+  entry.count++;
+  return true;
+}
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -11,7 +29,15 @@ const contactSchema = z.object({
   message: z.string().min(10),
 });
 
-export async function POST(request: Request) {
+export async function POST(request: NextRequest) {
+  const ip = request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ?? "unknown";
+  if (!checkRateLimit(ip)) {
+    return NextResponse.json(
+      { error: "Demasiados intentos. Espera unos minutos antes de volver a intentarlo." },
+      { status: 429 }
+    );
+  }
+
   const body: unknown = await request.json();
   const parsed = contactSchema.safeParse(body);
 
