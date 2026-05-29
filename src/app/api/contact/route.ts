@@ -30,7 +30,7 @@ export async function POST(request: Request) {
   };
 
   const { error } = await resend.emails.send({
-    from: "Innovatio-IT Contacto <onboarding@resend.dev>",
+    from: "Innovatio-IT <contacto@innovatio-it.com>",
     to: [process.env.CONTACT_EMAIL ?? "contacto@innovatio-it.com"],
     replyTo: email,
     subject: `[Contacto] ${name} — ${serviceLabels[service] ?? service}`,

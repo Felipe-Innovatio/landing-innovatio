@@ -1,0 +1,39 @@
+# Innovatio-IT
+
+> Equipo de ingenieros informáticos chilenos expertos en desarrollo de software, ciberseguridad e inteligencia artificial, basados en Santiago de Chile.
+
+Innovatio-IT es una empresa de tecnología 100% remota fundada en Santiago, Región Metropolitana, Chile. Está formada por ingenieros informáticos especializados en distintas áreas, que trabajan potenciados con herramientas de inteligencia artificial de última generación. Su enfoque combina innovación tecnológica con rigor profesional para garantizar resultados confiables y libres de los errores comunes del desarrollo asistido por IA.
+
+## Servicios
+
+- **Diseño y Desarrollo**: Aplicaciones web y móviles a medida, con tecnologías modernas como Next.js, React, Node.js y Python.
+- **Hosting e Infraestructura**: Soluciones cloud en AWS, configuración de servidores, Docker, Kubernetes y Terraform.
+- **Consultoría Tecnológica**: Asesoría en arquitectura de software, elección de stack tecnológico y transformación digital.
+- **Ciberseguridad**: Auditorías de seguridad, protección de datos y hardening de sistemas.
+- **Inteligencia Artificial**: Integración de IA en procesos empresariales, automatización inteligente y desarrollo de soluciones con LLMs.
+
+## Tecnologías principales
+
+React, Next.js, TypeScript, Node.js, Python, AWS, Docker, Kubernetes, PostgreSQL, MongoDB, Redis, Terraform, GraphQL, TailwindCSS, Supabase.
+
+## Contacto
+
+- Sitio web: https://innovatio-it.com
+- Email: admin@innovatio-it.com
+- WhatsApp: +56 9 5637 9853
+- Ubicación: Santiago, Región Metropolitana, Chile (equipo 100% remoto)
+- GitHub: https://github.com/Felipe-Innovatio
+
+## Preguntas frecuentes
+
+**¿Con qué tipo de empresas trabajan?**
+Trabajamos con startups, pymes y empresas en crecimiento que necesitan soluciones tecnológicas confiables. No tenemos restricción por tamaño — evaluamos cada proyecto según su alcance y objetivos.
+
+**¿Cómo integran la IA en sus proyectos?**
+Usamos herramientas de IA para acelerar el desarrollo, mejorar la calidad del código y automatizar tareas repetitivas. Sin embargo, cada entregable pasa por revisión profesional humana para garantizar que no se incorporen errores propios del desarrollo exclusivamente asistido por IA.
+
+**¿Trabajan con clientes fuera de Chile?**
+Sí. Al ser un equipo 100% remoto, podemos trabajar con clientes en cualquier país de habla hispana y también en inglés.
+
+**¿Cómo puedo contratar sus servicios?**
+A través del formulario de contacto en https://innovatio-it.com o escribiendo directamente a admin@innovatio-it.com.
