@@ -9,9 +9,6 @@ const links = [
   { label: "Contacto", href: "#contacto" },
 ];
 
-const socials = [
-  { label: "GitHub", href: "https://github.com/Felipe-Innovatio" },
-];
 
 export default function Footer() {
   return (
@@ -56,25 +53,6 @@ export default function Footer() {
               </nav>
             </div>
 
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--muted)" }}>
-                Redes
-              </p>
-              <div className="flex flex-col gap-3">
-                {socials.map((s) => (
-                  <a
-                    key={s.label}
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm transition-opacity hover:opacity-80"
-                    style={{ color: "var(--muted)" }}
-                  >
-                    {s.label}
-                  </a>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 
