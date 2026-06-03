@@ -4,7 +4,6 @@ import TechStack from "@/components/sections/TechStack";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
-import Testimonials from "@/components/sections/Testimonials";
 import CtaBanner from "@/components/sections/CtaBanner";
 import Pricing from "@/components/sections/Pricing";
 import Faq from "@/components/sections/Faq";
@@ -71,7 +70,6 @@ export default function Home() {
         <About />
         <Services />
         <Process />
-        <Testimonials />
         <CtaBanner />
         <Pricing />
         <Faq />
