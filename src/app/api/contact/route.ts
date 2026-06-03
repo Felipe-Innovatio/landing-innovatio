@@ -56,7 +56,10 @@ export async function POST(request: NextRequest) {
       body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
     });
 
-    const verifyData = await verifyRes.json() as { success: boolean; score: number };
+    const verifyData = await verifyRes.json() as { success: boolean; score: number; action: string; hostname: string };
+
+    // eslint-disable-next-line no-console
+    console.log("[reCAPTCHA] score:", verifyData.score, "| action:", verifyData.action, "| host:", verifyData.hostname);
 
     if (!verifyData.success || verifyData.score < 0.5) {
       return NextResponse.json(
