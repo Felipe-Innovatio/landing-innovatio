@@ -2,7 +2,7 @@
 
 import { notFound } from "next/navigation";
 
-const articles: Record<string, { title: string; description: string; date: string; readTime: string; category: string; content: string }> = {
+export const articles: Record<string, { title: string; description: string; date: string; readTime: string; category: string; content: string }> = {
   "cuanto-cuesta-pagina-web-chile-2026": {
     title: "Cuánto cuesta hacer una página web en Chile en 2026",
     description: "Desde $100.000 hasta $15.000.000+. Te explicamos por qué hay tanta diferencia, qué incluye cada precio y cómo elegir la opción correcta para tu negocio.",
@@ -13,7 +13,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p>Si estás buscando cotizaciones, probablemente ya te diste cuenta de que los precios saltan de un extremo a otro sin explicación clara. Un freelancer te dice $200.000, una agencia te pide $4.000.000 y un equipo de ingenieros parte en $800.000. ¿A quién le creemos? La respuesta corta es: <strong>depende de qué necesitas ahora y qué vas a necesitar en un año</strong>.</p>
 
-<h3>Los tres mundos del desarrollo web</h3>
+<h3 id="los-tres-mundos-del-desarrollo-web">Los tres mundos del desarrollo web</h3>
 
 <p>Antes de tirar números al aire, conviene entender que en Chile coexisten tres modelos de desarrollo web que parecen ofrecer lo mismo pero entregan resultados radicalmente distintos.</p>
 
@@ -23,64 +23,64 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p><strong>Equipos de ingeniería con código real ($800.000 – $15.000.000+):</strong> Arquitectura pensada para tu caso, tecnologías modernas como React, Next.js o Node.js, SEO técnico integrado desde el primer día y una base que puede escalar sin drama. El código es tuyo, el sitio es rápido y el crecimiento no requiere reiniciar desde cero.</p>
 
-<h3>Tabla comparativa: ¿Qué compras realmente?</h3>
+<h3 id="tabla-comparativa-que-compras-realmente">Tabla comparativa: ¿Qué compras realmente?</h3>
 
-<table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;">
+<table>
   <thead>
-    <tr style="border-bottom:2px solid var(--accent);text-align:left;">
-      <th style="padding:12px 8px;">Aspecto</th>
-      <th style="padding:12px 8px;">Plantilla ($100k–500k)</th>
-      <th style="padding:12px 8px;">Agencia ($1.5M–5M)</th>
-      <th style="padding:12px 8px;">Ingenieros ($800k–15M+)</th>
+    <tr>
+      <th>Aspecto</th>
+      <th>Plantilla ($100k–500k)</th>
+      <th>Agencia ($1.5M–5M)</th>
+      <th>Ingenieros ($800k–15M+)</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Tiempo de entrega</td>
-      <td style="padding:12px 8px;">2–7 días</td>
-      <td style="padding:12px 8px;">2–4 meses</td>
-      <td style="padding:12px 8px;">2–8 semanas</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Tecnología</td>
-      <td style="padding:12px 8px;">WordPress / Wix</td>
-      <td style="padding:12px 8px;">Variable</td>
-      <td style="padding:12px 8px;">React, Next.js, Node.js</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">SEO técnico</td>
-      <td style="padding:12px 8px;">Básico o nulo</td>
-      <td style="padding:12px 8px;">Intermedio</td>
-      <td style="padding:12px 8px;">Integrado desde el día 1</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Escalabilidad</td>
-      <td style="padding:12px 8px;">Limitada</td>
-      <td style="padding:12px 8px;">Media</td>
-      <td style="padding:12px 8px;">Alta</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Seguridad</td>
-      <td style="padding:12px 8px;">Mínima</td>
-      <td style="padding:12px 8px;">Básica</td>
-      <td style="padding:12px 8px;">Hardening incluido</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Soporte post-entrega</td>
-      <td style="padding:12px 8px;">Generalmente no</td>
-      <td style="padding:12px 8px;">Pago</td>
-      <td style="padding:12px 8px;">1 mes incluido</td>
+    <tr>
+      <td>Tiempo de entrega</td>
+      <td>2–7 días</td>
+      <td>2–4 meses</td>
+      <td>2–8 semanas</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px;font-weight:500;">Propiedad del código</td>
-      <td style="padding:12px 8px;">No (plataforma)</td>
-      <td style="padding:12px 8px;">A veces</td>
-      <td style="padding:12px 8px;">Siempre</td>
+      <td>Tecnología</td>
+      <td>WordPress / Wix</td>
+      <td>Variable</td>
+      <td>React, Next.js, Node.js</td>
+    </tr>
+    <tr>
+      <td>SEO técnico</td>
+      <td>Básico o nulo</td>
+      <td>Intermedio</td>
+      <td>Integrado desde el día 1</td>
+    </tr>
+    <tr>
+      <td>Escalabilidad</td>
+      <td>Limitada</td>
+      <td>Media</td>
+      <td>Alta</td>
+    </tr>
+    <tr>
+      <td>Seguridad</td>
+      <td>Mínima</td>
+      <td>Básica</td>
+      <td>Hardening incluido</td>
+    </tr>
+    <tr>
+      <td>Soporte post-entrega</td>
+      <td>Generalmente no</td>
+      <td>Pago</td>
+      <td>1 mes incluido</td>
+    </tr>
+    <tr>
+      <td>Propiedad del código</td>
+      <td>No (plataforma)</td>
+      <td>A veces</td>
+      <td>Siempre</td>
     </tr>
   </tbody>
 </table>
 
-<h3>Costos ocultos que nadie te menciona</h3>
+<h3 id="costos-ocultos-que-nadie-te-menciona">Costos ocultos que nadie te menciona</h3>
 
 <p>El precio del desarrollo es solo la punta del iceberg. Después de entregado el sitio, aparecen gastos recurrentes que muchos emprendedores no contemplan:</p>
 
@@ -95,7 +95,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p>Esos "ahorros" iniciales de $200.000 pueden convertirse en $2.000.000 de gastos imprevistos durante el primer año.</p>
 
-<h3>Cuándo conviene cada opción</h3>
+<h3 id="cuando-conviene-cada-opcion">Cuándo conviene cada opción</h3>
 
 <p>No existe una única respuesta correcta. La elección depende de tu etapa:</p>
 
@@ -105,7 +105,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p><strong>Elige un equipo de ingeniería si:</strong> tu sitio es tu negocio —vendes, reservas, capturas leads— o si planeas crecer rápido. El costo inicial es mayor, pero el costo total de propiedad a 2 años suele ser menor.</p>
 
-<h3>Preguntas para hacer antes de contratar</h3>
+<h3 id="preguntas-para-hacer-antes-de-contratar">Preguntas para hacer antes de contratar</h3>
 
 <ol>
 <li>"¿El código será mío o dependo de una plataforma?"</li>
@@ -118,11 +118,11 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p>Si el desarrollador te mira con cara de "¿por qué preguntas eso?", es una señal de alerta.</p>
 
-<h3>La pregunta que deberías hacerte</h3>
+<h3 id="la-pregunta-que-deberias-hacerte">La pregunta que deberías hacerte</h3>
 
 <p>No es "¿cuánto cuesta una página web?". Es "¿cuánto me cuesta que mi tecnología me frene?". Una mala decisión al inicio se paga con intereses compuestos: rediseños costosos, hackeos, caídas en Black Friday y clientes que se van porque tu sitio tarda 8 segundos en cargar.</p>
 
-<p>En <a href="/servicios/desarrollo" style="color:var(--accent);">Innovatio-IT</a> partimos desde <strong>$800.000</strong> porque es el precio mínimo para hacer las cosas bien: código limpio, SEO técnico, responsive real y una arquitectura que no se cae cuando creces. Si estás en la etapa de evaluar opciones, <a href="/contacto" style="color:var(--accent);">escríbenos</a> y te ayudamos a decidir sin compromiso.</p>`,
+<p>En <a href="/servicios/desarrollo">Innovatio-IT</a> partimos desde <strong>$800.000</strong> porque es el precio mínimo para hacer las cosas bien: código limpio, SEO técnico, responsive real y una arquitectura que no se cae cuando creces. Si estás en la etapa de evaluar opciones, <a href="/contacto">escríbenos</a> y te ayudamos a decidir sin compromiso.</p>`,
   },
   "wordpress-vs-codigo-a-medida": {
     title: "WordPress vs Código a medida: Cuál elegir para tu empresa",
@@ -134,80 +134,80 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p>La pregunta no es cuál es "mejor" en abstracto. La pregunta es cuál es mejor <strong>para tu empresa en su etapa actual</strong>. Un emprendimiento que recién valida su modelo de negocio tiene necesidades distintas a una empresa de e-commerce que procesa miles de transacciones al mes.</p>
 
-<h3>Contexto: ¿Qué estás comprando realmente?</h3>
+<h3 id="contexto-que-estas-comprando-realmente">Contexto: ¿Qué estás comprando realmente?</h3>
 
 <p>WordPress es un sistema de gestión de contenido que funciona con plantillas y plugins. Es rápido de implementar, barato de arrancar y no necesitas saber programar para publicar un post. Pero esa conveniencia tiene un costo oculto: cada plugin que instalas suma código que no controlas, cada plantilla limita lo que puedes personalizar y cada actualización puede romper algo.</p>
 
 <p>El código a medida, por otro lado, es software diseñado específicamente para tu negocio. Nada más, nada menos. No hay plugins de terceros, no hay plantillas que limiten tu diseño y no hay actualizaciones sorpresa que dejen tu sitio en blanco. Pero sí requiere un equipo que sepa lo que hace.</p>
 
-<h3>Comparativa detallada</h3>
+<h3 id="comparativa-detallada">Comparativa detallada</h3>
 
-<table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;">
+<table>
   <thead>
-    <tr style="border-bottom:2px solid var(--accent);text-align:left;">
-      <th style="padding:12px 8px;">Aspecto</th>
-      <th style="padding:12px 8px;">WordPress</th>
-      <th style="padding:12px 8px;">Código a medida</th>
+    <tr>
+      <th>Aspecto</th>
+      <th>WordPress</th>
+      <th>Código a medida</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Tiempo de carga</td>
-      <td style="padding:12px 8px;">3–8 segundos (con plugins)</td>
-      <td style="padding:12px 8px;">&lt; 1 segundo (optimizado)</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Seguridad</td>
-      <td style="padding:12px 8px;">Objetivo #1 de ataques automatizados</td>
-      <td style="padding:12px 8px;">Área de ataque mínima y controlada</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Escalabilidad</td>
-      <td style="padding:12px 8px;">Vertical (más servidor)</td>
-      <td style="padding:12px 8px;">Horizontal (más instancias, menos costo)</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Personalización</td>
-      <td style="padding:12px 8px;">Limitada por plantilla y plugins</td>
-      <td style="padding:12px 8px;">Total: cada pixel es tuyo</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Costo inicial</td>
-      <td style="padding:12px 8px;">$100.000 – $2.000.000</td>
-      <td style="padding:12px 8px;">$800.000 – $15.000.000+</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Costo a 2 años</td>
-      <td style="padding:12px 8px;">$1.500.000 – $5.000.000+</td>
-      <td style="padding:12px 8px;">$1.200.000 – $3.000.000</td>
+    <tr>
+      <td>Tiempo de carga</td>
+      <td>3–8 segundos (con plugins)</td>
+      <td>&lt; 1 segundo (optimizado)</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px;font-weight:500;">Propiedad del código</td>
-      <td style="padding:12px 8px;">No (dependes de terceros)</td>
-      <td style="padding:12px 8px;">Sí (100% tuyo)</td>
+      <td>Seguridad</td>
+      <td>Objetivo #1 de ataques automatizados</td>
+      <td>Área de ataque mínima y controlada</td>
+    </tr>
+    <tr>
+      <td>Escalabilidad</td>
+      <td>Vertical (más servidor)</td>
+      <td>Horizontal (más instancias, menos costo)</td>
+    </tr>
+    <tr>
+      <td>Personalización</td>
+      <td>Limitada por plantilla y plugins</td>
+      <td>Total: cada pixel es tuyo</td>
+    </tr>
+    <tr>
+      <td>Costo inicial</td>
+      <td>$100.000 – $2.000.000</td>
+      <td>$800.000 – $15.000.000+</td>
+    </tr>
+    <tr>
+      <td>Costo a 2 años</td>
+      <td>$1.500.000 – $5.000.000+</td>
+      <td>$1.200.000 – $3.000.000</td>
+    </tr>
+    <tr>
+      <td>Propiedad del código</td>
+      <td>No (dependes de terceros)</td>
+      <td>Sí (100% tuyo)</td>
     </tr>
   </tbody>
 </table>
 
-<h3>Rendimiento: cada segundo cuenta</h3>
+<h3 id="rendimiento-cada-segundo-cuenta">Rendimiento: cada segundo cuenta</h3>
 
 <p>Un sitio en WordPress con 20 plugins tarda entre 3 y 8 segundos en cargar. Un sitio hecho con Next.js y optimizado correctamente carga en menos de 1 segundo. En ecommerce, cada segundo de demora reduce las conversiones un 7%. Eso significa que si vendes $10.000.000 al mes, un sitio lento te puede estar costando $700.000 mensuales en ventas perdidas.</p>
 
 <p>Google también penaliza la lentitud. Desde 2021, el Core Web Vitals afecta directamente el ranking de búsqueda. Los sitios en WordPress con plugins mal optimizados tienen puntuaciones de 30–50 en PageSpeed Insights, mientras que un Next.js bien construido puntúa 90–100 sin trucos.</p>
 
-<h3>Seguridad: la puerta que no cerraste</h3>
+<h3 id="seguridad-la-puerta-que-no-cerraste">Seguridad: la puerta que no cerraste</h3>
 
 <p>WordPress es el objetivo número uno de ataques automatizados. No porque sea malo, sino porque es el más popular. Un plugin desactualizado puede abrir la puerta a tu servidor entero, permitiendo que un atacante acceda a bases de datos, información de clientes y hasta cuentas bancarias.</p>
 
 <p>Con código propio, el área de ataque es mínima y controlada. No hay plugins de terceros que nadie revise. No hay plantillas con backdoors escondidos. Y si encuentras una vulnerabilidad, la puedes parchear en horas, no en semanas esperando que el autor del plugin saque una actualización.</p>
 
-<h3>Escalabilidad: ¿crecer o rehacer?</h3>
+<h3 id="escalabilidad-crecer-o-rehacer">Escalabilidad: ¿crecer o rehacer?</h3>
 
 <p>WordPress escala verticalmente: cuando tienes más tráfico, necesitas un servidor más grande. Eso funciona hasta cierto punto, pero se vuelve caro rápido. Un sitio con 100.000 visitas mensuales puede necesitar un servidor dedicado de $200.000 mensuales.</p>
 
 <p>El código moderno escala horizontalmente: agregas más instancias pequeñas según la demanda. El costo crece de forma proporcional al tráfico real, no a un servidor fijo. La diferencia se nota cuando pasas de 1.000 a 100.000 visitas al mes.</p>
 
-<h3>Proceso paso a paso para decidir</h3>
+<h3 id="proceso-paso-a-paso-para-decidir">Proceso paso a paso para decidir</h3>
 
 <ol>
 <li><strong>Define el objetivo principal de tu sitio.</strong> ¿Es un blog informativo, una tienda online, un SaaS o un portfolio?</li>
@@ -217,7 +217,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li><strong>Decide si el código debe ser tuyo.</strong> Si planeas vender tu empresa algún día, tener el código propio aumenta el valor de la compañía.</li>
 </ol>
 
-<h3>Errores comunes al elegir</h3>
+<h3 id="errores-comunes-al-elegir">Errores comunes al elegir</h3>
 
 <ul>
 <li><strong>Ahorrar en el desarrollo para gastar en publicidad:</strong> un sitio lento y feo desperdicia cualquier peso que inviertas en ads.</li>
@@ -226,11 +226,11 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li><strong>Ignorar el mobile:</strong> más del 60% del tráfico web en Chile viene de celulares. Un sitio que se ve bien en desktop pero mal en mobile está perdiendo clientes.</li>
 </ul>
 
-<h3>La regla simple</h3>
+<h3 id="la-regla-simple">La regla simple</h3>
 
 <p>Si solo publicas contenido y no te importa la velocidad, usa WordPress. Es barato, rápido de implementar y hay miles de tutoriales. Si tu sitio es tu negocio —ventas, reservas, dashboards, integraciones— invierte en código a medida desde el día uno.</p>
 
-<p>En <a href="/servicios/desarrollo" style="color:var(--accent);">Innovatio-IT</a> desarrollamos con React, Next.js y Node.js. No vendemos plantillas ni cobramos por cada cambio. Si estás en la encrucijada de decidir, <a href="/contacto" style="color:var(--accent);">conversemos sin compromiso</a> y te damos una opinión honesta sobre qué camino conviene para tu caso.</p>`,
+<p>En <a href="/servicios/desarrollo">Innovatio-IT</a> desarrollamos con React, Next.js y Node.js. No vendemos plantillas ni cobramos por cada cambio. Si estás en la encrucijada de decidir, <a href="/contacto">conversemos sin compromiso</a> y te damos una opinión honesta sobre qué camino conviene para tu caso.</p>`,
   },
   "ciberseguridad-pymes-chile": {
     title: "Ciberseguridad para PYMES en Chile: Guía práctica 2026",
@@ -242,52 +242,52 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p>El problema es que muchos empresarios creen que la ciberseguridad es solo para bancos y multinacionales. "Somos chicos, a nadie le importamos", piensan. Error fatal. Los atacantes automatizados no discriminan por tamaño: escanean miles de IPs por minuto buscando puertas abiertas, contraseñas débiles y software desactualizado. Si tienes un servidor conectado a internet, ya eres un objetivo.</p>
 
-<h3>La realidad de las PYMES chilenas</h3>
+<h3 id="la-realidad-de-las-pymes-chilenas">La realidad de las PYMES chilenas</h3>
 
 <p>Según estudios recientes, el 43% de las PYMES chilenas han sufrido algún incidente de seguridad en los últimos dos años. De ese porcentaje, solo el 15% reportó el incidente. El resto lo ocultó por vergüenza, desconocimiento o miedo a perder clientes. Peor aún: el 60% de las PYMES que sufren un ataque grave cierra sus puertas antes de los 6 meses.</p>
 
 <p>Los cibercriminales saben que las PYMES no tienen departamentos de seguridad. Saben que el dueño de la empresa también maneja el servidor. Y saben que una empresa pequeña pagará un rescate de $2.000.000 sin pensarlo, porque no tiene backups ni plan de contingencia.</p>
 
-<h3>Tabla comparativa: Riesgo vs costo de prevención</h3>
+<h3 id="tabla-comparativa-riesgo-vs-costo-de-prevencion">Tabla comparativa: Riesgo vs costo de prevención</h3>
 
-<table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;">
+<table>
   <thead>
-    <tr style="border-bottom:2px solid var(--accent);text-align:left;">
-      <th style="padding:12px 8px;">Amenaza</th>
-      <th style="padding:12px 8px;">Costo del ataque</th>
-      <th style="padding:12px 8px;">Costo de prevención</th>
+    <tr>
+      <th>Amenaza</th>
+      <th>Costo del ataque</th>
+      <th>Costo de prevención</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Ransomware</td>
-      <td style="padding:12px 8px;">$2M – $50M + paralización</td>
-      <td style="padding:12px 8px;">$200.000 – $500.000/año</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Phishing masivo</td>
-      <td style="padding:12px 8px;">Pérdida de datos + multas</td>
-      <td style="padding:12px 8px;">$50.000 – $150.000/año</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Robo de datos clientes</td>
-      <td style="padding:12px 8px;">Multas + demandas + reputación</td>
-      <td style="padding:12px 8px;">$100.000 – $300.000/año</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Downtime por ataque DDoS</td>
-      <td style="padding:12px 8px;">$500.000 – $2M/día</td>
-      <td style="padding:12px 8px;">$80.000 – $200.000/año</td>
+    <tr>
+      <td>Ransomware</td>
+      <td>$2M – $50M + paralización</td>
+      <td>$200.000 – $500.000/año</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px;font-weight:500;">Fraude interno</td>
-      <td style="padding:12px 8px;">Variable (puede ser millonario)</td>
-      <td style="padding:12px 8px;">$100.000 – $400.000/año</td>
+      <td>Phishing masivo</td>
+      <td>Pérdida de datos + multas</td>
+      <td>$50.000 – $150.000/año</td>
+    </tr>
+    <tr>
+      <td>Robo de datos clientes</td>
+      <td>Multas + demandas + reputación</td>
+      <td>$100.000 – $300.000/año</td>
+    </tr>
+    <tr>
+      <td>Downtime por ataque DDoS</td>
+      <td>$500.000 – $2M/día</td>
+      <td>$80.000 – $200.000/año</td>
+    </tr>
+    <tr>
+      <td>Fraude interno</td>
+      <td>Variable (puede ser millonario)</td>
+      <td>$100.000 – $400.000/año</td>
     </tr>
   </tbody>
 </table>
 
-<h3>Los 5 errores más comunes (y cómo corregirlos)</h3>
+<h3 id="los-5-errores-mas-comunes-y-como-corregirlos">Los 5 errores más comunes (y cómo corregirlos)</h3>
 
 <ol>
 <li><strong>Contraseñas débiles reutilizadas:</strong> El 65% de los empleados usa la misma contraseña en trabajo y en redes sociales. Solución: implementa un gestor de contraseñas corporativo como 1Password o Bitwarden. Cuesta $30.000 mensuales y elimina el 80% de los riesgos de acceso no autorizado.</li>
@@ -297,7 +297,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li><strong>WiFi de invitados en la misma red:</strong> Cualquier persona conectada puede escanear tus dispositivos internos. Solución: separa la red corporativa de la red de invitados con un VLAN. Es configuración básica que cualquier técnico puede hacer en una tarde.</li>
 </ol>
 
-<h3>Proceso paso a paso para proteger tu empresa</h3>
+<h3 id="proceso-paso-a-paso-para-proteger-tu-empresa">Proceso paso a paso para proteger tu empresa</h3>
 
 <ol>
 <li><strong>Inventario de activos digitales.</strong> Haz una lista de todos los servidores, dominios, cuentas de correo y servicios en la nube que usa tu empresa. Lo que no conoces, no puedes proteger.</li>
@@ -308,7 +308,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li><strong>Implementar monitoreo básico.</strong> Alertas de accesos extraños, intentos de login fallidos y cambios en archivos críticos.</li>
 </ol>
 
-<h3>Cuándo necesitas contratar ayuda externa</h3>
+<h3 id="cuando-necesitas-contratar-ayuda-externa">Cuándo necesitas contratar ayuda externa</h3>
 
 <p>Puedes hacer mucho por tu cuenta, pero hay un punto donde necesitas un especialista. Considera contratar ayuda profesional cuando:</p>
 
@@ -320,7 +320,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li>Necesitas cumplir con normativas como ISO 27001 o la Ley de Protección de Datos Personales.</li>
 </ul>
 
-<p>En <a href="/servicios/ciberseguridad" style="color:var(--accent);">Innovatio-IT</a> hacemos auditorías de seguridad accesibles para PYMES chilenas. No vendemos miedo: te entregamos un plan concreto con prioridades claras y presupuestos realistas. La prevención siempre sale más barata que el remedio. <a href="/contacto" style="color:var(--accent);">Solicita una auditoría</a> y descubre en qué estado está la seguridad de tu empresa.</p>`,
+<p>En <a href="/servicios/ciberseguridad">Innovatio-IT</a> hacemos auditorías de seguridad accesibles para PYMES chilenas. No vendemos miedo: te entregamos un plan concreto con prioridades claras y presupuestos realistas. La prevención siempre sale más barata que el remedio. <a href="/contacto">Solicita una auditoría</a> y descubre en qué estado está la seguridad de tu empresa.</p>`,
   },
   "ia-empresas-chile-como-empezar": {
     title: "Inteligencia Artificial para empresas chilenas: Cómo empezar sin morir en el intento",
@@ -332,64 +332,64 @@ const articles: Record<string, { title: string; description: string; date: strin
 
 <p>La buena noticia es que la IA dejó de ser un lujo de Silicon Valley. Hoy un emprendimiento chileno puede implementar un chatbot inteligente por menos de $300.000 mensuales. El problema no es el costo: es la estrategia. Empresas que implementan IA sin un plan claro terminan con 5 suscripciones distintas, datos fragmentados y empleados que no saben qué herramienta usar para qué tarea.</p>
 
-<h3>El estado de la IA en Chile 2026</h3>
+<h3 id="el-estado-de-la-ia-en-chile-2026">El estado de la IA en Chile 2026</h3>
 
 <p>Chile está en una posición interesante. Tenemos una base tecnológica sólida, alta penetración de internet y un ecosistema startup en crecimiento. Pero también tenemos una cultura empresarial conservadora que ve la IA como amenaza antes que como herramienta. Eso está cambiando rápido: las empresas que adoptaron IA en 2024 ya están viendo reducciones de 20–40% en tareas administrativas y mejoras significativas en atención al cliente.</p>
 
 <p>El desafío no es técnico: es cultural. La IA no reemplaza a tu equipo, pero sí reemplaza a las empresas que no la usan frente a competidores que sí.</p>
 
-<h3>Tabla comparativa: ¿Por dónde empezar?</h3>
+<h3 id="tabla-comparativa-por-donde-empezar">Tabla comparativa: ¿Por dónde empezar?</h3>
 
-<table style="width:100%;border-collapse:collapse;margin:24px 0;font-size:14px;">
+<table>
   <thead>
-    <tr style="border-bottom:2px solid var(--accent);text-align:left;">
-      <th style="padding:12px 8px;">Opción</th>
-      <th style="padding:12px 8px;">Costo mensual</th>
-      <th style="padding:12px 8px;">Tiempo de implementación</th>
-      <th style="padding:12px 8px;">Ideal para</th>
+    <tr>
+      <th>Opción</th>
+      <th>Costo mensual</th>
+      <th>Tiempo de implementación</th>
+      <th>Ideal para</th>
     </tr>
   </thead>
   <tbody>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">ChatGPT / Claude equipo</td>
-      <td style="padding:12px 8px;">$100.000 – $300.000</td>
-      <td style="padding:12px 8px;">1 día</td>
-      <td style="padding:12px 8px;">Redacción, análisis, brainstorming</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">No-code con Make / Zapier + IA</td>
-      <td style="padding:12px 8px;">$150.000 – $500.000</td>
-      <td style="padding:12px 8px;">1–2 semanas</td>
-      <td style="padding:12px 8px;">Automatización de flujos repetitivos</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">Chatbot RAG con documentos</td>
-      <td style="padding:12px 8px;">$300.000 – $800.000</td>
-      <td style="padding:12px 8px;">2–4 semanas</td>
-      <td style="padding:12px 8px;">Atención al cliente interna/externa</td>
-    </tr>
-    <tr style="border-bottom:1px solid var(--border);">
-      <td style="padding:12px 8px;font-weight:500;">ML a medida para predicción</td>
-      <td style="padding:12px 8px;">$800.000 – $3.000.000</td>
-      <td style="padding:12px 8px;">1–3 meses</td>
-      <td style="padding:12px 8px;">Forecasting, clasificación, detección</td>
+    <tr>
+      <td>ChatGPT / Claude equipo</td>
+      <td>$100.000 – $300.000</td>
+      <td>1 día</td>
+      <td>Redacción, análisis, brainstorming</td>
     </tr>
     <tr>
-      <td style="padding:12px 8px;font-weight:500;">Sistema IA completo integrado</td>
-      <td style="padding:12px 8px;">$1.500.000 – $5.000.000+</td>
-      <td style="padding:12px 8px;">2–6 meses</td>
-      <td style="padding:12px 8px;">Empresas en etapa de escala</td>
+      <td>No-code con Make / Zapier + IA</td>
+      <td>$150.000 – $500.000</td>
+      <td>1–2 semanas</td>
+      <td>Automatización de flujos repetitivos</td>
+    </tr>
+    <tr>
+      <td>Chatbot RAG con documentos</td>
+      <td>$300.000 – $800.000</td>
+      <td>2–4 semanas</td>
+      <td>Atención al cliente interna/externa</td>
+    </tr>
+    <tr>
+      <td>ML a medida para predicción</td>
+      <td>$800.000 – $3.000.000</td>
+      <td>1–3 meses</td>
+      <td>Forecasting, clasificación, detección</td>
+    </tr>
+    <tr>
+      <td>Sistema IA completo integrado</td>
+      <td>$1.500.000 – $5.000.000+</td>
+      <td>2–6 meses</td>
+      <td>Empresas en etapa de escala</td>
     </tr>
   </tbody>
 </table>
 
-<h3>Paso 1: Identifica el dolor real</h3>
+<h3 id="paso-1-identifica-el-dolor-real">Paso 1: Identifica el dolor real</h3>
 
 <p>La IA no es magia. Es una herramienta para resolver problemas específicos. ¿Tus vendedores pasan 3 horas al día respondiendo las mismas preguntas? ¿Tus analistas transcriben datos manualmente? ¿Tu equipo de soporte se ahoga en tickets repetitivos? Esos son los candidatos perfectos.</p>
 
 <p>El error más común es buscar "usar IA" en vez de buscar "resolver este problema". Empieza con una pregunta simple: <strong>¿Qué tarea repetitiva le quita más tiempo a tu equipo?</strong> Si la respuesta es "responder preguntas frecuentes", un chatbot RAG es la solución. Si es "clasificar documentos", un modelo de ML pequeño. Si es "escribir correos", ChatGPT Enterprise.</p>
 
-<h3>Paso 2: Empieza con un piloto de 2 semanas</h3>
+<h3 id="paso-2-empieza-con-un-piloto-de-2-semanas">Paso 2: Empieza con un piloto de 2 semanas</h3>
 
 <p>No contrates una consultora de 6 meses. Arma un piloto pequeño, medible y reversible. La regla es: si el piloto falla, pierdes $200.000 y ganas aprendizaje. Si contratas un proyecto grande sin validar, pierdes $5.000.000 y nadie sabe por qué.</p>
 
@@ -401,19 +401,19 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li><strong>Clasificación automática de tickets de soporte:</strong> el modelo etiqueta por urgencia y categoría, reduciendo el tiempo de respuesta en un 60%.</li>
 </ul>
 
-<h3>Paso 3: Mide antes de escalar</h3>
+<h3 id="paso-3-mide-antes-de-escalar">Paso 3: Mide antes de escalar</h3>
 
 <p>Si el piloto ahorra 5 horas semanales, escálalo. Si nadie lo usa, aborta y aprende. La ventaja de la IA moderna es que los costos de experimentación son bajos. Pero solo si experimentas de forma disciplinada.</p>
 
 <p>Define métricas claras antes de empezar: tiempo ahorrado, tasa de error, satisfacción del usuario, costo por interacción. Si no puedes medirlo, no puedes mejorarlo. Y si no puedes mejorarlo, no escales.</p>
 
-<h3>Paso 4: Capacita a tu equipo (no lo reemplaces)</h3>
+<h3 id="paso-4-capacita-a-tu-equipo-no-lo-reemplaces">Paso 4: Capacita a tu equipo (no lo reemplaces)</h3>
 
 <p>La resistencia al cambio es el principal motivo por el que fallan los proyectos de IA. Tu equipo no odia la tecnología: odia sentirse reemplazable. Involúcralos desde el diseño del piloto. Pregúntales qué tareas les quitan tiempo. Muéstrales cómo la IA les permite enfocarse en lo estratégico.</p>
 
 <p>En nuestra experiencia, los equipos que reciben capacitación de 2 horas sobre cómo usar las herramientas adoptan la IA 3 veces más rápido que los equipos a los que simplemente se les "entrega" la herramienta.</p>
 
-<h3>Casos de uso reales por industria</h3>
+<h3 id="casos-de-uso-reales-por-industria">Casos de uso reales por industria</h3>
 
 <ul>
 <li><strong>Retail / E-commerce:</strong> descripción automática de productos, atención al cliente 24/7, forecasting de inventario y recomendaciones personalizadas.</li>
@@ -423,7 +423,7 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li><strong>Educación:</strong> tutorías personalizadas, generación de evaluaciones, corrección automática de tareas y análisis de desempeño estudiantil.</li>
 </ul>
 
-<h3>Lo que NO hacer</h3>
+<h3 id="lo-que-no-hacer">Lo que NO hacer</h3>
 
 <ul>
 <li><strong>No reemplaces a tu equipo sin un plan de transición.</strong> La IA funciona mejor como asistente que como sustituto. Un humano revisando la IA es más eficiente que la IA sola o el humano solo.</li>
@@ -433,32 +433,22 @@ const articles: Record<string, { title: string; description: string; date: strin
 <li><strong>No esperes perfección desde el día uno.</strong> Un chatbot que responde correctamente el 70% de las veces y escala al 90% en 3 meses es mejor que no tener chatbot.</li>
 </ul>
 
-<h3>Conclusión: empieza hoy, pero empieza bien</h3>
+<h3 id="conclusion-empieza-hoy-pero-empieza-bien">Conclusión: empieza hoy, pero empieza bien</h3>
 
 <p>La IA no es una moda pasajera. Es una herramienta de productividad comparable a la llegada de Excel o de internet. Las empresas que la adoptan ahora van a tener una ventaja competitiva real en 2027. Las que esperen "a que se estabilice" van a jugar con desventaja.</p>
 
-<p>En <a href="/servicios/ia" style="color:var(--accent);">Innovatio-IT</a> diseñamos sistemas RAG, automatizaciones con IA e integraciones de LLMs pensados para empresas chilenas reales. Sin buzzwords, sin vendor lock-in, sin proyectos de 6 meses que nadie usa. Si tienes un proceso repetitivo que te quita tiempo, <a href="/contacto" style="color:var(--accent);">cuéntanos</a> y te proponemos un piloto concreto en menos de 48 horas.</p>`,
+<p>En <a href="/servicios/ia">Innovatio-IT</a> diseñamos sistemas RAG, automatizaciones con IA e integraciones de LLMs pensados para empresas chilenas reales. Sin buzzwords, sin vendor lock-in, sin proyectos de 6 meses que nadie usa. Si tienes un proceso repetitivo que te quita tiempo, <a href="/contacto">cuéntanos</a> y te proponemos un piloto concreto en menos de 48 horas.</p>`,
   },
 };
 
-export default function ArticleContent({ slug }: { slug: string }) {
+export default function ArticleContent({ slug, contentOverride }: { slug: string; contentOverride?: string }) {
   const article = articles[slug];
   if (!article) return notFound();
 
   return (
-    <main className="pt-32 pb-20 px-6">
-      <article className="max-w-3xl mx-auto">
-        <header className="mb-12">
-          <span className="text-xs font-semibold px-3 py-1 rounded-full mb-4 inline-block" style={{ background: "rgba(55,138,221,0.08)", color: "var(--accent-light)" }}>{article.category}</span>
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold tracking-tight mb-4" style={{ color: "var(--foreground)", letterSpacing: "-0.03em" }}>{article.title}</h1>
-          <p className="text-sm" style={{ color: "var(--muted)" }}>{article.date} · {article.readTime} de lectura</p>
-        </header>
-        <div
-          className="prose prose-invert max-w-none"
-          style={{ color: "var(--muted)", lineHeight: "1.8" }}
-          dangerouslySetInnerHTML={{ __html: article.content }}
-        />
-      </article>
-    </main>
+    <div
+      className="blog-content"
+      dangerouslySetInnerHTML={{ __html: contentOverride ?? article.content }}
+    />
   );
 }

@@ -73,3 +73,153 @@ body {
   transform: translateY(-4px);
   box-shadow: 0 8px 32px rgba(55, 138, 221, 0.12);
 }
+
+/* ─── Blog reading styles ─── */
+.blog-content {
+  color: #b8c5d9;
+  font-size: 1.025rem;
+  line-height: 1.85;
+}
+
+.blog-content p {
+  margin-bottom: 1.25rem;
+}
+
+.blog-content h2 {
+  color: var(--foreground);
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-top: 2.75rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: -0.01em;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content h3 {
+  color: var(--accent-light);
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  scroll-margin-top: 6rem;
+}
+
+.blog-content a {
+  color: var(--accent-light);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+.blog-content a:hover {
+  border-bottom-color: var(--accent);
+}
+
+.blog-content strong,
+.blog-content b {
+  color: var(--foreground);
+  font-weight: 600;
+}
+
+.blog-content ul {
+  list-style: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.blog-content ul li::marker {
+  color: var(--accent);
+}
+.blog-content ul li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content ol {
+  list-style: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.blog-content ol li::marker {
+  color: var(--accent);
+  font-weight: 600;
+}
+.blog-content ol li {
+  margin-bottom: 0.75rem;
+  padding-left: 0.25rem;
+}
+
+.blog-content blockquote {
+  border-left: 3px solid var(--accent);
+  background: rgba(55, 138, 221, 0.05);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+}
+.blog-content blockquote p:last-child {
+  margin-bottom: 0;
+}
+
+.blog-content table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1.5rem 0;
+  font-size: 0.925rem;
+  line-height: 1.5;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.blog-content thead {
+  background: var(--accent-dim);
+}
+
+.blog-content th {
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.85rem 1rem;
+  border-bottom: 2px solid var(--accent);
+}
+
+.blog-content td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: top;
+}
+
+.blog-content tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.blog-content tbody tr:hover {
+  background: rgba(55, 138, 221, 0.04);
+}
+
+.blog-content code {
+  background: var(--surface);
+  color: var(--accent-light);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.85em;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.blog-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 2rem 0;
+}
+
+/* TOC sidebar active link */
+.toc-link {
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+.toc-link.active {
+  color: var(--accent-light);
+  border-left-color: var(--accent);
+}
+.toc-link:hover {
+  color: var(--foreground);
+}
