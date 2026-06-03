@@ -2,14 +2,14 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-const TechStack = dynamic(() => import("@/components/sections/TechStack"));
-const About = dynamic(() => import("@/components/sections/About"));
-const Services = dynamic(() => import("@/components/sections/Services"));
-const Process = dynamic(() => import("@/components/sections/Process"));
-const CtaBanner = dynamic(() => import("@/components/sections/CtaBanner"));
-const Pricing = dynamic(() => import("@/components/sections/Pricing"));
-const Faq = dynamic(() => import("@/components/sections/Faq"));
-const Contact = dynamic(() => import("@/components/sections/Contact"));
+const TechStack = dynamic(() => import("@/components/sections/TechStack"), { ssr: true });
+const About = dynamic(() => import("@/components/sections/About"), { ssr: true });
+const Services = dynamic(() => import("@/components/sections/Services"), { ssr: true });
+const Process = dynamic(() => import("@/components/sections/Process"), { ssr: true });
+const CtaBanner = dynamic(() => import("@/components/sections/CtaBanner"), { ssr: true });
+const Pricing = dynamic(() => import("@/components/sections/Pricing"), { ssr: true });
+const Faq = dynamic(() => import("@/components/sections/Faq"), { ssr: true });
+const Contact = dynamic(() => import("@/components/sections/Contact"), { ssr: true });
 
 const faqJsonLd = {
   "@context": "https://schema.org",

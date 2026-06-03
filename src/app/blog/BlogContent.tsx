@@ -9,7 +9,7 @@ const articles = [
     excerpt: "Desde $100.000 hasta $15.000.000+. Te explicamos por qué hay tanta diferencia y cómo elegir la opción correcta para tu negocio.",
     date: "2026-06-03",
     category: "Desarrollo Web",
-    readTime: "8 min",
+    readTime: "15 min",
   },
   {
     slug: "wordpress-vs-codigo-a-medida",
@@ -17,7 +17,7 @@ const articles = [
     excerpt: "Comparamos rendimiento, seguridad, escalabilidad y costo total de propiedad. La respuesta depende de tu etapa de crecimiento.",
     date: "2026-05-28",
     category: "Desarrollo Web",
-    readTime: "6 min",
+    readTime: "14 min",
   },
   {
     slug: "ciberseguridad-pymes-chile",
