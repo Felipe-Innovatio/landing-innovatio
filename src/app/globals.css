@@ -223,3 +223,8 @@ body {
 .toc-link:hover {
   color: var(--foreground);
 }
+
+/* Ocultar badge de reCAPTCHA v3 (Google permite ocultarlo si se muestra el disclaimer) */
+.grecaptcha-badge {
+  visibility: hidden !important;
+}

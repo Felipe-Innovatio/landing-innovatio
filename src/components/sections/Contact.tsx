@@ -206,6 +206,30 @@ export default function Contact() {
               {errors.privacy && <span style={errorStyle}>{errors.privacy.message}</span>}
             </div>
 
+            <p className="text-xs text-center leading-relaxed" style={{ color: "var(--muted)" }}>
+              Este sitio está protegido por reCAPTCHA y se aplican la{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline transition-opacity hover:opacity-70"
+                style={{ color: "var(--accent-light)" }}
+              >
+                Política de Privacidad
+              </a>{" "}
+              y los{" "}
+              <a
+                href="https://policies.google.com/terms"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline transition-opacity hover:opacity-70"
+                style={{ color: "var(--accent-light)" }}
+              >
+                Términos de Servicio
+              </a>{" "}
+              de Google.
+            </p>
+
             {serverError && (
               <p className="text-sm text-center py-2 px-4 rounded-lg" style={{ background: "rgba(248,113,113,0.1)", color: "#f87171" }}>
                 {serverError}
