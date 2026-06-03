@@ -32,7 +32,7 @@ export default function CtaBanner() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="#contacto"
+                href="/contacto"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm transition-all hover:opacity-90 hover:scale-105"
                 style={{ background: "var(--accent)", color: "#fff" }}
               >

@@ -38,7 +38,7 @@ export default function NotFound() {
           Volver al inicio →
         </Link>
         <Link
-          href="/#contacto"
+          href="/contacto"
           className="inline-flex items-center justify-center px-8 py-3 rounded-full font-medium text-sm border transition-all"
           style={{ borderColor: "var(--border)", color: "var(--muted)" }}
         >

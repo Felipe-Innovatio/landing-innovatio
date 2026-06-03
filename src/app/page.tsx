@@ -1,16 +1,15 @@
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+
 import Hero from "@/components/sections/Hero";
 import TechStack from "@/components/sections/TechStack";
 import About from "@/components/sections/About";
 import Services from "@/components/sections/Services";
 import Process from "@/components/sections/Process";
-// import Testimonials from "@/components/sections/Testimonials";
+import Testimonials from "@/components/sections/Testimonials";
 import CtaBanner from "@/components/sections/CtaBanner";
 import Pricing from "@/components/sections/Pricing";
 import Faq from "@/components/sections/Faq";
 import Contact from "@/components/sections/Contact";
-import WhatsAppButton from "@/components/ui/WhatsAppButton";
+
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -66,21 +65,18 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <Header />
       <main className="pt-16">
         <Hero />
         <TechStack />
         <About />
         <Services />
         <Process />
-        {/* <Testimonials /> */}
+        <Testimonials />
         <CtaBanner />
         <Pricing />
         <Faq />
         <Contact />
       </main>
-      <Footer />
-      <WhatsAppButton />
     </>
   );
 }

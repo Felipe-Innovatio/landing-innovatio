@@ -66,14 +66,14 @@ export default function Hero() {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-20">
           <Link
-            href="#contacto"
+            href="/contacto"
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-medium text-sm transition-all hover:opacity-90 hover:scale-105"
             style={{ background: "var(--accent)", color: "#fff" }}
           >
             Hablemos →
           </Link>
           <Link
-            href="#servicios"
+            href="/servicios"
             className="inline-flex items-center justify-center px-8 py-4 rounded-full font-medium text-sm border transition-all hover:border-opacity-60"
             style={{ borderColor: "var(--border)", color: "var(--muted)", background: "rgba(255,255,255,0.03)" }}
           >

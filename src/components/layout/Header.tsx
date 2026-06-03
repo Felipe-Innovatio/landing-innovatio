@@ -5,10 +5,10 @@ import Link from "next/link";
 import Logo from "@/components/ui/Logo";
 
 const navLinks = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Nosotros", href: "#nosotros" },
-  { label: "Precios", href: "#precios" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Servicios", href: "/servicios" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Precios", href: "/precios" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 export default function Header() {
@@ -40,7 +40,7 @@ export default function Header() {
 
         {/* CTA */}
         <Link
-          href="#contacto"
+          href="/contacto"
           className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-opacity hover:opacity-80"
           style={{ background: "var(--accent)", color: "#fff" }}
         >
@@ -74,7 +74,7 @@ export default function Header() {
             </Link>
           ))}
           <Link
-            href="#contacto"
+            href="/contacto"
             className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-medium"
             style={{ background: "var(--accent)", color: "#fff" }}
             onClick={() => setOpen(false)}

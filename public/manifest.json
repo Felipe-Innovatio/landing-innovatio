@@ -1,0 +1,16 @@
+{
+  "name": "Innovatio-IT",
+  "short_name": "Innovatio-IT",
+  "description": "Desarrollo de Software, Ciberseguridad e IA en Chile",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06080f",
+  "theme_color": "#06080f",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "256x256",
+      "type": "image/x-icon"
+    }
+  ]
+}

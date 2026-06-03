@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
+import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -95,12 +98,54 @@ export default function RootLayout({
       lang="es"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
+      <head>
+        <meta name="theme-color" content="#06080f" />
+        <link rel="manifest" href="/manifest.json" />
+      </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
+        <Header />
         {children}
+        <Footer />
+        <WhatsAppButton />
         <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Innovatio-IT",
+              "url": siteUrl,
+              "logo": `${siteUrl}/og-image.png`,
+              "description": "Innovatio-IT es un equipo de ingenieros informáticos chilenos especializados en desarrollo de software, ciberseguridad e inteligencia artificial.",
+              "email": "contacto@innovatio-it.com",
+              "telephone": "+56-9-5637-9853",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Santiago",
+                "addressCountry": "CL"
+              },
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+56-9-5637-9853",
+                "contactType": "sales",
+                "availableLanguage": ["Spanish", "English"],
+                "areaServed": "CL"
+              },
+              "priceRange": "$$$",
+              "knowsAbout": [
+                "Desarrollo de Software",
+                "Ciberseguridad",
+                "Inteligencia Artificial",
+                "Cloud e Infraestructura",
+                "Consultoría Tecnológica"
+              ]
+            }),
+          }}
         />
       </body>
     </html>

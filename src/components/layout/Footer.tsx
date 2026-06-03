@@ -2,11 +2,11 @@ import Link from "next/link";
 import Logo from "@/components/ui/Logo";
 
 const links = [
-  { label: "Servicios", href: "#servicios" },
-  { label: "Nosotros", href: "#nosotros" },
-  { label: "Precios", href: "#precios" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contacto", href: "#contacto" },
+  { label: "Servicios", href: "/servicios" },
+  { label: "Nosotros", href: "/nosotros" },
+  { label: "Precios", href: "/precios" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contacto", href: "/contacto" },
 ];
 
 
