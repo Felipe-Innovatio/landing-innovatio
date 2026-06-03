@@ -118,7 +118,15 @@ export const articles: Record<string, { title: string; description: string; date
 
 <p>No es "¿cuánto cuesta una página web?". Es "¿cuánto me cuesta que mi tecnología me frene?". Una mala decisión al inicio se paga con intereses compuestos: rediseños costosos, hackeos, caídas en Black Friday y clientes que se van porque tu sitio tarda 8 segundos en cargar.</p>
 
-<p>En <a href="/servicios/desarrollo">Innovatio-IT</a> partimos desde <strong>$800.000</strong> porque es el precio mínimo para hacer las cosas bien: código limpio, SEO técnico, responsive real y una arquitectura que no se cae cuando creces. Si estás en la etapa de evaluar opciones, <a href="/contacto">escríbenos</a> y te ayudamos a decidir sin compromiso.</p>`,
+<p>En <a href="/servicios/desarrollo">Innovatio-IT</a> partimos desde <strong>$800.000</strong> porque es el precio mínimo para hacer las cosas bien: código limpio, SEO técnico, responsive real y una arquitectura que no se cae cuando creces. Si estás en la etapa de evaluar opciones, <a href="/contacto">escríbenos</a> y te ayudamos a decidir sin compromiso.</p>
+
+<h3 id="fuentes">Fuentes y referencias</h3>
+<ul>
+<li><a href="https://w3techs.com/technologies/overview/content_management" target="_blank" rel="noopener noreferrer">W3Techs — Content Management Systems (2025)</a></li>
+<li><a href="https://www.portent.com/blog/analytics/research-site-speed.htm" target="_blank" rel="noopener noreferrer">Portent — Page Speed & Conversion Rate Analysis</a></li>
+<li><a href="https://developers.google.com/search/docs/appearance/core-web-vitals" target="_blank" rel="noopener noreferrer">Google Search Central — Core Web Vitals</a></li>
+<li>Rangos de precio basados en cotizaciones de mercado chileno 2024–2026.</li>
+</ul>`,
   },
   "wordpress-vs-codigo-a-medida": {
     title: "WordPress vs Código a medida: Cuál elegir para tu empresa",
@@ -219,14 +227,22 @@ export const articles: Record<string, { title: string; description: string; date
 <li><strong>Ahorrar en el desarrollo para gastar en publicidad:</strong> un sitio lento y feo desperdicia cualquier peso que inviertas en ads.</li>
 <li><strong>Elegir WordPress "para probar" y nunca migrar:</strong> muchas empresas quedan atrapadas en WordPress durante años porque la migración se vuelve costosa.</li>
 <li><strong>No preguntar quién tiene el código:</strong> si contratas a una agencia que usa su propio CMS privado, no puedes cambiar de proveedor sin rehacer todo.</li>
-<li><strong>Ignorar el mobile:</strong> más del 60% del tráfico web en Chile viene de celulares. Un sitio que se ve bien en desktop pero mal en mobile está perdiendo clientes.</li>
+<li><strong>Ignorar el mobile:</strong> más del 60% del tráfico web mundial viene de celulares. Un sitio que se ve bien en desktop pero mal en mobile está perdiendo clientes.</li>
 </ul>
 
 <h3 id="la-regla-simple">La regla simple</h3>
 
 <p>Si solo publicas contenido y no te importa la velocidad, usa WordPress. Es barato, rápido de implementar y hay miles de tutoriales. Si tu sitio es tu negocio —ventas, reservas, dashboards, integraciones— invierte en código a medida desde el día uno.</p>
 
-<p>En <a href="/servicios/desarrollo">Innovatio-IT</a> desarrollamos con React, Next.js y Node.js. No vendemos plantillas ni cobramos por cada cambio. Si estás en la encrucijada de decidir, <a href="/contacto">conversemos sin compromiso</a> y te damos una opinión honesta sobre qué camino conviene para tu caso.</p>`,
+<p>En <a href="/servicios/desarrollo">Innovatio-IT</a> desarrollamos con React, Next.js y Node.js. No vendemos plantillas ni cobramos por cada cambio. Si estás en la encrucijada de decidir, <a href="/contacto">conversemos sin compromiso</a> y te damos una opinión honesta sobre qué camino conviene para tu caso.</p>
+
+<h3 id="fuentes">Fuentes y referencias</h3>
+<ul>
+<li><a href="https://w3techs.com/technologies/overview/content_management" target="_blank" rel="noopener noreferrer">W3Techs — WordPress Usage Statistics (2025)</a></li>
+<li><a href="https://www.portent.com/blog/analytics/research-site-speed.htm" target="_blank" rel="noopener noreferrer">Portent — Site Speed & Conversion Rate (2022)</a></li>
+<li><a href="https://developers.google.com/search/blog/2020/11/timing-for-page-experience" target="_blank" rel="noopener noreferrer">Google Search Central — Page Experience Update (nov 2020)</a></li>
+<li><a href="https://gs.statcounter.com/platform-market-share/desktop-mobile-tablet" target="_blank" rel="noopener noreferrer">StatCounter — Mobile vs Desktop Traffic Worldwide (2025)</a></li>
+</ul>`,
   },
   "ciberseguridad-pymes-chile": {
     title: "Ciberseguridad para PYMES en Chile: Guía práctica 2026",
@@ -240,7 +256,7 @@ export const articles: Record<string, { title: string; description: string; date
 
 <h3 id="la-realidad-de-las-pymes-chilenas">La realidad de las PYMES chilenas</h3>
 
-<p>Según estudios recientes, el 43% de las PYMES chilenas han sufrido algún incidente de seguridad en los últimos dos años. De ese porcentaje, solo el 15% reportó el incidente. El resto lo ocultó por vergüenza, desconocimiento o miedo a perder clientes. Peor aún: el 60% de las PYMES que sufren un ataque grave cierra sus puertas antes de los 6 meses.</p>
+<p>Según el <em>2025 Global Threat Report</em>, el <strong>43% de todos los ciberataques van dirigidos a pequeñas empresas</strong>. La investigación de la <em>National Cyber Security Alliance</em> encontró que el <strong>60% de las pequeñas empresas cierra antes de los 6 meses</strong> tras sufrir un ataque grave. Y no son solo cifras de Estados Unidos: en Australia, un estudio del <em>Australian Small Business and Family Enterprise Ombudsman</em> reveló que más de la mitad de las PYMES afectadas no sobrevive al semestre.</p>
 
 <p>Los cibercriminales saben que las PYMES no tienen departamentos de seguridad. Saben que el dueño de la empresa también maneja el servidor. Y saben que una empresa pequeña pagará un rescate de $2.000.000 sin pensarlo, porque no tiene backups ni plan de contingencia.</p>
 
@@ -316,7 +332,16 @@ export const articles: Record<string, { title: string; description: string; date
 <li>Necesitas cumplir con normativas como ISO 27001 o la Ley de Protección de Datos Personales.</li>
 </ul>
 
-<p>En <a href="/servicios/ciberseguridad">Innovatio-IT</a> hacemos auditorías de seguridad accesibles para PYMES chilenas. No vendemos miedo: te entregamos un plan concreto con prioridades claras y presupuestos realistas. La prevención siempre sale más barata que el remedio. <a href="/contacto">Solicita una auditoría</a> y descubre en qué estado está la seguridad de tu empresa.</p>`,
+<p>En <a href="/servicios/ciberseguridad">Innovatio-IT</a> hacemos auditorías de seguridad accesibles para PYMES chilenas. No vendemos miedo: te entregamos un plan concreto con prioridades claras y presupuestos realistas. La prevención siempre sale más barata que el remedio. <a href="/contacto">Solicita una auditoría</a> y descubre en qué estado está la seguridad de tu empresa.</p>
+
+<h3 id="fuentes">Fuentes y referencias</h3>
+<ul>
+<li><a href="https://www.techjockey.com/blog/cyberattacks-target-small-businesses" target="_blank" rel="noopener noreferrer">Cybersecurity Ventures — 2025 Global Threat Report</a></li>
+<li><a href="https://www.denverpost.com/2016/10/23/small-companies-cyber-attack-out-of-business/" target="_blank" rel="noopener noreferrer">Denver Post / National Cyber Security Alliance — Small Business Closure After Cyberattack (2016)</a></li>
+<li><a href="https://www.lastpass.com/-/media/9FE0BF5DC473413B8AB4DF3BD8688295.pdf" target="_blank" rel="noopener noreferrer">LastPass — Psychology of Passwords Report (2020)</a></li>
+<li><a href="https://www.proofpoint.com/us/resources/threat-reports/state-of-phish" target="_blank" rel="noopener noreferrer">Proofpoint — State of the Phish Report (2026)</a></li>
+<li><a href="https://www.zdnet.com/article/microsoft-using-multi-factor-authentication-blocks-99-9-of-account-hacks/" target="_blank" rel="noopener noreferrer">Microsoft / ZDNet — MFA Blocks 99.9% of Automated Attacks (2019)</a></li>
+</ul>`,
   },
   "ia-empresas-chile-como-empezar": {
     title: "Inteligencia Artificial para empresas chilenas: Cómo empezar sin morir en el intento",
@@ -433,6 +458,13 @@ export const articles: Record<string, { title: string; description: string; date
 
 <p>La IA no es una moda pasajera. Es una herramienta de productividad comparable a la llegada de Excel o de internet. Las empresas que la adoptan ahora van a tener una ventaja competitiva real en 2027. Las que esperen "a que se estabilice" van a jugar con desventaja.</p>
 
-<p>En <a href="/servicios/ia">Innovatio-IT</a> diseñamos sistemas RAG, automatizaciones con IA e integraciones de LLMs pensados para empresas chilenas reales. Sin buzzwords, sin vendor lock-in, sin proyectos de 6 meses que nadie usa. Si tienes un proceso repetitivo que te quita tiempo, <a href="/contacto">cuéntanos</a> y te proponemos un piloto concreto en menos de 48 horas.</p>`,
+<p>En <a href="/servicios/ia">Innovatio-IT</a> diseñamos sistemas RAG, automatizaciones con IA e integraciones de LLMs pensados para empresas chilenas reales. Sin buzzwords, sin vendor lock-in, sin proyectos de 6 meses que nadie usa. Si tienes un proceso repetitivo que te quita tiempo, <a href="/contacto">cuéntanos</a> y te proponemos un piloto concreto en menos de 48 horas.</p>
+
+<h3 id="fuentes">Fuentes y referencias</h3>
+<ul>
+<li><a href="https://cyberstreams.com/blog/b/pwcs-20-40-percent-productivity-hack" target="_blank" rel="noopener noreferrer">PwC / CyberStreams — ChatGPT Productivity Gains: 20-40% (2024)</a></li>
+<li><a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/superagency-in-the-workplace-empowering-people-to-unlock-ais-full-potential-at-work" target="_blank" rel="noopener noreferrer">McKinsey — Superagency in the Workplace (2025)</a></li>
+<li><a href="https://www.uctoday.com/productivity-automation/ai-productivity-reports-2026/" target="_blank" rel="noopener noreferrer">UC Today — AI Productivity Reports 2026</a></li>
+</ul>`,
   },
 };
