@@ -5,7 +5,7 @@ module.exports = {
   changefreq: 'monthly',
   priority: 0.7,
   sitemapSize: 5000,
-  exclude: ['/privacidad'],
+  exclude: ['/robots.txt'],
   
   additionalPaths: async (config) => [
     { loc: '/', changefreq: 'weekly', priority: 1.0 },
@@ -23,6 +23,7 @@ module.exports = {
     { loc: '/blog/wordpress-vs-codigo-a-medida', priority: 0.7 },
     { loc: '/blog/ciberseguridad-pymes-chile', priority: 0.7 },
     { loc: '/blog/ia-empresas-chile-como-empezar', priority: 0.7 },
+    { loc: '/privacidad', priority: 0.5 },
   ],
 
   robotsTxtOptions: {
