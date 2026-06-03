@@ -6,7 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import FadeIn from "@/components/ui/FadeIn";
-import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
+import { useRecaptcha } from "@/hooks/useRecaptcha";
 
 const schema = z.object({
   name: z.string().min(2, "Ingresa al menos 2 caracteres"),
@@ -34,7 +34,9 @@ const errorStyle = {
 
 export default function Contact() {
   const [serverError, setServerError] = useState<string | null>(null);
-  const { executeRecaptcha } = useGoogleReCaptcha();
+  const { execute: executeRecaptcha } = useRecaptcha(
+    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
+  );
   const {
     register,
     handleSubmit,
@@ -45,19 +47,26 @@ export default function Contact() {
     setServerError(null);
 
     let token = "";
-    if (executeRecaptcha) {
+    try {
       token = await executeRecaptcha("contact_form");
+    } catch {
+      // reCAPTCHA no está listo o falló — enviamos sin token
+      token = "";
     }
 
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...data, recaptchaToken: token }),
-    });
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...data, recaptchaToken: token }),
+      });
 
-    if (!res.ok) {
-      const json = await res.json() as { error?: string };
-      setServerError(json.error ?? "Error al enviar. Intentá de nuevo.");
+      if (!res.ok) {
+        const json = await res.json() as { error?: string };
+        setServerError(json.error ?? "Error al enviar. Intentá de nuevo.");
+      }
+    } catch {
+      setServerError("Error de red. Verificá tu conexión e intentá de nuevo.");
     }
   }
 

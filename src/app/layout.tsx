@@ -5,7 +5,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
-import RecaptchaProvider from "@/components/ui/RecaptchaProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -121,13 +120,11 @@ export default function RootLayout({
         )}
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <RecaptchaProvider>
-          <Header />
-          {children}
-          <Footer />
-          <WhatsAppButton />
-          <Analytics />
-        </RecaptchaProvider>
+        <Header />
+        {children}
+        <Footer />
+        <WhatsAppButton />
+        <Analytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
