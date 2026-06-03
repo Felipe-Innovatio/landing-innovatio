@@ -27,6 +27,7 @@ const contactSchema = z.object({
   email: z.string().email(),
   service: z.string().min(1),
   message: z.string().min(10),
+  recaptchaToken: z.string().min(1),
 });
 
 export async function POST(request: NextRequest) {
@@ -45,7 +46,23 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ error: "Datos inválidos" }, { status: 400 });
   }
 
-  const { name, email, service, message } = parsed.data;
+  const { name, email, service, message, recaptchaToken } = parsed.data;
+
+  // Verify reCAPTCHA v3
+  const verifyRes = await fetch("https://www.google.com/recaptcha/api/siteverify", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: `secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptchaToken}`,
+  });
+
+  const verifyData = await verifyRes.json() as { success: boolean; score: number };
+
+  if (!verifyData.success || verifyData.score < 0.5) {
+    return NextResponse.json(
+      { error: "Verificación de seguridad fallida. Intenta nuevamente." },
+      { status: 400 }
+    );
+  }
 
   const serviceLabels: Record<string, string> = {
     desarrollo: "Diseño y Desarrollo",

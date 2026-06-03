@@ -1,3 +1,5 @@
+"use client";
+
 import FadeIn from "@/components/ui/FadeIn";
 
 const differentiators = [

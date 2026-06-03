@@ -1,3 +1,5 @@
+"use client";
+
 import FadeIn from "@/components/ui/FadeIn";
 
 interface Service {
@@ -69,12 +71,20 @@ export default function Services() {
           {services.map((service, i) => (
             <FadeIn key={service.title} delay={i * 80}>
               <div
-                className="card-hover p-8 rounded-2xl border h-full flex flex-col"
+                className="card-hover p-8 rounded-2xl border h-full flex flex-col transition-all duration-300 hover:-translate-y-1"
                 style={{
                   borderColor: service.accent ? "var(--accent-dim)" : "var(--border)",
                   background: service.accent
                     ? "linear-gradient(135deg, rgba(55,138,221,0.07) 0%, var(--surface) 100%)"
                     : "var(--surface)",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.borderColor = "rgba(55,138,221,0.3)";
+                  e.currentTarget.style.boxShadow = "0 8px 32px rgba(55,138,221,0.08)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.borderColor = service.accent ? "var(--accent-dim)" : "var(--border)";
+                  e.currentTarget.style.boxShadow = "none";
                 }}
               >
                 <div

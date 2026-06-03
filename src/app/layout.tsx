@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
+import RecaptchaProvider from "@/components/ui/RecaptchaProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -101,13 +102,30 @@ export default function RootLayout({
       <head>
         <meta name="theme-color" content="#06080f" />
         <link rel="manifest" href="/manifest.json" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        {process.env.NEXT_PUBLIC_GA_ID && (
+          <>
+            <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`} />
+            <script dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', { page_path: window.location.pathname });
+              `,
+            }} />
+          </>
+        )}
       </head>
       <body className="min-h-full flex flex-col" suppressHydrationWarning>
-        <Header />
-        {children}
-        <Footer />
-        <WhatsAppButton />
-        <Analytics />
+        <RecaptchaProvider>
+          <Header />
+          {children}
+          <Footer />
+          <WhatsAppButton />
+          <Analytics />
+        </RecaptchaProvider>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

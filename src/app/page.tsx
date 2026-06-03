@@ -1,14 +1,15 @@
-
+import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
-import TechStack from "@/components/sections/TechStack";
-import About from "@/components/sections/About";
-import Services from "@/components/sections/Services";
-import Process from "@/components/sections/Process";
-import CtaBanner from "@/components/sections/CtaBanner";
-import Pricing from "@/components/sections/Pricing";
-import Faq from "@/components/sections/Faq";
-import Contact from "@/components/sections/Contact";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
+const TechStack = dynamic(() => import("@/components/sections/TechStack"));
+const About = dynamic(() => import("@/components/sections/About"));
+const Services = dynamic(() => import("@/components/sections/Services"));
+const Process = dynamic(() => import("@/components/sections/Process"));
+const CtaBanner = dynamic(() => import("@/components/sections/CtaBanner"));
+const Pricing = dynamic(() => import("@/components/sections/Pricing"));
+const Faq = dynamic(() => import("@/components/sections/Faq"));
+const Contact = dynamic(() => import("@/components/sections/Contact"));
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -66,14 +67,30 @@ export default function Home() {
       />
       <main className="pt-16">
         <Hero />
-        <TechStack />
-        <About />
-        <Services />
-        <Process />
-        <CtaBanner />
-        <Pricing />
-        <Faq />
-        <Contact />
+        <ScrollReveal>
+          <TechStack />
+        </ScrollReveal>
+        <ScrollReveal>
+          <About />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Services />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Process />
+        </ScrollReveal>
+        <ScrollReveal>
+          <CtaBanner />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Pricing />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Faq />
+        </ScrollReveal>
+        <ScrollReveal>
+          <Contact />
+        </ScrollReveal>
       </main>
     </>
   );

@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import FadeIn from "@/components/ui/FadeIn";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const schema = z.object({
   name: z.string().min(2, "Ingresa al menos 2 caracteres"),
@@ -31,6 +32,7 @@ const errorStyle = {
 
 export default function Contact() {
   const [serverError, setServerError] = useState<string | null>(null);
+  const { executeRecaptcha } = useGoogleReCaptcha();
   const {
     register,
     handleSubmit,
@@ -39,10 +41,17 @@ export default function Contact() {
 
   async function onSubmit(data: FormData) {
     setServerError(null);
+    if (!executeRecaptcha) {
+      setServerError("Error de verificación de seguridad. Intenta de nuevo.");
+      return;
+    }
+
+    const token = await executeRecaptcha("contact_form");
+
     const res = await fetch("/api/contact", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(data),
+      body: JSON.stringify({ ...data, recaptchaToken: token }),
     });
 
     if (!res.ok) {

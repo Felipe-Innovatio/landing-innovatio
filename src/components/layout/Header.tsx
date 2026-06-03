@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Logo from "@/components/ui/Logo";
 
@@ -13,6 +13,32 @@ const navLinks = [
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("");
+
+  useEffect(() => {
+    const sections = ["servicios", "nosotros", "precios", "contacto"];
+
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + 100;
+
+      for (let i = sections.length - 1; i >= 0; i--) {
+        const element = document.getElementById(sections[i]);
+        if (element && element.offsetTop <= scrollPosition) {
+          setActiveSection(sections[i]);
+          return;
+        }
+      }
+      setActiveSection("");
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const getNavColor = (href: string) => {
+    const id = href.replace("/", "");
+    return activeSection === id ? "var(--accent)" : "var(--muted)";
+  };
 
   return (
     <header
@@ -29,9 +55,9 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className="text-sm transition-colors"
-              style={{ color: "var(--muted)" }}
+              style={{ color: getNavColor(link.href) }}
               onMouseEnter={(e) => (e.currentTarget.style.color = "var(--foreground)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = "var(--muted)")}
+              onMouseLeave={(e) => (e.currentTarget.style.color = getNavColor(link.href))}
             >
               {link.label}
             </Link>

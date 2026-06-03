@@ -1,3 +1,5 @@
+"use client";
+
 import {
   siReact, siNextdotjs, siTypescript, siTailwindcss, siVuedotjs,
   siNodedotjs, siPython, siFastapi, siGraphql, siSupabase,
