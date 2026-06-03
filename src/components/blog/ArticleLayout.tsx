@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { articles } from "@/app/blog/[slug]/ArticleContent";
+import { articles } from "@/app/blog/[slug]/articles";
 import ArticleContent from "@/app/blog/[slug]/ArticleContent";
 import TableOfContents from "./TableOfContents";
 import ShareBar from "./ShareBar";
