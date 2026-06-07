@@ -56,32 +56,30 @@ export default function TableOfContents({ contentHtml }: { contentHtml: string }
   if (headings.length === 0) return null;
 
   return (
-    <nav className="hidden lg:block">
-      <div className="sticky top-32">
-        <p className="text-xs font-semibold uppercase tracking-widest mb-4" style={{ color: "var(--muted)" }}>
-          En este artículo
-        </p>
-        <ul className="space-y-2 border-l pl-4" style={{ borderColor: "var(--border)" }}>
-          {headings.map((h) => (
-            <li key={h.id}>
-              <a
-                href={`#${h.id}`}
-                className="toc-link block text-sm leading-snug border-l-2 -ml-[17px] pl-4 transition-colors"
-                style={{
-                  color: activeId === h.id ? "var(--accent-light)" : "var(--muted)",
-                  borderLeftColor: activeId === h.id ? "var(--accent)" : "transparent",
-                }}
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById(h.id)?.scrollIntoView({ behavior: "smooth" });
-                }}
-              >
-                {h.text}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <nav className="sticky top-28">
+      <p className="text-[13px] font-semibold mb-4" style={{ color: "var(--muted)" }}>
+        En este artículo
+      </p>
+      <ul className="flex flex-col gap-2 pl-4" style={{ borderLeft: "2px solid var(--line)" }}>
+        {headings.map((h) => (
+          <li key={h.id}>
+            <a
+              href={`#${h.id}`}
+              className="block text-[13.5px] leading-snug transition-colors duration-200"
+              style={{
+                color: activeId === h.id ? "var(--accent)" : "var(--muted)",
+                fontWeight: activeId === h.id ? 600 : 400,
+              }}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(h.id)?.scrollIntoView({ behavior: "smooth" });
+              }}
+            >
+              {h.text}
+            </a>
+          </li>
+        ))}
+      </ul>
     </nav>
   );
 }

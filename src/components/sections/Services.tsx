@@ -1,128 +1,83 @@
-"use client";
-
-import FadeIn from "@/components/ui/FadeIn";
+import Link from "next/link";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 interface Service {
-  icon: string;
   title: string;
   description: string;
-  tags: string[];
-  accent?: boolean;
+  href: string;
 }
 
 const services: Service[] = [
   {
-    icon: "◈",
-    title: "Diseño y Desarrollo",
-    description:
-      "Tu idea, convertida en producto real. Desarrollamos sitios web, aplicaciones y plataformas a medida que funcionan, escalan y se ven bien.",
-    tags: ["React", "Next.js", "Node.js", "React Native"],
+    title: "Desarrollo web y apps",
+    description: "Sitios, plataformas y aplicaciones a medida que escalan contigo.",
+    href: "/servicios/desarrollo",
   },
   {
-    icon: "⬡",
-    title: "Hosting e Infraestructura",
-    description:
-      "Tu aplicación siempre disponible, sin que tengas que preocuparte por servidores. Gestionamos la nube para que tú te enfoques en el negocio.",
-    tags: ["AWS", "GCP", "Docker", "Kubernetes"],
-  },
-  {
-    icon: "◎",
-    title: "Consultoría Tecnológica",
-    description:
-      "¿No sabes por dónde empezar o sientes que tu tecnología no te acompaña? Te ayudamos a tomar las decisiones correctas antes de invertir.",
-    tags: ["Arquitectura", "Code Review", "Tech Strategy"],
-  },
-  {
-    icon: "⬢",
     title: "Ciberseguridad",
-    description:
-      "Un solo incidente puede costar más que años de prevención. Auditamos, reforzamos y protegemos tus sistemas antes de que sea tarde.",
-    tags: ["Pentesting", "SIEM", "Hardening", "ISO 27001"],
-    accent: true,
+    description: "Auditorías, pentesting y protección continua de tus sistemas.",
+    href: "/servicios/ciberseguridad",
   },
   {
-    icon: "◉",
-    title: "Inteligencia Artificial",
-    description:
-      "Automatiza lo repetitivo, potencia tu equipo y toma mejores decisiones con IA integrada en tus procesos — sin reemplazar a las personas.",
-    tags: ["LLMs", "RAG", "Automatización", "ML"],
-    accent: true,
+    title: "Inteligencia artificial",
+    description: "Automatización útil, integrada en tus procesos reales.",
+    href: "/servicios/ia",
+  },
+  {
+    title: "Cloud y hosting",
+    description: "Tu aplicación siempre disponible, sin que pienses en servidores.",
+    href: "/servicios/hosting",
+  },
+  {
+    title: "Consultoría",
+    description: "Decisiones técnicas claras antes de invertir.",
+    href: "/servicios/consultoria",
   },
 ];
 
 export default function Services() {
   return (
-    <section id="servicios" className="py-28 px-6">
-      <div className="max-w-6xl mx-auto">
-
-        <FadeIn className="mb-16">
-          <span className="text-xs font-semibold uppercase tracking-widest mb-4 block" style={{ color: "var(--accent)" }}>
-            Nuestros Servicios
-          </span>
+    <section id="servicios" className="py-24 md:py-32">
+      <div className="max-w-6xl mx-auto px-6">
+        <ScrollReveal>
           <h2
-            className="text-4xl md:text-5xl font-semibold leading-tight max-w-2xl"
-            style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
+            className="display font-bold mb-12 md:mb-16"
+            style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--foreground)" }}
           >
-            Soluciones para cada etapa de tu crecimiento
+            Lo que hacemos
           </h2>
-        </FadeIn>
+        </ScrollReveal>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div style={{ borderTop: "1px solid var(--line)" }}>
           {services.map((service, i) => (
-            <FadeIn key={service.title} delay={i * 80}>
-              <div
-                className="card-hover p-8 rounded-2xl border h-full flex flex-col transition-all duration-300 hover:-translate-y-1"
-                style={{
-                  borderColor: service.accent ? "var(--accent-dim)" : "var(--border)",
-                  background: service.accent
-                    ? "linear-gradient(135deg, rgba(55,138,221,0.07) 0%, var(--surface) 100%)"
-                    : "var(--surface)",
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.borderColor = "rgba(55,138,221,0.3)";
-                  e.currentTarget.style.boxShadow = "0 8px 32px rgba(55,138,221,0.08)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.borderColor = service.accent ? "var(--accent-dim)" : "var(--border)";
-                  e.currentTarget.style.boxShadow = "none";
-                }}
+            <ScrollReveal key={service.href} delay={i * 60}>
+              <Link
+                href={service.href}
+                className="service-row group flex flex-col md:flex-row md:items-center gap-2 md:gap-8 py-7 md:py-9"
+                style={{ borderBottom: "1px solid var(--line)", textDecoration: "none" }}
               >
-                <div
-                  className="text-2xl mb-6 w-11 h-11 flex items-center justify-center rounded-xl border"
-                  style={{
-                    borderColor: service.accent ? "var(--accent-dim)" : "var(--border)",
-                    color: "var(--accent)",
-                  }}
+                <h3
+                  className="row-title display font-bold flex-1"
+                  style={{ fontSize: "clamp(24px, 3.2vw, 40px)", color: "var(--foreground)" }}
                 >
-                  {service.icon}
-                </div>
-
-                <h3 className="text-lg font-semibold mb-3" style={{ color: "var(--foreground)" }}>
                   {service.title}
                 </h3>
-                <p className="text-sm leading-relaxed mb-6 flex-1" style={{ color: "var(--muted)" }}>
+                <p className="text-[15px] md:text-base md:max-w-sm md:flex-1" style={{ color: "var(--muted)" }}>
                   {service.description}
                 </p>
-
-                <div className="flex flex-wrap gap-2">
-                  {service.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs px-2.5 py-1 rounded-full border"
-                      style={{
-                        borderColor: service.accent ? "var(--accent-dim)" : "var(--border)",
-                        color: service.accent ? "var(--accent-light)" : "var(--muted)",
-                      }}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </FadeIn>
+                <span
+                  className="row-arrow hidden md:flex items-center justify-center w-12 h-12 rounded-full shrink-0"
+                  style={{ background: "var(--accent)", color: "var(--on-accent)" }}
+                  aria-hidden="true"
+                >
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M7 17L17 7M9 7h8v8" />
+                  </svg>
+                </span>
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
-
       </div>
     </section>
   );

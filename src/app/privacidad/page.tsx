@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import Logo from "@/components/ui/Logo";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",
@@ -53,67 +52,52 @@ const sections = [
 
 export default function PrivacidadPage() {
   return (
-    <>
-      <header
-        className="fixed top-0 left-0 right-0 z-50 border-b"
-        style={{ background: "rgba(8,8,8,0.95)", backdropFilter: "blur(12px)", borderColor: "var(--border)" }}
-      >
-        <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-          <Logo size="sm" href="/" />
-          <Link
-            href="/"
-            className="text-sm transition-opacity hover:opacity-70"
-            style={{ color: "var(--muted)" }}
-          >
-            ← Volver al inicio
-          </Link>
+    <main>
+      <section className="max-w-3xl mx-auto px-6 pt-36 md:pt-44 pb-20 md:pb-28">
+        <h1
+          className="display font-extrabold mb-3"
+          style={{ fontSize: "clamp(34px, 5vw, 64px)", color: "var(--foreground)" }}
+        >
+          Política de privacidad
+        </h1>
+        <p className="text-[14px] mb-12" style={{ color: "var(--muted)" }}>
+          Última actualización: mayo de 2026
+        </p>
+
+        <div className="flex flex-col gap-9">
+          {sections.map((section) => (
+            <div key={section.title}>
+              <h2 className="display text-lg font-bold mb-2.5" style={{ color: "var(--foreground)" }}>
+                {section.title}
+              </h2>
+              <p className="text-[15px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                {section.content}
+              </p>
+            </div>
+          ))}
         </div>
-      </header>
 
-      <main className="pt-28 pb-24 px-6">
-        <div className="max-w-3xl mx-auto">
-          <div className="mb-12">
-            <p className="text-sm font-semibold tracking-widest uppercase mb-3" style={{ color: "var(--accent)" }}>
-              Legal
-            </p>
-            <h1 className="text-3xl md:text-4xl font-bold mb-4" style={{ letterSpacing: "-0.02em" }}>
-              Política de Privacidad
-            </h1>
-            <p className="text-sm" style={{ color: "var(--muted)" }}>
-              Última actualización: mayo de 2026
-            </p>
-          </div>
-
-          <div className="flex flex-col gap-8">
-            {sections.map((section) => (
-              <div key={section.title}>
-                <h2 className="text-lg font-semibold mb-3" style={{ color: "var(--foreground)" }}>
-                  {section.title}
-                </h2>
-                <p className="leading-relaxed" style={{ color: "var(--muted)" }}>
-                  {section.content}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <div
-            className="mt-12 p-6 rounded-2xl"
-            style={{ border: "1px solid var(--border)", background: "var(--surface)" }}
-          >
-            <p className="text-sm" style={{ color: "var(--muted)" }}>
-              ¿Tienes preguntas sobre el tratamiento de tus datos?{" "}
-              <a
-                href="mailto:contacto@innovatio-it.com"
-                className="transition-opacity hover:opacity-70"
-                style={{ color: "var(--accent-light)" }}
-              >
-                contacto@innovatio-it.com
-              </a>
-            </p>
-          </div>
+        <div className="card p-6 mt-12">
+          <p className="text-[14px]" style={{ color: "var(--muted)" }}>
+            ¿Tienes preguntas sobre el tratamiento de tus datos?{" "}
+            <a
+              href="mailto:contacto@innovatio-it.com"
+              className="underline underline-offset-2 font-medium"
+              style={{ color: "var(--foreground)" }}
+            >
+              contacto@innovatio-it.com
+            </a>
+          </p>
         </div>
-      </main>
-    </>
+
+        <Link
+          href="/"
+          className="link-slide inline-block mt-10 text-[15px] font-semibold"
+          style={{ color: "var(--foreground)" }}
+        >
+          ← Volver al inicio
+        </Link>
+      </section>
+    </main>
   );
 }

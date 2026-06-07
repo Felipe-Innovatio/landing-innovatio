@@ -1,114 +1,98 @@
 "use client";
 
 import { useState } from "react";
-import FadeIn from "@/components/ui/FadeIn";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const faqs = [
   {
     question: "¿Con qué tipo de empresas trabajan?",
     answer:
-      "Trabajamos con startups, pymes y empresas en crecimiento que necesitan soluciones tecnológicas confiables. No tenemos restricción por tamaño — evaluamos cada proyecto según su alcance y objetivos.",
+      "Con startups, pymes y empresas en crecimiento. No filtramos por tamaño: evaluamos cada proyecto según su alcance y objetivos.",
   },
   {
-    question: "¿Cómo integran la inteligencia artificial en sus proyectos?",
+    question: "¿Cómo usan la inteligencia artificial en sus proyectos?",
     answer:
-      "Usamos herramientas de IA para acelerar el desarrollo, mejorar la calidad del código y automatizar procesos. Pero cada entregable pasa por revisión profesional humana — así garantizamos resultados confiables, sin los errores comunes del desarrollo exclusivamente asistido por IA.",
+      "La usamos para acelerar el desarrollo y automatizar procesos, y revisamos cada entrega antes de que llegue a producción. Así obtienes la velocidad de la IA sin sus errores típicos.",
   },
   {
     question: "¿Trabajan con clientes fuera de Chile?",
     answer:
-      "Sí. Al ser un equipo 100% remoto podemos trabajar con clientes en cualquier país de habla hispana y también en inglés.",
+      "Sí. Trabajamos 100% remoto con clientes de cualquier país de habla hispana, y también en inglés.",
   },
   {
     question: "¿Cuánto demora un proyecto típico?",
     answer:
-      "Depende del alcance. Un sitio web o MVP puede estar listo en 2 a 6 semanas. Proyectos más complejos se planifican en etapas con entregas intermedias para que siempre tengas visibilidad del avance.",
+      "Un sitio web o MVP puede estar listo en 2 a 6 semanas. Proyectos más grandes se planifican por etapas, con entregas intermedias para que veas el avance.",
   },
   {
-    question: "¿Cómo puedo empezar a trabajar con ustedes?",
+    question: "¿Cómo empezamos?",
     answer:
-      "Escríbenos por el formulario de contacto o al WhatsApp. Conversamos sobre tu proyecto sin compromiso, definimos el alcance y te entregamos una propuesta.",
+      "Escríbenos por el formulario o por WhatsApp. Conversamos sin compromiso, definimos el alcance y te enviamos una propuesta.",
   },
 ];
 
 export default function Faq() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section id="faq" className="py-24 px-6">
-      <div className="max-w-3xl mx-auto">
-        <FadeIn>
-          <div className="text-center mb-16">
-            <p className="text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "var(--accent)" }}>
-              FAQ
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Preguntas frecuentes
-            </h2>
-            <p style={{ color: "var(--muted)" }}>
-              Todo lo que necesitas saber antes de comenzar.
-            </p>
-          </div>
-        </FadeIn>
+    <section id="faq" className="py-24 md:py-32">
+      <div className="max-w-3xl mx-auto px-6">
+        <ScrollReveal>
+          <h2
+            className="display font-bold mb-10 md:mb-14 text-center"
+            style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--foreground)" }}
+          >
+            Preguntas frecuentes
+          </h2>
+        </ScrollReveal>
 
         <div className="flex flex-col gap-3">
-          {faqs.map((faq, index) => (
-            <FadeIn key={index} delay={index * 60}>
-              <div
-                style={{
-                  border: "1px solid var(--border)",
-                  borderRadius: "12px",
-                  overflow: "hidden",
-                  background: openIndex === index ? "var(--surface)" : "transparent",
-                  transition: "background 0.2s",
-                }}
-              >
-                <button
-                  onClick={() => toggle(index)}
-                  className="w-full text-left flex items-center justify-between gap-4 px-6 py-5"
-                  aria-expanded={openIndex === index}
-                  style={{ cursor: "pointer", background: "transparent", border: "none" }}
-                >
-                  <span className="font-medium text-lg" style={{ color: "var(--foreground)" }}>
-                    {faq.question}
-                  </span>
-                  <span
-                    style={{
-                      color: "var(--accent)",
-                      fontSize: "20px",
-                      flexShrink: 0,
-                      transform: openIndex === index ? "rotate(45deg)" : "rotate(0deg)",
-                      transition: "transform 0.2s",
-                      display: "inline-block",
-                    }}
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index;
+            return (
+              <ScrollReveal key={faq.question} delay={index * 60}>
+                <div className="card overflow-hidden">
+                  <button
+                    onClick={() => toggle(index)}
+                    className="w-full flex items-center justify-between gap-4 px-6 py-5 text-left"
+                    aria-expanded={isOpen}
+                    style={{ cursor: "pointer", background: "transparent", border: "none" }}
                   >
-                    +
-                  </span>
-                </button>
+                    <span className="text-[16px] font-semibold" style={{ color: "var(--foreground)" }}>
+                      {faq.question}
+                    </span>
+                    <span
+                      className="flex items-center justify-center w-8 h-8 rounded-full shrink-0 transition-transform duration-300"
+                      style={{
+                        background: isOpen ? "var(--accent)" : "var(--surface-2)",
+                        color: isOpen ? "var(--on-accent)" : "var(--foreground)",
+                        transform: isOpen ? "rotate(45deg)" : "rotate(0deg)",
+                      }}
+                      aria-hidden="true"
+                    >
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+                        <path d="M12 5v14M5 12h14" />
+                      </svg>
+                    </span>
+                  </button>
 
-                <div
-                  style={{
-                    maxHeight: openIndex === index ? "300px" : "0px",
-                    overflow: "hidden",
-                    transition: "max-height 0.3s ease",
-                  }}
-                >
-                  <p
-                    className="px-6 pb-5 text-base leading-relaxed"
-                    style={{ color: "var(--muted)" }}
+                  <div
+                    className="overflow-hidden transition-all duration-300 ease-out"
+                    style={{ maxHeight: isOpen ? "240px" : "0px" }}
                   >
-                    {faq.answer}
-                  </p>
+                    <p className="px-6 pb-6 text-[15px] leading-relaxed" style={{ color: "var(--muted)" }}>
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </FadeIn>
-          ))}
+              </ScrollReveal>
+            );
+          })}
         </div>
-
       </div>
     </section>
   );

@@ -1,15 +1,16 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
-import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const TechStack = dynamic(() => import("@/components/sections/TechStack"), { ssr: true });
-const About = dynamic(() => import("@/components/sections/About"), { ssr: true });
 const Services = dynamic(() => import("@/components/sections/Services"), { ssr: true });
+const About = dynamic(() => import("@/components/sections/About"), { ssr: true });
 const Process = dynamic(() => import("@/components/sections/Process"), { ssr: true });
-const CtaBanner = dynamic(() => import("@/components/sections/CtaBanner"), { ssr: true });
 const Pricing = dynamic(() => import("@/components/sections/Pricing"), { ssr: true });
 const Faq = dynamic(() => import("@/components/sections/Faq"), { ssr: true });
+const CtaBanner = dynamic(() => import("@/components/sections/CtaBanner"), { ssr: true });
 const Contact = dynamic(() => import("@/components/sections/Contact"), { ssr: true });
+// Pendiente de activar cuando haya testimonios reales:
+// const Testimonials = dynamic(() => import("@/components/sections/Testimonials"), { ssr: true });
 
 const faqJsonLd = {
   "@context": "https://schema.org",
@@ -20,15 +21,15 @@ const faqJsonLd = {
       name: "¿Con qué tipo de empresas trabajan?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Trabajamos con startups, pymes y empresas en crecimiento que necesitan soluciones tecnológicas confiables. No tenemos restricción por tamaño — evaluamos cada proyecto según su alcance y objetivos.",
+        text: "Con startups, pymes y empresas en crecimiento. No filtramos por tamaño: evaluamos cada proyecto según su alcance y objetivos.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cómo integran la inteligencia artificial en sus proyectos?",
+      name: "¿Cómo usan la inteligencia artificial en sus proyectos?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Usamos herramientas de IA para acelerar el desarrollo, mejorar la calidad del código y automatizar procesos. Pero cada entregable pasa por revisión profesional humana — así garantizamos resultados confiables, sin los errores comunes del desarrollo exclusivamente asistido por IA.",
+        text: "La usamos para acelerar el desarrollo y automatizar procesos, y revisamos cada entrega antes de que llegue a producción. Así obtienes la velocidad de la IA sin sus errores típicos.",
       },
     },
     {
@@ -36,7 +37,7 @@ const faqJsonLd = {
       name: "¿Trabajan con clientes fuera de Chile?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Sí. Al ser un equipo 100% remoto podemos trabajar con clientes en cualquier país de habla hispana y también en inglés.",
+        text: "Sí. Trabajamos 100% remoto con clientes de cualquier país de habla hispana, y también en inglés.",
       },
     },
     {
@@ -44,15 +45,15 @@ const faqJsonLd = {
       name: "¿Cuánto demora un proyecto típico?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Depende del alcance. Un sitio web o MVP puede estar listo en 2 a 6 semanas. Proyectos más complejos se planifican en etapas con entregas intermedias para que siempre tengas visibilidad del avance.",
+        text: "Un sitio web o MVP puede estar listo en 2 a 6 semanas. Proyectos más grandes se planifican por etapas, con entregas intermedias para que veas el avance.",
       },
     },
     {
       "@type": "Question",
-      name: "¿Cómo puedo empezar a trabajar con ustedes?",
+      name: "¿Cómo empezamos?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Escríbenos por el formulario de contacto o al WhatsApp. Conversamos sobre tu proyecto sin compromiso, definimos el alcance y te entregamos una propuesta.",
+        text: "Escríbenos por el formulario o por WhatsApp. Conversamos sin compromiso, definimos el alcance y te enviamos una propuesta.",
       },
     },
   ],
@@ -65,32 +66,18 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <main className="pt-16">
+      <main>
         <Hero />
-        <ScrollReveal>
-          <TechStack />
-        </ScrollReveal>
-        <ScrollReveal>
-          <About />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Services />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Process />
-        </ScrollReveal>
-        <ScrollReveal>
-          <CtaBanner />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Pricing />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Faq />
-        </ScrollReveal>
-        <ScrollReveal>
-          <Contact />
-        </ScrollReveal>
+        <TechStack />
+        <Services />
+        <About />
+        <Process />
+        <Pricing />
+        {/* Pendiente de activar cuando haya testimonios reales:
+        <Testimonials /> */}
+        <Faq />
+        <CtaBanner />
+        <Contact />
       </main>
     </>
   );

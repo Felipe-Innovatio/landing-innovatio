@@ -1,24 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Bricolage_Grotesque, Hanken_Grotesk } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import WhatsAppButton from "@/components/ui/WhatsAppButton";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const bricolage = Bricolage_Grotesque({
+  variable: "--font-bricolage",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
   subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://innovatio-it.com";
 const description =
-  "Innovatio-IT es un equipo de ingenieros informáticos chilenos, expertos en distintas áreas tecnológicas y potenciados con inteligencia artificial. Combinamos las herramientas más avanzadas con rigor profesional para entregar soluciones confiables y de alto impacto.";
+  "Estudio de software en Santiago de Chile. Hacemos webs, plataformas, ciberseguridad e IA para empresas de toda Latinoamérica. Respondemos en menos de 24 horas.";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -73,12 +75,12 @@ export const metadata: Metadata = {
     locale: "es_CL",
     url: siteUrl,
     siteName: "Innovatio-IT",
-    title: "Innovatio-IT — Tecnología que transforma tu negocio",
+    title: "Innovatio-IT — Estudio de software en Santiago",
     description,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Innovatio-IT — Tecnología que transforma tu negocio",
+    title: "Innovatio-IT — Estudio de software en Santiago",
     description,
   },
   robots: {
@@ -96,10 +98,10 @@ export default function RootLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${bricolage.variable} ${hanken.variable} h-full antialiased`}
     >
       <head>
-        <meta name="theme-color" content="#06080f" />
+        <meta name="theme-color" content="#F4F1EA" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

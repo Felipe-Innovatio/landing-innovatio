@@ -8,92 +8,83 @@ const navLinks = [
   { label: "Servicios", href: "/servicios" },
   { label: "Nosotros", href: "/nosotros" },
   { label: "Precios", href: "/precios" },
-  { label: "Contacto", href: "/contacto" },
+  { label: "Blog", href: "/blog" },
 ];
 
 export default function Header() {
   const [open, setOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState("");
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const sections = ["servicios", "nosotros", "precios", "contacto"];
-
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100;
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const element = document.getElementById(sections[i]);
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i]);
-          return;
-        }
-      }
-      setActiveSection("");
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 12);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const getNavColor = (href: string) => {
-    const id = href.replace("/", "");
-    return activeSection === id ? "var(--accent)" : "var(--muted)";
-  };
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 border-b"
-      style={{ background: "rgba(8,8,8,0.85)", backdropFilter: "blur(12px)", borderColor: "var(--border)" }}
+      className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
+      style={{
+        background: scrolled || open ? "rgba(244,241,234,0.92)" : "transparent",
+        backdropFilter: scrolled || open ? "blur(10px)" : "none",
+        borderBottom: scrolled || open ? "1px solid var(--line)" : "1px solid transparent",
+      }}
     >
-      <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-6 h-[72px] flex items-center justify-between">
         <Logo size="sm" />
 
-        {/* Desktop nav */}
+        {/* Nav desktop */}
         <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm transition-colors"
-              style={{ color: getNavColor(link.href) }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = "var(--foreground)")}
-              onMouseLeave={(e) => (e.currentTarget.style.color = getNavColor(link.href))}
+              className="link-slide text-[15px] font-medium"
+              style={{ color: "var(--foreground)" }}
             >
               {link.label}
             </Link>
           ))}
+          <Link href="/contacto" className="pill" style={{ padding: "11px 22px", fontSize: "14px" }}>
+            Hablemos
+          </Link>
         </nav>
 
-        {/* CTA */}
-        <Link
-          href="/contacto"
-          className="hidden md:inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium transition-opacity hover:opacity-80"
-          style={{ background: "var(--accent)", color: "#fff" }}
-        >
-          Contáctanos
-        </Link>
-
-        {/* Mobile hamburger */}
+        {/* Botón móvil */}
         <button
-          className="md:hidden flex flex-col gap-1.5 p-2"
+          className="md:hidden flex flex-col justify-center items-center w-10 h-10 gap-1.5"
           onClick={() => setOpen(!open)}
           aria-label="Menú"
+          aria-expanded={open}
         >
-          <span className="block w-5 h-0.5" style={{ background: "var(--foreground)", transition: "transform 0.2s", transform: open ? "rotate(45deg) translateY(8px)" : "" }} />
-          <span className="block w-5 h-0.5" style={{ background: "var(--foreground)", opacity: open ? 0 : 1, transition: "opacity 0.2s" }} />
-          <span className="block w-5 h-0.5" style={{ background: "var(--foreground)", transition: "transform 0.2s", transform: open ? "rotate(-45deg) translateY(-8px)" : "" }} />
+          <span
+            className="block w-6 h-[2px] rounded transition-transform duration-300"
+            style={{ background: "var(--foreground)", transform: open ? "rotate(45deg) translateY(5.5px)" : "none" }}
+          />
+          <span
+            className="block w-6 h-[2px] rounded transition-opacity duration-300"
+            style={{ background: "var(--foreground)", opacity: open ? 0 : 1 }}
+          />
+          <span
+            className="block w-6 h-[2px] rounded transition-transform duration-300"
+            style={{ background: "var(--foreground)", transform: open ? "rotate(-45deg) translateY(-5.5px)" : "none" }}
+          />
         </button>
       </div>
 
-      {/* Mobile menu */}
-      {open && (
-        <div className="md:hidden border-t px-6 py-4 flex flex-col gap-4" style={{ borderColor: "var(--border)", background: "var(--background)" }}>
+      {/* Menú móvil */}
+      <div
+        className="md:hidden overflow-hidden transition-all duration-300"
+        style={{ maxHeight: open ? "320px" : "0px" }}
+      >
+        <nav className="px-6 pb-6 pt-2 flex flex-col gap-1">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-sm"
-              style={{ color: "var(--muted)" }}
+              className="display text-[26px] font-bold py-1.5"
+              style={{ color: "var(--foreground)" }}
               onClick={() => setOpen(false)}
             >
               {link.label}
@@ -101,14 +92,13 @@ export default function Header() {
           ))}
           <Link
             href="/contacto"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-full text-sm font-medium"
-            style={{ background: "var(--accent)", color: "#fff" }}
+            className="pill self-start mt-3"
             onClick={() => setOpen(false)}
           >
-            Contáctanos
+            Hablemos
           </Link>
-        </div>
-      )}
+        </nav>
+      </div>
     </header>
   );
 }

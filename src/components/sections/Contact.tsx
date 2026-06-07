@@ -1,257 +1,53 @@
-"use client";
-
-import { useState } from "react";
-import Link from "next/link";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import FadeIn from "@/components/ui/FadeIn";
-import { useRecaptcha } from "@/hooks/useRecaptcha";
-
-const schema = z.object({
-  name: z.string().min(2, "Ingresa al menos 2 caracteres"),
-  email: z.string().email("Email inválido"),
-  service: z.string().min(1, "Selecciona un servicio"),
-  message: z.string().min(10, "El mensaje debe tener al menos 10 caracteres"),
-  privacy: z.boolean().refine((val) => val === true, {
-    message: "Debes aceptar la política de privacidad",
-  }),
-});
-
-type FormData = z.infer<typeof schema>;
-
-const inputStyle = {
-  borderColor: "var(--border)",
-  color: "var(--foreground)",
-  background: "transparent",
-};
-
-const errorStyle = {
-  color: "#f87171",
-  fontSize: "11px",
-  marginTop: "4px",
-};
+import ContactForm from "./ContactForm";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 export default function Contact() {
-  const [serverError, setServerError] = useState<string | null>(null);
-  const { execute: executeRecaptcha } = useRecaptcha(
-    process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY
-  );
-  const {
-    register,
-    handleSubmit,
-    formState: { errors, isSubmitting, isSubmitSuccessful },
-  } = useForm<FormData>({ resolver: zodResolver(schema) });
-
-  async function onSubmit(data: FormData) {
-    setServerError(null);
-
-    let token = "";
-    try {
-      token = await executeRecaptcha("contact_form");
-    } catch {
-      // reCAPTCHA no está listo o falló — enviamos sin token
-      token = "";
-    }
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, recaptchaToken: token }),
-      });
-
-      if (!res.ok) {
-        const json = await res.json() as { error?: string };
-        setServerError(json.error ?? "Error al enviar. Intentá de nuevo.");
-      }
-    } catch {
-      setServerError("Error de red. Verificá tu conexión e intentá de nuevo.");
-    }
-  }
-
   return (
-    <section id="contacto" className="py-28 px-6">
-      <div className="max-w-2xl mx-auto text-center mb-12">
-        <FadeIn>
-          <span className="text-xs font-semibold uppercase tracking-widest mb-4 block" style={{ color: "var(--accent)" }}>
-            Contacto
-          </span>
-          <h2
-            className="text-4xl md:text-5xl font-semibold leading-tight mb-4"
-            style={{ color: "var(--foreground)", letterSpacing: "-0.02em" }}
-          >
-            ¿Tienes un proyecto?
-          </h2>
-          <p style={{ color: "var(--muted)" }}>
-            Cuéntanos de qué se trata y te respondemos en menos de 24 horas.
-          </p>
-        </FadeIn>
-      </div>
-
-      <FadeIn className="max-w-xl mx-auto" delay={100}>
-        {isSubmitSuccessful ? (
-          <div
-            className="p-10 rounded-2xl border text-center"
-            style={{ borderColor: "var(--border)", background: "var(--surface)" }}
-          >
-            <p
-              className="text-xs font-semibold uppercase tracking-widest mb-3"
-              style={{ color: "var(--accent)" }}
-            >
-              Enviado
-            </p>
-            <p className="font-semibold text-lg mb-2" style={{ color: "var(--foreground)" }}>
-              ¡Mensaje recibido!
-            </p>
-            <p className="text-sm" style={{ color: "var(--muted)" }}>
-              Te respondemos a <span style={{ color: "var(--accent-light)" }}>contacto@innovatio-it.com</span> a la brevedad.
-            </p>
-          </div>
-        ) : (
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            noValidate
-            className="p-8 rounded-2xl border flex flex-col gap-5"
-            style={{ borderColor: "var(--border)", background: "var(--surface)" }}
-          >
-            <div className="grid sm:grid-cols-2 gap-5">
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium" style={{ color: "var(--muted)" }}>
-                  Nombre
-                </label>
-                <input
-                  type="text"
-                  placeholder="Tu nombre"
-                  {...register("name")}
-                  className="px-4 py-3 rounded-xl border text-sm outline-none bg-transparent"
-                  style={{ ...inputStyle, borderColor: errors.name ? "#f87171" : "var(--border)" }}
-                />
-                {errors.name && <span style={errorStyle}>{errors.name.message}</span>}
-              </div>
-
-              <div className="flex flex-col gap-1.5">
-                <label className="text-xs font-medium" style={{ color: "var(--muted)" }}>
-                  Email
-                </label>
-                <input
-                  type="email"
-                  placeholder="tu@email.com"
-                  {...register("email")}
-                  className="px-4 py-3 rounded-xl border text-sm outline-none bg-transparent"
-                  style={{ ...inputStyle, borderColor: errors.email ? "#f87171" : "var(--border)" }}
-                />
-                {errors.email && <span style={errorStyle}>{errors.email.message}</span>}
-              </div>
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium" style={{ color: "var(--muted)" }}>
-                Servicio de interés
-              </label>
-              <select
-                {...register("service")}
-                className="px-4 py-3 rounded-xl border text-sm outline-none"
-                style={{
-                  borderColor: errors.service ? "#f87171" : "var(--border)",
-                  color: "var(--muted)",
-                  background: "var(--surface)",
-                }}
+    <section id="contacto" className="py-24 md:py-32" style={{ background: "var(--surface-2)" }}>
+      <div className="max-w-6xl mx-auto px-6">
+        <div className="grid lg:grid-cols-12 gap-12 items-start">
+          <div className="lg:col-span-5">
+            <ScrollReveal>
+              <h2
+                className="display font-bold"
+                style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--foreground)" }}
               >
-                <option value="">Seleccioná un servicio</option>
-                <option value="desarrollo">Diseño y Desarrollo</option>
-                <option value="hosting">Hosting e Infraestructura</option>
-                <option value="consultoria">Consultoría Tecnológica</option>
-                <option value="ciberseguridad">Ciberseguridad</option>
-                <option value="ia">Inteligencia Artificial</option>
-              </select>
-              {errors.service && <span style={errorStyle}>{errors.service.message}</span>}
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label className="text-xs font-medium" style={{ color: "var(--muted)" }}>
-                Mensaje
-              </label>
-              <textarea
-                rows={4}
-                placeholder="Cuéntanos sobre tu proyecto..."
-                {...register("message")}
-                className="px-4 py-3 rounded-xl border text-sm outline-none resize-none bg-transparent"
-                style={{ ...inputStyle, borderColor: errors.message ? "#f87171" : "var(--border)" }}
-              />
-              {errors.message && <span style={errorStyle}>{errors.message.message}</span>}
-            </div>
-
-            <div className="flex flex-col gap-1.5">
-              <label className="flex items-start gap-3 cursor-pointer">
-                <input
-                  type="checkbox"
-                  {...register("privacy")}
-                  className="mt-0.5 flex-shrink-0"
-                  style={{ accentColor: "var(--accent)", width: "16px", height: "16px" }}
-                />
-                <span className="text-xs leading-relaxed" style={{ color: "var(--muted)" }}>
-                  He leído y acepto la{" "}
-                  <Link
-                    href="/privacidad"
-                    target="_blank"
-                    className="underline transition-opacity hover:opacity-70"
-                    style={{ color: "var(--accent-light)" }}
-                  >
-                    Política de Privacidad
-                  </Link>
-                  {" "}y autorizo el tratamiento de mis datos personales para gestionar mi consulta.
-                </span>
-              </label>
-              {errors.privacy && <span style={errorStyle}>{errors.privacy.message}</span>}
-            </div>
-
-            <p className="text-xs text-center leading-relaxed" style={{ color: "var(--muted)" }}>
-              Este sitio está protegido por reCAPTCHA y se aplican la{" "}
-              <a
-                href="https://policies.google.com/privacy"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition-opacity hover:opacity-70"
-                style={{ color: "var(--accent-light)" }}
-              >
-                Política de Privacidad
-              </a>{" "}
-              y los{" "}
-              <a
-                href="https://policies.google.com/terms"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline transition-opacity hover:opacity-70"
-                style={{ color: "var(--accent-light)" }}
-              >
-                Términos de Servicio
-              </a>{" "}
-              de Google.
-            </p>
-
-            {serverError && (
-              <p className="text-sm text-center py-2 px-4 rounded-lg" style={{ background: "rgba(248,113,113,0.1)", color: "#f87171" }}>
-                {serverError}
+                Cuéntanos qué necesitas
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={100}>
+              <p className="mt-5 text-base md:text-lg leading-relaxed max-w-md" style={{ color: "var(--muted)" }}>
+                Respondemos en menos de 24 horas con una propuesta concreta.
+                Sin compromiso y sin spam.
               </p>
-            )}
+              <div className="mt-8 flex flex-col gap-3">
+                <a
+                  href="mailto:contacto@innovatio-it.com"
+                  className="link-slide self-start text-[16px] font-semibold"
+                  style={{ color: "var(--foreground)" }}
+                >
+                  contacto@innovatio-it.com
+                </a>
+                <a
+                  href="https://wa.me/56956379853"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="link-slide self-start text-[16px] font-semibold"
+                  style={{ color: "var(--foreground)" }}
+                >
+                  WhatsApp +56 9 5637 9853
+                </a>
+              </div>
+            </ScrollReveal>
+          </div>
 
-            <button
-              type="submit"
-              disabled={isSubmitting}
-              className="w-full py-3.5 rounded-full font-medium text-sm transition-opacity"
-              style={{
-                background: "var(--accent)",
-                color: "#fff",
-                opacity: isSubmitting ? 0.6 : 1,
-                cursor: isSubmitting ? "not-allowed" : "pointer",
-              }}
-            >
-              {isSubmitting ? "Enviando..." : "Enviar mensaje"}
-            </button>
-          </form>
-        )}
-      </FadeIn>
+          <div className="lg:col-span-7">
+            <ScrollReveal delay={150}>
+              <ContactForm />
+            </ScrollReveal>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

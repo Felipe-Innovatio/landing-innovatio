@@ -1,11 +1,11 @@
 {
   "name": "Innovatio-IT",
   "short_name": "Innovatio-IT",
-  "description": "Desarrollo de Software, Ciberseguridad e IA en Chile",
+  "description": "Estudio de software en Santiago de Chile",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#06080f",
-  "theme_color": "#06080f",
+  "background_color": "#F4F1EA",
+  "theme_color": "#F4F1EA",
   "icons": [
     {
       "src": "/favicon.ico",

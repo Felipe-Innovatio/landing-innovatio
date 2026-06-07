@@ -14,16 +14,17 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#06080f",
-          borderRadius: 7,
+          background: "#F4F1EA",
+          borderRadius: 8,
         }}
       >
-        <svg width="22" height="22" viewBox="0 0 44 44" fill="none">
-          <rect x="1" y="1" width="42" height="42" rx="9" stroke="#378ADD" strokeWidth="2.5" fill="rgba(55,138,221,0.1)" />
-          <circle cx="22" cy="11" r="3.5" fill="#378ADD" />
-          <line x1="22" y1="17" x2="22" y2="33" stroke="#378ADD" strokeWidth="3" strokeLinecap="round" />
-          <line x1="13" y1="17" x2="31" y2="17" stroke="#85B7EB" strokeWidth="2" strokeLinecap="round" />
-          <line x1="13" y1="33" x2="31" y2="33" stroke="#85B7EB" strokeWidth="2" strokeLinecap="round" />
+        <svg width="24" height="24" viewBox="0 0 100 100" fill="none">
+          <path
+            d="M50 8v84M14 29l72 42M14 71l72-42"
+            stroke="#1E3AFF"
+            strokeWidth="14"
+            strokeLinecap="round"
+          />
         </svg>
       </div>
     ),

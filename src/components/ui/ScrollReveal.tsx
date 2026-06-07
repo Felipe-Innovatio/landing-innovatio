@@ -5,54 +5,37 @@ import { ReactNode, useEffect, useRef, useState } from "react";
 interface ScrollRevealProps {
   children: ReactNode;
   className?: string;
+  /** retraso en ms para escalonar elementos */
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
   duration?: number;
 }
 
-export default function ScrollReveal({
-  children,
-  className = "",
-  delay = 0,
-  direction = "up",
-  duration = 600,
-}: ScrollRevealProps) {
+export default function ScrollReveal({ children, className = "", delay = 0 }: ScrollRevealProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [isVisible, setIsVisible] = useState(false);
-
-  const getInitialTransform = () => {
-    switch (direction) {
-      case "up": return "translateY(32px)";
-      case "down": return "translateY(-32px)";
-      case "left": return "translateX(32px)";
-      case "right": return "translateX(-32px)";
-    }
-  };
+  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          setVisible(true);
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
     );
-    if (ref.current) observer.observe(ref.current);
+    observer.observe(el);
     return () => observer.disconnect();
   }, []);
 
   return (
     <div
       ref={ref}
-      className={className}
-      style={{
-        opacity: isVisible ? 1 : 0,
-        transform: isVisible ? "translate(0)" : getInitialTransform(),
-        transition: `opacity ${duration}ms ease-out ${delay}ms, transform ${duration}ms ease-out ${delay}ms`,
-        willChange: "opacity, transform",
-      }}
+      className={`reveal ${visible ? "in-view" : ""} ${className}`}
+      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
     >
       {children}
     </div>

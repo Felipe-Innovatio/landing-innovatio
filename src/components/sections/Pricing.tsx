@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import FadeIn from "@/components/ui/FadeIn";
+import ScrollReveal from "@/components/ui/ScrollReveal";
 
 interface PriceTier {
   name: string;
@@ -16,7 +16,6 @@ interface PriceTier {
 interface ServicePricing {
   id: string;
   label: string;
-  icon: string;
   tiers: PriceTier[];
 }
 
@@ -24,7 +23,6 @@ const services: ServicePricing[] = [
   {
     id: "desarrollo",
     label: "Desarrollo",
-    icon: "◈",
     tiers: [
       {
         name: "Starter",
@@ -35,7 +33,7 @@ const services: ServicePricing[] = [
           "Responsive (móvil + desktop)",
           "SEO técnico básico",
           "Formulario de contacto",
-          "Entrega en 2–3 semanas",
+          "Entrega en 2 a 3 semanas",
         ],
       },
       {
@@ -47,7 +45,7 @@ const services: ServicePricing[] = [
           "CMS para gestión de contenido",
           "Blog y SEO avanzado",
           "Integraciones (Analytics, CRM)",
-          "Entrega en 3–6 semanas",
+          "Entrega en 3 a 6 semanas",
           "1 mes de soporte incluido",
         ],
         highlight: true,
@@ -62,7 +60,7 @@ const services: ServicePricing[] = [
           "Base de datos y API propia",
           "Panel de administración",
           "Integraciones avanzadas",
-          "MVP en 8–16 semanas",
+          "MVP en 8 a 16 semanas",
         ],
       },
     ],
@@ -70,7 +68,6 @@ const services: ServicePricing[] = [
   {
     id: "hosting",
     label: "Hosting",
-    icon: "⬡",
     tiers: [
       {
         name: "Básico",
@@ -119,7 +116,6 @@ const services: ServicePricing[] = [
   {
     id: "consultoria",
     label: "Consultoría",
-    icon: "◎",
     tiers: [
       {
         name: "Sesión",
@@ -166,7 +162,6 @@ const services: ServicePricing[] = [
   {
     id: "ciberseguridad",
     label: "Ciberseguridad",
-    icon: "⬢",
     tiers: [
       {
         name: "Básico",
@@ -177,7 +172,7 @@ const services: ServicePricing[] = [
           "Reporte de vulnerabilidades",
           "Clasificación por nivel de riesgo",
           "Recomendaciones de mitigación",
-          "Entrega en 2–5 días hábiles",
+          "Entrega en 2 a 5 días hábiles",
         ],
       },
       {
@@ -190,7 +185,7 @@ const services: ServicePricing[] = [
           "Informe técnico detallado",
           "Informe ejecutivo para directivos",
           "Plan de remediación",
-          "Entrega en 5–10 días hábiles",
+          "Entrega en 5 a 10 días hábiles",
         ],
         highlight: true,
       },
@@ -212,7 +207,6 @@ const services: ServicePricing[] = [
   {
     id: "ia",
     label: "IA",
-    icon: "◉",
     tiers: [
       {
         name: "Estrategia",
@@ -259,142 +253,131 @@ const services: ServicePricing[] = [
 
 export default function Pricing() {
   const [active, setActive] = useState("desarrollo");
-
-  const current = services.find((s) => s.id === active)!;
+  const current = services.find((s) => s.id === active) ?? services[0];
 
   return (
-    <section id="precios" className="py-24 px-6" style={{ background: "var(--surface)" }}>
-      <div className="max-w-6xl mx-auto">
-
-        <FadeIn>
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold tracking-widest uppercase mb-4" style={{ color: "var(--accent)" }}>
-              Precios
-            </p>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ letterSpacing: "-0.02em" }}>
-              Inversión clara, resultados reales
+    <section id="precios" className="py-24 md:py-32" style={{ background: "var(--surface-2)" }}>
+      <div className="max-w-6xl mx-auto px-6">
+        <ScrollReveal>
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-12">
+            <h2
+              className="display font-bold"
+              style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--foreground)" }}
+            >
+              Precios claros
             </h2>
-            <p className="max-w-xl mx-auto" style={{ color: "var(--muted)" }}>
-              Precios referenciales en pesos chilenos. Cada proyecto se cotiza según su alcance real — sin sorpresas.
+            <p className="text-[15px] max-w-sm" style={{ color: "var(--muted)" }}>
+              Valores de referencia en pesos chilenos. Cada proyecto se cotiza
+              según su alcance, por escrito.
             </p>
           </div>
-        </FadeIn>
+        </ScrollReveal>
 
-        {/* Service tabs */}
-        <FadeIn delay={80}>
-          <div className="flex flex-wrap justify-center gap-2 mb-10">
-            {services.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => setActive(s.id)}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-full text-sm font-medium transition-all"
-                style={{
-                  background: active === s.id ? "var(--accent)" : "transparent",
-                  color: active === s.id ? "#fff" : "var(--muted)",
-                  border: `1px solid ${active === s.id ? "var(--accent)" : "var(--border)"}`,
-                  cursor: "pointer",
-                }}
-              >
-                <span>{s.icon}</span>
-                {s.label}
-              </button>
-            ))}
+        <ScrollReveal delay={80}>
+          <div className="flex flex-wrap gap-2 mb-10" role="tablist" aria-label="Seleccionar servicio">
+            {services.map((s) => {
+              const isActive = active === s.id;
+              return (
+                <button
+                  key={s.id}
+                  role="tab"
+                  aria-selected={isActive}
+                  onClick={() => setActive(s.id)}
+                  className="text-[14px] font-semibold px-5 py-2.5 rounded-full transition-all duration-200"
+                  style={{
+                    background: isActive ? "var(--foreground)" : "var(--surface)",
+                    color: isActive ? "var(--background)" : "var(--muted)",
+                    border: "1px solid " + (isActive ? "var(--foreground)" : "var(--line)"),
+                    cursor: "pointer",
+                  }}
+                >
+                  {s.label}
+                </button>
+              );
+            })}
           </div>
-        </FadeIn>
+        </ScrollReveal>
 
-        {/* Pricing cards */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-5">
           {current.tiers.map((tier, i) => (
-            <FadeIn key={tier.name} delay={i * 80}>
+            <ScrollReveal key={current.id + "-" + tier.name} delay={i * 80}>
               <div
-                className="relative flex flex-col rounded-2xl p-8 h-full"
-                style={{
-                  border: tier.highlight
-                    ? "2px solid var(--accent)"
-                    : "1px solid var(--border)",
-                  background: tier.highlight
-                    ? "linear-gradient(135deg, rgba(55,138,221,0.08) 0%, var(--background) 100%)"
-                    : "var(--background)",
-                }}
+                className="card card-hover relative flex flex-col p-7 h-full"
+                style={tier.highlight ? { border: "2px solid var(--accent)" } : undefined}
               >
                 {tier.highlight && (
-                  <div
-                    className="absolute -top-3 left-1/2 -translate-x-1/2 text-xs font-semibold px-4 py-1 rounded-full"
-                    style={{ background: "var(--accent)", color: "#fff" }}
+                  <span
+                    className="absolute -top-3.5 left-6 text-[12px] font-bold px-3 py-1 rounded-full"
+                    style={{ background: "var(--accent)", color: "var(--on-accent)" }}
                   >
-                    Más popular
-                  </div>
+                    Recomendado
+                  </span>
                 )}
 
-                <div className="mb-6">
-                  <h3 className="text-lg font-semibold mb-1" style={{ color: "var(--foreground)" }}>
-                    {tier.name}
-                  </h3>
-                  <p className="text-sm mb-4" style={{ color: "var(--muted)" }}>
-                    {tier.description}
-                  </p>
-                  <div className="flex items-baseline gap-1" suppressHydrationWarning>
-                    <span
-                      className="text-2xl font-bold"
-                      style={{ color: tier.highlight ? "var(--accent)" : "var(--foreground)" }}
-                    >
-                      {tier.price}
+                <h3 className="display text-2xl font-bold" style={{ color: "var(--foreground)" }}>
+                  {tier.name}
+                </h3>
+                <p className="text-[14px] mt-1 mb-5" style={{ color: "var(--muted)" }}>
+                  {tier.description}
+                </p>
+
+                <p className="mb-6">
+                  <span className="display text-[26px] font-bold" style={{ color: "var(--foreground)" }}>
+                    {tier.price}
+                  </span>
+                  {tier.period && (
+                    <span className="text-sm ml-0.5" style={{ color: "var(--muted)" }}>
+                      {tier.period}
                     </span>
-                    <span className="text-sm" style={{ color: "var(--muted)", visibility: tier.period ? "visible" : "hidden" }}>
-                      {tier.period ?? "/mes"}
-                    </span>
-                    <span
-                      className="text-xs font-medium"
-                      style={{ color: "var(--muted)", visibility: tier.price !== "A cotizar" ? "visible" : "hidden" }}
-                    >
+                  )}
+                  {tier.price !== "A cotizar" && (
+                    <span className="text-[12px] ml-2" style={{ color: "var(--muted)" }}>
                       + IVA
                     </span>
-                  </div>
-                </div>
+                  )}
+                </p>
 
-                <ul className="flex flex-col gap-2.5 flex-1 mb-8">
+                <ul className="flex flex-col gap-2.5 flex-1 mb-8 pt-5" style={{ borderTop: "1px solid var(--line)" }}>
                   {tier.features.map((feat) => (
-                    <li key={feat} className="flex items-start gap-2.5 text-sm" style={{ color: "var(--muted)" }}>
-                      <span style={{ color: "var(--accent-dim)", flexShrink: 0, marginTop: "2px", fontSize: "10px" }}>—</span>
+                    <li key={feat} className="flex items-start gap-2.5 text-[14.5px]" style={{ color: "#33312B" }}>
+                      <svg
+                        className="shrink-0 mt-[3px]"
+                        width="15"
+                        height="15"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="var(--accent)"
+                        strokeWidth="3"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        aria-hidden="true"
+                      >
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
                       {feat}
                     </li>
                   ))}
                 </ul>
 
                 <Link
-                  href="#contacto"
-                  className="block text-center py-3 rounded-full text-sm font-medium transition-all hover:opacity-90"
-                  style={{
-                    background: tier.highlight ? "var(--accent)" : "transparent",
-                    color: tier.highlight ? "#fff" : "var(--foreground)",
-                    border: `1px solid ${tier.highlight ? "var(--accent)" : "var(--border)"}`,
-                  }}
+                  href="/contacto"
+                  className={tier.highlight ? "pill w-full" : "pill-ghost w-full"}
                 >
-                  {tier.price === "A cotizar" ? "Cotizar →" : "Empezar →"}
+                  {tier.price === "A cotizar" ? "Cotizar" : "Empezar"}
                 </Link>
               </div>
-            </FadeIn>
+            </ScrollReveal>
           ))}
         </div>
 
-        {/* Bottom note */}
-        <FadeIn delay={240}>
-          <div
-            className="mt-12 py-5 px-6 rounded-r-2xl"
-            style={{
-              borderLeft: "3px solid var(--accent)",
-              background: "var(--background)",
-            }}
-          >
-            <p className="text-sm font-semibold mb-2" style={{ color: "var(--foreground)" }}>
-              ¿Por qué no la opción más barata?
-            </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--muted)" }}>
-              En Chile puedes encontrar webs desde $100.000 — son plantillas WordPress hechas en días por personas sin formación en ingeniería. Nosotros desarrollamos con código real, ingenieros titulados y tecnologías modernas. La diferencia se nota en rendimiento, seguridad y escalabilidad.
-            </p>
-          </div>
-        </FadeIn>
-
+        <ScrollReveal delay={160}>
+          <p className="mt-10 text-[14px] leading-relaxed max-w-2xl" style={{ color: "var(--muted)" }}>
+            ¿Por qué no somos la opción más barata? Porque trabajamos con código
+            propio y tecnologías actuales, no con plantillas. La diferencia se
+            nota en rendimiento, seguridad y en que el sitio no se cae cuando tu
+            negocio crece.
+          </p>
+        </ScrollReveal>
       </div>
     </section>
   );
