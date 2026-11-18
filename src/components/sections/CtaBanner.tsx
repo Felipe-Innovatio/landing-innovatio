@@ -11,7 +11,7 @@ export default function CtaBanner() {
             style={{ background: "var(--accent)" }}
           >
             <div
-              className="spin-slow absolute -right-10 -bottom-14 pointer-events-none select-none"
+              className="absolute -right-10 -bottom-14 pointer-events-none select-none"
               aria-hidden="true"
             >
               <svg width="200" height="200" viewBox="0 0 100 100" fill="none">

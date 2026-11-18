@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       {/* Asterisco decorativo */}
       <div
-        className="spin-slow absolute -right-16 top-24 md:right-10 md:top-28 pointer-events-none select-none"
+        className="absolute -right-16 top-24 md:right-10 md:top-28 pointer-events-none select-none"
         aria-hidden="true"
       >
         <svg width="220" height="220" viewBox="0 0 100 100" fill="none">

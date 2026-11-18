@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
 import { faqs } from "@/content/faq";
 
-const TechStack = dynamic(() => import("@/components/sections/TechStack"), { ssr: true });
+const Commitments = dynamic(() => import("@/components/sections/Commitments"), { ssr: true });
 const Services = dynamic(() => import("@/components/sections/Services"), { ssr: true });
 const About = dynamic(() => import("@/components/sections/About"), { ssr: true });
 const Process = dynamic(() => import("@/components/sections/Process"), { ssr: true });
@@ -32,7 +32,7 @@ export default function Home() {
       />
       <main>
         <Hero />
-        <TechStack />
+        <Commitments />
         <Services />
         <About />
         <Process />
