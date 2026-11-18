@@ -1,45 +1,7 @@
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-interface ServiceRow {
-  title: string;
-  desc: string;
-  price: string;
-  href: string;
-}
-
-const services: ServiceRow[] = [
-  {
-    title: "Desarrollo web y apps",
-    desc: "Sitios, plataformas y aplicaciones a medida que escalan contigo.",
-    price: "desde $800.000",
-    href: "/servicios/desarrollo",
-  },
-  {
-    title: "Ciberseguridad",
-    desc: "Auditorías, pentesting y protección continua de tus sistemas.",
-    price: "a cotizar",
-    href: "/servicios/ciberseguridad",
-  },
-  {
-    title: "Inteligencia artificial",
-    desc: "Automatización útil, integrada en tus procesos reales.",
-    price: "a cotizar",
-    href: "/servicios/ia",
-  },
-  {
-    title: "Cloud y hosting",
-    desc: "Tu aplicación siempre disponible, sin que pienses en servidores.",
-    price: "desde $150.000/mes",
-    href: "/servicios/hosting",
-  },
-  {
-    title: "Consultoría",
-    desc: "Decisiones técnicas claras antes de invertir.",
-    price: "desde $200.000",
-    href: "/servicios/consultoria",
-  },
-];
+import { services } from "@/content/services";
 
 export default function ServiciosPage() {
   return (
@@ -77,7 +39,7 @@ export default function ServiciosPage() {
                   {s.title}
                 </h2>
                 <p className="text-[15px] md:max-w-xs md:flex-1" style={{ color: "var(--muted)" }}>
-                  {s.desc}
+                  {s.description}
                 </p>
                 <span className="text-[15px] font-semibold md:w-44 md:text-right" style={{ color: "var(--foreground)" }}>
                   {s.price}
@@ -105,7 +67,7 @@ export default function ServiciosPage() {
               ¿No encuentras lo que buscas?
             </h2>
             <p className="mt-3 text-base max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
-              Cuéntanos igual. Si no es lo nuestro, te lo decimos al tiro.
+              Escríbenos igual.
             </p>
             <Link href="/contacto" className="pill-light mt-7">
               Hablemos

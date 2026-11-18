@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative overflow-hidden">
       {/* Asterisco decorativo */}
       <div
-        className="spin-slow absolute -right-16 top-24 md:right-10 md:top-28 pointer-events-none select-none"
+        className="absolute -right-16 top-24 md:right-10 md:top-28 pointer-events-none select-none"
         aria-hidden="true"
       >
         <svg width="220" height="220" viewBox="0 0 100 100" fill="none">
@@ -26,9 +26,9 @@ export default function Hero() {
             className="display font-extrabold"
             style={{ fontSize: "clamp(46px, 7.5vw, 104px)", color: "var(--foreground)" }}
           >
-            Software con
+            Tu área de
             <br />
-            oficio<span style={{ color: "var(--accent)" }}>.</span>
+            tecnología<span style={{ color: "var(--accent)" }}>.</span>
           </h1>
         </ScrollReveal>
 
@@ -37,19 +37,18 @@ export default function Hero() {
             className="mt-7 text-lg md:text-xl leading-relaxed max-w-xl"
             style={{ color: "var(--muted)" }}
           >
-            Diseñamos y construimos productos digitales que funcionan: webs,
-            plataformas, seguridad e inteligencia artificial. Desde Santiago,
-            para toda Latinoamérica.
+            Desarrollo de software, infraestructura, seguridad e inteligencia
+            artificial. Por proyecto o por horas al mes, con alcance por escrito.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={220}>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link href="/contacto" className="pill">
-              Hablemos de tu proyecto
+              Conversemos 20 minutos
             </Link>
             <Link href="/servicios" className="pill-ghost">
-              Ver servicios
+              Cómo trabajamos
             </Link>
           </div>
         </ScrollReveal>

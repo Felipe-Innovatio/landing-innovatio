@@ -16,15 +16,14 @@ export default function About() {
                 className="display font-bold leading-tight"
                 style={{ fontSize: "clamp(28px, 3.8vw, 48px)", color: "var(--foreground)" }}
               >
-                Un estudio chico, senior y sin vueltas.
+                Un equipo pequeño de ingenieros senior.
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl" style={{ color: "var(--muted)" }}>
-                Somos ingenieros que diseñan, construyen y mantienen lo que
-                entregan. Usamos IA para avanzar rápido y revisamos cada
-                entrega antes de que llegue a tus manos. Sin intermediarios ni
-                promesas infladas: lo que conversamos es lo que se construye.
+                Somos entre cuatro y seis personas, con experiencia en desarrollo,
+                infraestructura y seguridad. Quien diseña un proyecto lo construye y
+                lo mantiene después.
               </p>
             </ScrollReveal>
           </div>

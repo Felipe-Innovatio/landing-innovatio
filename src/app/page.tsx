@@ -1,8 +1,10 @@
 import dynamic from "next/dynamic";
 import Hero from "@/components/sections/Hero";
+import { faqs } from "@/content/faq";
 
-const TechStack = dynamic(() => import("@/components/sections/TechStack"), { ssr: true });
+const Commitments = dynamic(() => import("@/components/sections/Commitments"), { ssr: true });
 const Services = dynamic(() => import("@/components/sections/Services"), { ssr: true });
+const Launch = dynamic(() => import("@/components/sections/Launch"), { ssr: true });
 const About = dynamic(() => import("@/components/sections/About"), { ssr: true });
 const Process = dynamic(() => import("@/components/sections/Process"), { ssr: true });
 const Pricing = dynamic(() => import("@/components/sections/Pricing"), { ssr: true });
@@ -15,48 +17,11 @@ const Contact = dynamic(() => import("@/components/sections/Contact"), { ssr: tr
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: [
-    {
-      "@type": "Question",
-      name: "¿Con qué tipo de empresas trabajan?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Con startups, pymes y empresas en crecimiento. No filtramos por tamaño: evaluamos cada proyecto según su alcance y objetivos.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cómo usan la inteligencia artificial en sus proyectos?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "La usamos para acelerar el desarrollo y automatizar procesos, y revisamos cada entrega antes de que llegue a producción. Así obtienes la velocidad de la IA sin sus errores típicos.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Trabajan con clientes fuera de Chile?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Sí. Trabajamos 100% remoto con clientes de cualquier país de habla hispana, y también en inglés.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cuánto demora un proyecto típico?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Un sitio web o MVP puede estar listo en 2 a 6 semanas. Proyectos más grandes se planifican por etapas, con entregas intermedias para que veas el avance.",
-      },
-    },
-    {
-      "@type": "Question",
-      name: "¿Cómo empezamos?",
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: "Escríbenos por el formulario o por WhatsApp. Conversamos sin compromiso, definimos el alcance y te enviamos una propuesta.",
-      },
-    },
-  ],
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.question,
+    acceptedAnswer: { "@type": "Answer", text: f.answer },
+  })),
 };
 
 export default function Home() {
@@ -68,8 +33,9 @@ export default function Home() {
       />
       <main>
         <Hero />
-        <TechStack />
+        <Commitments />
         <Services />
+        <Launch />
         <About />
         <Process />
         <Pricing />

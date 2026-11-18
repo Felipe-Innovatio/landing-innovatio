@@ -11,7 +11,7 @@ export default function CtaBanner() {
             style={{ background: "var(--accent)" }}
           >
             <div
-              className="spin-slow absolute -right-10 -bottom-14 pointer-events-none select-none"
+              className="absolute -right-10 -bottom-14 pointer-events-none select-none"
               aria-hidden="true"
             >
               <svg width="200" height="200" viewBox="0 0 100 100" fill="none">
@@ -28,14 +28,14 @@ export default function CtaBanner() {
               className="display font-bold relative"
               style={{ fontSize: "clamp(32px, 5vw, 64px)", color: "var(--on-accent)" }}
             >
-              ¿Hablamos de tu proyecto?
+              Empecemos por una llamada.
             </h2>
             <p className="mt-4 text-base md:text-lg max-w-md relative" style={{ color: "rgba(255,255,255,0.85)" }}>
-              Escríbenos hoy y mañana tienes una propuesta concreta sobre la mesa.
+              Veinte minutos, sin costo.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 relative">
               <Link href="/contacto" className="pill-light">
-                Escribir ahora
+                Agendar llamada
               </Link>
               <a
                 href="mailto:contacto@innovatio-it.com"

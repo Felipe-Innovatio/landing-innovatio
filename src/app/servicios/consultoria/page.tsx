@@ -3,7 +3,7 @@ import ServiceDetail from "@/components/sections/ServiceDetail";
 
 export const metadata: Metadata = {
   title: "Consultoría Tecnológica | Innovatio-IT Chile",
-  description: "Auditoría técnica, recomendación de stack y roadmap de migración. Desde $200.000 CLP por sesión. Toma decisiones claras antes de invertir.",
+  description: "Auditoría técnica, recomendación de stack y roadmap de migración. Desde $200.000 CLP por sesión.",
   keywords: "consultoría tecnológica Chile, auditoría técnica, arquitectura software, tech strategy",
 };
 
@@ -13,9 +13,9 @@ export default function ConsultoriaPage() {
       <ServiceDetail
         code="003"
         area="Consultoría"
-        title="Decidir bien,"
-        titleAccent="antes de invertir"
-        intro="¿Sientes que tu tecnología te frena? Te ayudamos a tomar decisiones claras antes de gastar un peso: auditoría técnica, revisión de código y roadmap de migración."
+        title="Consultoría"
+        titleAccent="técnica"
+        intro="Revisamos arquitectura, código y costos de infraestructura, y entregamos un informe con recomendaciones y estimaciones. Sirve para decidir antes de invertir en un desarrollo nuevo."
         techLabel="Especialidades"
         techs={["Arquitectura", "Code Review", "Tech Strategy", "Revisión de Stack", "Mentoría"]}
         features={[
@@ -30,8 +30,8 @@ export default function ConsultoriaPage() {
         priceNote="+ IVA"
         timeLabel="Modalidad"
         timeValue="Por sesión"
-        ctaTitle="¿Lo revisamos?"
-        ctaText="Agenda una sesión de diagnóstico y sal con recomendaciones por escrito."
+        ctaTitle="Agenda una sesión de diagnóstico."
+        ctaText="Dos horas con un ingeniero senior. Al terminar recibes las recomendaciones por escrito."
         ctaButton="Agendar sesión"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{

@@ -5,16 +5,16 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 
 const values = [
   {
-    title: "Sin intermediarios",
-    desc: "La persona que cotiza tu proyecto es la misma que lo construye. Hablas directo con quien hace el trabajo.",
+    title: "Quién cotiza es quién construye",
+    desc: "La persona que cotiza el proyecto es la misma que lo construye y la que responde después. No hay intermediarios entre el cliente y el equipo técnico.",
   },
   {
-    title: "IA con criterio",
-    desc: "Usamos inteligencia artificial para avanzar rápido, y revisamos cada entrega antes de que llegue a tus manos.",
+    title: "Uso de IA con revisión",
+    desc: "Usamos modelos de lenguaje para escribir código y documentar más rápido. Cada entrega pasa por la revisión de otra persona antes de llegar a producción.",
   },
   {
-    title: "Código propio",
-    desc: "Nada de plantillas. Cada proyecto parte desde cero, pensado para tu caso, y el código queda a tu nombre.",
+    title: "El código es del cliente",
+    desc: "Cada proyecto parte desde cero, sin plantillas. El repositorio queda a nombre del cliente desde el primer día, con su documentación.",
   },
 ];
 
@@ -27,16 +27,16 @@ export default function NosotrosPage() {
             className="display font-extrabold"
             style={{ fontSize: "clamp(38px, 6vw, 84px)", color: "var(--foreground)" }}
           >
-            Un estudio chico,
+            Un equipo pequeño
             <br />
-            senior y sin vueltas<span style={{ color: "var(--accent)" }}>.</span>
+            de ingenieros senior<span style={{ color: "var(--accent)" }}>.</span>
           </h1>
         </ScrollReveal>
         <ScrollReveal delay={120}>
           <p className="mt-7 text-base md:text-lg leading-relaxed max-w-xl" style={{ color: "var(--muted)" }}>
-            Somos ingenieros que diseñan, construyen y mantienen lo que
-            entregan. Trabajamos desde Santiago con empresas de toda
-            Latinoamérica, y nos gusta que las cosas queden bien hechas.
+            Somos entre cuatro y seis personas, con experiencia en desarrollo,
+            infraestructura y seguridad. Trabajamos desde Santiago con clientes
+            en Chile y en el resto de Latinoamérica.
           </p>
         </ScrollReveal>
       </section>
@@ -71,7 +71,7 @@ export default function NosotrosPage() {
               Trabajemos juntos
             </h2>
             <p className="mt-3 text-base max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
-              Cuéntanos tu proyecto y mañana tienes una propuesta concreta.
+              Agenda una llamada de veinte minutos.
             </p>
             <Link href="/contacto" className="pill-light mt-7">
               Contactar

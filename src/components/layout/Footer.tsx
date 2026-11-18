@@ -25,8 +25,8 @@ export default function Footer() {
           <div className="md:col-span-5">
             <Logo size="lg" inverted />
             <p className="mt-4 text-[15px] leading-relaxed max-w-xs" style={{ color: "rgba(244,241,234,0.65)" }}>
-              Estudio de software en Santiago de Chile. Construimos productos
-              digitales para empresas de toda Latinoamérica.
+              Equipo de ingeniería en Santiago de Chile. Desarrollo de software,
+              infraestructura, ciberseguridad e inteligencia artificial.
             </p>
           </div>
 

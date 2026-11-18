@@ -26,7 +26,7 @@ const services: ServicePricing[] = [
     tiers: [
       {
         name: "Starter",
-        price: "desde $800.000",
+        price: "desde $690.000",
         description: "Landing page profesional",
         features: [
           "Diseño a medida",
@@ -38,7 +38,7 @@ const services: ServicePricing[] = [
       },
       {
         name: "Business",
-        price: "desde $1.500.000",
+        price: "desde $1.800.000",
         description: "Sitio corporativo completo",
         features: [
           "Múltiples páginas y secciones",
@@ -165,7 +165,7 @@ const services: ServicePricing[] = [
     tiers: [
       {
         name: "Básico",
-        price: "desde $300.000",
+        price: "desde $450.000",
         description: "Escaneo de vulnerabilidades",
         features: [
           "Análisis automatizado OWASP",
@@ -264,11 +264,11 @@ export default function Pricing() {
               className="display font-bold"
               style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--foreground)" }}
             >
-              Precios claros
+              Precios
             </h2>
             <p className="text-[15px] max-w-sm" style={{ color: "var(--muted)" }}>
-              Valores de referencia en pesos chilenos. Cada proyecto se cotiza
-              según su alcance, por escrito.
+              Valores de referencia en pesos chilenos, sin IVA. El precio final
+              depende del alcance y queda por escrito en la propuesta.
             </p>
           </div>
         </ScrollReveal>
@@ -372,10 +372,7 @@ export default function Pricing() {
 
         <ScrollReveal delay={160}>
           <p className="mt-10 text-[14px] leading-relaxed max-w-2xl" style={{ color: "var(--muted)" }}>
-            ¿Por qué no somos la opción más barata? Porque trabajamos con código
-            propio y tecnologías actuales, no con plantillas. La diferencia se
-            nota en rendimiento, seguridad y en que el sitio no se cae cuando tu
-            negocio crece.
+            Incluye repositorio del cliente, documentación y traspaso de accesos.
           </p>
         </ScrollReveal>
       </div>
