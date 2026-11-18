@@ -4,14 +4,14 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 const offers = [
   {
     name: "Sitio corporativo",
-    list: "$2.400.000",
-    price: "$1.500.000",
+    list: "$1.800.000",
+    price: "$1.200.000",
     detail: "Hasta 8 páginas, CMS y SEO técnico. 4 a 6 semanas.",
   },
   {
     name: "Landing page",
-    list: "$1.200.000",
-    price: "$800.000",
+    list: "$690.000",
+    price: "$490.000",
     detail: "Una página con diseño a medida y formulario. 2 a 3 semanas.",
   },
   {
