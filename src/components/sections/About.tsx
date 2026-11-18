@@ -24,9 +24,8 @@ export default function About() {
                 Somos entre cuatro y seis personas, con experiencia en desarrollo,
                 infraestructura y seguridad. Quien diseña un proyecto es quien lo
                 construye y quien lo mantiene después: no subcontratamos el trabajo.
-                Usamos modelos de lenguaje en el desarrollo y en tareas internas, y
-                cada entrega pasa por la revisión de otra persona antes de llegar a
-                producción.
+                Usamos modelos de lenguaje en el desarrollo; cada entrega pasa por la
+                revisión de otra persona.
               </p>
             </ScrollReveal>
           </div>

@@ -11,7 +11,7 @@ const steps: Step[] = [
     number: "1",
     title: "Primera conversación",
     description:
-      "Nos cuentas qué necesitas resolver. Es una llamada de 20 minutos y no tiene costo.",
+      "Nos cuentas qué necesitas resolver. La llamada dura veinte minutos y no tiene costo.",
   },
   {
     number: "2",

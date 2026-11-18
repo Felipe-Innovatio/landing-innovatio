@@ -67,7 +67,7 @@ export default function ServiciosPage() {
               ¿No encuentras lo que buscas?
             </h2>
             <p className="mt-3 text-base max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
-              Escríbenos igual. Si el proyecto no es para nosotros, te lo decimos en la primera conversación.
+              Escríbenos igual.
             </p>
             <Link href="/contacto" className="pill-light mt-7">
               Hablemos

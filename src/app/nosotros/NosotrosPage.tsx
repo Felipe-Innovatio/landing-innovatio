@@ -71,7 +71,7 @@ export default function NosotrosPage() {
               Trabajemos juntos
             </h2>
             <p className="mt-3 text-base max-w-md" style={{ color: "rgba(255,255,255,0.85)" }}>
-              Veinte minutos para entender qué necesitas. Sin costo y sin compromiso.
+              Agenda una llamada de veinte minutos.
             </p>
             <Link href="/contacto" className="pill-light mt-7">
               Contactar

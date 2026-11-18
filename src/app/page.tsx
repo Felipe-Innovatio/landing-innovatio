@@ -4,9 +4,9 @@ import { faqs } from "@/content/faq";
 
 const Commitments = dynamic(() => import("@/components/sections/Commitments"), { ssr: true });
 const Services = dynamic(() => import("@/components/sections/Services"), { ssr: true });
+const Launch = dynamic(() => import("@/components/sections/Launch"), { ssr: true });
 const About = dynamic(() => import("@/components/sections/About"), { ssr: true });
 const Process = dynamic(() => import("@/components/sections/Process"), { ssr: true });
-const Proof = dynamic(() => import("@/components/sections/Proof"), { ssr: true });
 const Pricing = dynamic(() => import("@/components/sections/Pricing"), { ssr: true });
 const Faq = dynamic(() => import("@/components/sections/Faq"), { ssr: true });
 const CtaBanner = dynamic(() => import("@/components/sections/CtaBanner"), { ssr: true });
@@ -35,9 +35,9 @@ export default function Home() {
         <Hero />
         <Commitments />
         <Services />
+        <Launch />
         <About />
         <Process />
-        <Proof />
         <Pricing />
         {/* Pendiente de activar cuando haya testimonios reales:
         <Testimonials /> */}

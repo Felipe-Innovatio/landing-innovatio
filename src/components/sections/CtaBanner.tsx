@@ -31,7 +31,7 @@ export default function CtaBanner() {
               Empecemos por una llamada.
             </h2>
             <p className="mt-4 text-base md:text-lg max-w-md relative" style={{ color: "rgba(255,255,255,0.85)" }}>
-              Veinte minutos, sin costo. Si el proyecto no encaja con lo que hacemos, te lo decimos ahí mismo.
+              Veinte minutos, sin costo.
             </p>
             <div className="mt-8 flex flex-wrap gap-4 relative">
               <Link href="/contacto" className="pill-light">

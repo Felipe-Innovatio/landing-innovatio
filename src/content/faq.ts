@@ -27,7 +27,7 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Cómo empezamos?",
     answer:
-      "Por el formulario o por WhatsApp. Agendamos una llamada de 20 minutos, sin costo. Si hay acuerdo, enviamos una propuesta escrita con alcance, plazos y precio en menos de 24 horas.",
+      "Por el formulario o por WhatsApp. Agendamos una llamada de veinte minutos. Si hay acuerdo, enviamos la propuesta por escrito en menos de 24 horas.",
   },
   {
     question: "¿Qué incluye una entrega?",

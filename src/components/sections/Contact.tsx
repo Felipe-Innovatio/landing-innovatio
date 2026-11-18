@@ -17,8 +17,7 @@ export default function Contact() {
             </ScrollReveal>
             <ScrollReveal delay={100}>
               <p className="mt-5 text-base md:text-lg leading-relaxed max-w-md" style={{ color: "var(--muted)" }}>
-                Respondemos en un día hábil con una propuesta escrita. Si el
-                proyecto no es para nosotros, también te lo decimos.
+                Respondemos en un día hábil con una propuesta escrita.
               </p>
               <div className="mt-8 flex flex-col gap-3">
                 <a
