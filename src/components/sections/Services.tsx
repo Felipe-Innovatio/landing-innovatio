@@ -1,39 +1,7 @@
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
-interface Service {
-  title: string;
-  description: string;
-  href: string;
-}
-
-const services: Service[] = [
-  {
-    title: "Desarrollo web y apps",
-    description: "Sitios, plataformas y aplicaciones a medida que escalan contigo.",
-    href: "/servicios/desarrollo",
-  },
-  {
-    title: "Ciberseguridad",
-    description: "Auditorías, pentesting y protección continua de tus sistemas.",
-    href: "/servicios/ciberseguridad",
-  },
-  {
-    title: "Inteligencia artificial",
-    description: "Automatización útil, integrada en tus procesos reales.",
-    href: "/servicios/ia",
-  },
-  {
-    title: "Cloud y hosting",
-    description: "Tu aplicación siempre disponible, sin que pienses en servidores.",
-    href: "/servicios/hosting",
-  },
-  {
-    title: "Consultoría",
-    description: "Decisiones técnicas claras antes de invertir.",
-    href: "/servicios/consultoria",
-  },
-];
+import { services } from "@/content/services";
 
 export default function Services() {
   return (

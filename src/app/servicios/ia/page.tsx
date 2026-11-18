@@ -3,7 +3,7 @@ import ServiceDetail from "@/components/sections/ServiceDetail";
 
 export const metadata: Metadata = {
   title: "Inteligencia Artificial para Empresas | Innovatio-IT Chile",
-  description: "Integración de LLMs, sistemas RAG, automatización con IA y ML a medida. Potencia tu equipo sin reemplazarlo. Cotiza sin compromiso.",
+  description: "Integración de modelos de lenguaje, búsqueda sobre datos propios y automatización de procesos. Medimos el resultado antes de ampliar el alcance.",
   keywords: "inteligencia artificial Chile, IA empresas, LLMs, RAG, automatización, machine learning",
 };
 
@@ -13,9 +13,9 @@ export default function IaPage() {
       <ServiceDetail
         code="005"
         area="Inteligencia Artificial"
-        title="IA que potencia,"
-        titleAccent="no reemplaza"
-        intro="La IA se encarga de lo repetitivo y tu equipo se enfoca en lo que importa. Integramos modelos de lenguaje, sistemas RAG y automatización en tus procesos, con supervisión profesional."
+        title="Automatización"
+        titleAccent="con IA"
+        intro="Integramos modelos de lenguaje en procesos concretos: atención de consultas, clasificación de documentos, generación de borradores y búsqueda sobre datos propios. Medimos el resultado antes de ampliar el alcance."
         techs={["OpenAI", "Anthropic", "LangChain", "Pinecone", "Python", "TensorFlow"]}
         features={[
           "Integración de LLMs",
@@ -29,8 +29,8 @@ export default function IaPage() {
         priceNote=""
         timeLabel="Modalidad"
         timeValue="Por alcance"
-        ctaTitle="¿Automatizamos?"
-        ctaText="Cuéntanos tu caso de uso y te proponemos una solución concreta, con costos operativos claros."
+        ctaTitle="Cuéntanos el proceso."
+        ctaText="Describimos juntos el proceso que quieres automatizar y estimamos el ahorro antes de cotizar."
         ctaButton="Solicitar propuesta"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{

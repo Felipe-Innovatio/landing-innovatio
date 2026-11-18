@@ -13,9 +13,9 @@ export default function HostingPage() {
       <ServiceDetail
         code="002"
         area="Hosting"
-        title="Tu aplicación,"
-        titleAccent="siempre arriba"
-        intro="Gestionamos tu infraestructura en la nube para que no pierdas el sueño con servidores. Escalado automático, respaldos y monitoreo continuo, administrados por ingenieros."
+        title="Infraestructura"
+        titleAccent="administrada"
+        intro="Administramos la infraestructura en la nube: despliegues, respaldos, monitoreo y certificados. Incluye optimización de costos y alertas cuando algo falla."
         techs={["AWS", "Google Cloud", "Docker", "Kubernetes", "Terraform", "Linux"]}
         features={[
           "Infraestructura como código",
@@ -29,8 +29,8 @@ export default function HostingPage() {
         priceNote="+ IVA"
         timeLabel="Setup inicial"
         timeValue="1 a 2 semanas"
-        ctaTitle="¿Migramos?"
-        ctaText="Cuéntanos tu proyecto y te armamos una arquitectura a tu medida, con costos claros."
+        ctaTitle="Revisemos tu infraestructura."
+        ctaText="Cuéntanos qué tienes hoy y te proponemos una arquitectura con costos mensuales estimados."
         ctaButton="Solicitar cotización"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{

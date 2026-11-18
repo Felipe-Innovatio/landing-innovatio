@@ -264,11 +264,11 @@ export default function Pricing() {
               className="display font-bold"
               style={{ fontSize: "clamp(32px, 4.5vw, 56px)", color: "var(--foreground)" }}
             >
-              Precios claros
+              Precios
             </h2>
             <p className="text-[15px] max-w-sm" style={{ color: "var(--muted)" }}>
-              Valores de referencia en pesos chilenos. Cada proyecto se cotiza
-              según su alcance, por escrito.
+              Valores de referencia en pesos chilenos, sin IVA. El precio final
+              depende del alcance y queda por escrito en la propuesta.
             </p>
           </div>
         </ScrollReveal>
@@ -372,10 +372,9 @@ export default function Pricing() {
 
         <ScrollReveal delay={160}>
           <p className="mt-10 text-[14px] leading-relaxed max-w-2xl" style={{ color: "var(--muted)" }}>
-            ¿Por qué no somos la opción más barata? Porque trabajamos con código
-            propio y tecnologías actuales, no con plantillas. La diferencia se
-            nota en rendimiento, seguridad y en que el sitio no se cae cuando tu
-            negocio crece.
+            Todos los proyectos incluyen el código en un repositorio del
+            cliente, la documentación técnica y el traspaso de accesos al
+            terminar.
           </p>
         </ScrollReveal>
       </div>

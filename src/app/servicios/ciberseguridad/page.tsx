@@ -3,7 +3,7 @@ import ServiceDetail from "@/components/sections/ServiceDetail";
 
 export const metadata: Metadata = {
   title: "Ciberseguridad Empresarial | Innovatio-IT Chile",
-  description: "Pentesting, hardening de servidores, SIEM e ISO 27001. Protege tu empresa antes de que pase algo grave. Cotiza sin compromiso.",
+  description: "Pentesting, hardening de servidores, SIEM e ISO 27001. Informe técnico, informe ejecutivo y plan de corrección.",
   keywords: "ciberseguridad Chile, pentesting empresas, ISO 27001, auditoría seguridad",
 };
 
@@ -13,9 +13,9 @@ export default function CiberseguridadPage() {
       <ServiceDetail
         code="004"
         area="Ciberseguridad"
-        title="Seguridad real,"
-        titleAccent="no promesas"
-        intro="Un solo incidente puede costar más que años de prevención. Auditamos, reforzamos y protegemos tus sistemas antes de que algo grave pase."
+        title="Seguridad"
+        titleAccent="informática"
+        intro="Revisamos configuraciones, dependencias y accesos, y probamos los sistemas con la misma metodología que usaría un atacante. Entregamos informe técnico, informe ejecutivo y plan de corrección."
         techLabel="Especialidades"
         techs={["Pentesting", "SIEM", "Hardening", "ISO 27001", "Forense", "OSINT"]}
         features={[
@@ -30,8 +30,8 @@ export default function CiberseguridadPage() {
         priceNote=""
         timeLabel="Modalidad"
         timeValue="Por alcance"
-        ctaTitle="¿Última auditoría?"
-        ctaText="La prevención siempre sale más barata que el remedio. Conversemos sobre el estado de tus sistemas."
+        ctaTitle="Solicita una revisión."
+        ctaText="Conversamos sobre el estado de tus sistemas y definimos el alcance de la revisión."
         ctaButton="Solicitar auditoría"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{

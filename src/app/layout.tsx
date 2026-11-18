@@ -20,7 +20,7 @@ const hanken = Hanken_Grotesk({
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://innovatio-it.com";
 const description =
-  "Estudio de software en Santiago de Chile. Hacemos webs, plataformas, ciberseguridad e IA para empresas de toda Latinoamérica. Respondemos en menos de 24 horas.";
+  "Innovatio-IT es un equipo de ingeniería en Santiago de Chile. Desarrollo de software, infraestructura, ciberseguridad e inteligencia artificial para empresas.";
 
 const jsonLd = {
   "@context": "https://schema.org",

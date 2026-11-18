@@ -37,9 +37,9 @@ export default function Hero() {
             className="mt-7 text-lg md:text-xl leading-relaxed max-w-xl"
             style={{ color: "var(--muted)" }}
           >
-            Desarrollo, infraestructura, seguridad e IA con un solo contrato y
-            gente senior. Entramos donde tu equipo se queda corto y salimos
-            cuando ya no nos necesitas.
+            Desarrollo de software, infraestructura, seguridad e inteligencia
+            artificial. Trabajamos por proyecto o por horas al mes, con un
+            equipo senior y alcance definido por escrito.
           </p>
         </ScrollReveal>
 

@@ -2,34 +2,7 @@
 
 import { useState } from "react";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
-const faqs = [
-  {
-    question: "¿Con qué tipo de empresas trabajan?",
-    answer:
-      "Con startups, pymes y empresas en crecimiento. No filtramos por tamaño: evaluamos cada proyecto según su alcance y objetivos.",
-  },
-  {
-    question: "¿Cómo usan la inteligencia artificial en sus proyectos?",
-    answer:
-      "La usamos para acelerar el desarrollo y automatizar procesos, y revisamos cada entrega antes de que llegue a producción. Así obtienes la velocidad de la IA sin sus errores típicos.",
-  },
-  {
-    question: "¿Trabajan con clientes fuera de Chile?",
-    answer:
-      "Sí. Trabajamos 100% remoto con clientes de cualquier país de habla hispana, y también en inglés.",
-  },
-  {
-    question: "¿Cuánto demora un proyecto típico?",
-    answer:
-      "Un sitio web o MVP puede estar listo en 2 a 6 semanas. Proyectos más grandes se planifican por etapas, con entregas intermedias para que veas el avance.",
-  },
-  {
-    question: "¿Cómo empezamos?",
-    answer:
-      "Escríbenos por el formulario o por WhatsApp. Conversamos sin compromiso, definimos el alcance y te enviamos una propuesta.",
-  },
-];
+import { faqs } from "@/content/faq";
 
 export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);

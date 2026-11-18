@@ -9,23 +9,27 @@ interface Step {
 const steps: Step[] = [
   {
     number: "1",
-    title: "Conversamos",
-    description: "Nos cuentas qué necesitas. Te respondemos con una propuesta concreta en menos de 24 horas.",
+    title: "Primera conversación",
+    description:
+      "Nos cuentas qué necesitas resolver. Es una llamada de 20 minutos y no tiene costo.",
   },
   {
     number: "2",
-    title: "Diseñamos",
-    description: "Definimos juntos el alcance, los flujos y el plan. Nada se construye sin un plan aprobado.",
+    title: "Propuesta",
+    description:
+      "Enviamos alcance, plazos y precio por escrito. Incluye lo que queda fuera del proyecto.",
   },
   {
     number: "3",
-    title: "Construimos",
-    description: "Avances reales cada semana. Ves el progreso, no promesas.",
+    title: "Desarrollo",
+    description:
+      "Trabajamos en ciclos de una o dos semanas, con entregas que puedes revisar en el ambiente de pruebas.",
   },
   {
     number: "4",
-    title: "Acompañamos",
-    description: "Lanzamos, documentamos y seguimos cerca para que todo funcione.",
+    title: "Entrega y soporte",
+    description:
+      "Documentamos el sistema, transferimos los accesos y quedamos disponibles para cambios y soporte.",
   },
 ];
 

@@ -13,9 +13,9 @@ export default function DesarrolloPage() {
       <ServiceDetail
         code="001"
         area="Desarrollo"
-        title="Tu idea,"
-        titleAccent="en producción"
-        intro="Desarrollamos sitios web, aplicaciones y plataformas a medida que funcionan, escalan y se ven bien. Sin plantillas ni atajos: código propio, escrito para tu caso."
+        title="Desarrollo"
+        titleAccent="a medida"
+        intro="Desarrollamos sitios web, aplicaciones y plataformas a medida. Trabajamos con código propio y entregamos el repositorio, la documentación y los accesos al cliente."
         techs={["React", "Next.js", "Node.js", "React Native", "TypeScript", "TailwindCSS", "GraphQL"]}
         features={[
           "Arquitectura escalable",
@@ -29,8 +29,8 @@ export default function DesarrolloPage() {
         priceNote="+ IVA"
         timeLabel="Plazo de entrega"
         timeValue="2 a 6 semanas"
-        ctaTitle="¿Construimos?"
-        ctaText="Cuéntanos qué necesitas y te respondemos con una propuesta concreta en menos de 24 horas."
+        ctaTitle="Empecemos por el alcance."
+        ctaText="Cuéntanos qué necesitas construir y te enviamos una propuesta escrita con plazos y precio."
         ctaButton="Iniciar proyecto"
       />
       <script type="application/ld+json" dangerouslySetInnerHTML={{
