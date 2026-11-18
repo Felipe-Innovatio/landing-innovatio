@@ -26,9 +26,9 @@ export default function Hero() {
             className="display font-extrabold"
             style={{ fontSize: "clamp(46px, 7.5vw, 104px)", color: "var(--foreground)" }}
           >
-            Software con
+            Tu área de
             <br />
-            oficio<span style={{ color: "var(--accent)" }}>.</span>
+            tecnología<span style={{ color: "var(--accent)" }}>.</span>
           </h1>
         </ScrollReveal>
 
@@ -37,19 +37,19 @@ export default function Hero() {
             className="mt-7 text-lg md:text-xl leading-relaxed max-w-xl"
             style={{ color: "var(--muted)" }}
           >
-            Diseñamos y construimos productos digitales que funcionan: webs,
-            plataformas, seguridad e inteligencia artificial. Desde Santiago,
-            para toda Latinoamérica.
+            Desarrollo, infraestructura, seguridad e IA con un solo contrato y
+            gente senior. Entramos donde tu equipo se queda corto y salimos
+            cuando ya no nos necesitas.
           </p>
         </ScrollReveal>
 
         <ScrollReveal delay={220}>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <Link href="/contacto" className="pill">
-              Hablemos de tu proyecto
+              Conversemos 20 minutos
             </Link>
             <Link href="/servicios" className="pill-ghost">
-              Ver servicios
+              Cómo trabajamos
             </Link>
           </div>
         </ScrollReveal>
