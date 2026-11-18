@@ -26,7 +26,7 @@ export default function CiberseguridadPage() {
           "Capacitación de equipo",
           "Informe ejecutivo",
         ]}
-        price="A cotizar"
+        price="desde $450.000"
         priceNote=""
         timeLabel="Modalidad"
         timeValue="Por alcance"

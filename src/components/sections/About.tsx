@@ -21,9 +21,9 @@ export default function About() {
             </ScrollReveal>
             <ScrollReveal delay={120}>
               <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl" style={{ color: "var(--muted)" }}>
-                Somos entre cuatro y seis personas, con experiencia en desarrollo,
-                infraestructura y seguridad. Quien diseña un proyecto lo construye y
-                lo mantiene después.
+                Cada proyecto lo toma una persona del equipo: la misma que lo cotiza,
+                lo construye y lo mantiene después. Entre todos cubrimos desarrollo,
+                infraestructura, seguridad e inteligencia artificial.
               </p>
             </ScrollReveal>
           </div>

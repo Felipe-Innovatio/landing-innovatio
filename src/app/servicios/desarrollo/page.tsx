@@ -3,7 +3,7 @@ import ServiceDetail from "@/components/sections/ServiceDetail";
 
 export const metadata: Metadata = {
   title: "Desarrollo Web y Aplicaciones | Innovatio-IT Chile",
-  description: "Desarrollamos sitios web, aplicaciones y plataformas a medida con React, Next.js y Node.js. Desde $800.000 CLP. Entrega en 2-6 semanas.",
+  description: "Desarrollamos sitios web, aplicaciones y plataformas a medida con React, Next.js y Node.js. Desde $690.000 CLP. Entrega en 2-6 semanas.",
   keywords: "desarrollo web Chile, crear página web Santiago, aplicación web a medida, React Next.js desarrolladores",
 };
 
