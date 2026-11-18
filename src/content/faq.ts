@@ -7,7 +7,7 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Con qué tipo de empresas trabajan?",
     answer:
-      "Con pymes y empresas de servicios, comercio e industria, de entre 10 y 200 personas. También con startups en etapa temprana.",
+      "Con pymes y empresas de servicios, comercio e industria. También con startups en etapa temprana.",
   },
   {
     question: "¿Cómo usan la inteligencia artificial en sus proyectos?",
@@ -22,7 +22,7 @@ export const faqs: FaqItem[] = [
   {
     question: "¿Cuánto demora un proyecto típico?",
     answer:
-      "Un sitio corporativo, entre 2 y 6 semanas. Una aplicación a medida, entre 8 y 16. El plazo queda fijado en la propuesta.",
+      "Un sitio corporativo, entre 4 y 6 semanas. Una aplicación a medida, entre 8 y 16. El plazo queda fijado en la propuesta.",
   },
   {
     question: "¿Cómo empezamos?",

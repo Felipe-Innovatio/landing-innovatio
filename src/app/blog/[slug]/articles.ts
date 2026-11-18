@@ -7,7 +7,7 @@ export const articles: Record<string, { title: string; description: string; date
     category: "Desarrollo Web",
     content: `<p>En Chile, el costo de una página web puede variar desde <strong>$100.000</strong> hasta más de <strong>$15.000.000</strong>. La diferencia no es capricho: depende de quién la hace, con qué tecnología y qué tan preparada está para crecer contigo.</p>
 
-<p>Si estás buscando cotizaciones, probablemente ya te diste cuenta de que los precios saltan de un extremo a otro sin explicación clara. Un freelancer te dice $200.000, una agencia te pide $4.000.000 y un equipo de ingenieros parte en $800.000. ¿A quién le creemos? La respuesta corta es: <strong>depende de qué necesitas ahora y qué vas a necesitar en un año</strong>.</p>
+<p>Si estás buscando cotizaciones, probablemente ya te diste cuenta de que los precios saltan de un extremo a otro sin explicación clara. Un freelancer te dice $200.000, una agencia te pide $4.000.000 y un equipo de ingenieros parte en $690.000. ¿A quién le creemos? La respuesta corta es: <strong>depende de qué necesitas ahora y qué vas a necesitar en un año</strong>.</p>
 
 <h3 id="los-tres-mundos-del-desarrollo-web">Los tres mundos del desarrollo web</h3>
 

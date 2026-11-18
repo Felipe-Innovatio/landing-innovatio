@@ -3,7 +3,7 @@ import ServiceDetail from "@/components/sections/ServiceDetail";
 
 export const metadata: Metadata = {
   title: "Consultoría Tecnológica | Innovatio-IT Chile",
-  description: "Auditoría técnica, recomendación de stack y roadmap de migración. Desde $200.000 CLP por sesión.",
+  description: "Auditoría técnica, recomendación de stack y roadmap de migración. Desde $150.000 CLP por sesión.",
   keywords: "consultoría tecnológica Chile, auditoría técnica, arquitectura software, tech strategy",
 };
 
@@ -26,7 +26,7 @@ export default function ConsultoriaPage() {
           "Mentoría técnica",
           "Documentación de arquitectura",
         ]}
-        price="desde $200.000"
+        price="desde $150.000"
         priceNote="+ IVA"
         timeLabel="Modalidad"
         timeValue="Por sesión"

@@ -34,9 +34,9 @@ export default function NosotrosPage() {
         </ScrollReveal>
         <ScrollReveal delay={120}>
           <p className="mt-7 text-base md:text-lg leading-relaxed max-w-xl" style={{ color: "var(--muted)" }}>
-            Somos entre cuatro y seis personas, con experiencia en desarrollo,
-            infraestructura y seguridad. Trabajamos desde Santiago con clientes
-            en Chile y en el resto de Latinoamérica.
+            Cada proyecto lo toma una persona del equipo, la misma que lo cotiza y
+            lo construye. Trabajamos desde Santiago, de forma remota para clientes
+            de Chile y Latinoamérica.
           </p>
         </ScrollReveal>
       </section>

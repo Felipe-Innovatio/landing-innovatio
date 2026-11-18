@@ -45,7 +45,7 @@ const services: ServicePricing[] = [
           "CMS para gestión de contenido",
           "Blog y SEO avanzado",
           "Integraciones (Analytics, CRM)",
-          "Entrega en 3 a 6 semanas",
+          "Entrega en 4 a 6 semanas",
           "1 mes de soporte incluido",
         ],
         highlight: true,

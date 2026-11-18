@@ -38,7 +38,7 @@ export const services: ServiceItem[] = [
     title: "Consultoría",
     description:
       "Revisión de arquitectura, costos de nube y deuda técnica.",
-    price: "desde $200.000",
+    price: "desde $150.000",
     href: "/servicios/consultoria",
   },
 ];
