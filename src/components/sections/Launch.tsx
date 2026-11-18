@@ -5,20 +5,20 @@ const offers = [
   {
     name: "Sitio corporativo",
     list: "$1.500.000",
-    price: "$890.000",
-    detail: "Hasta 8 páginas, CMS, formulario y SEO técnico. Entrega en 4 a 6 semanas.",
+    price: "$990.000",
+    detail: "Hasta 8 páginas, CMS y SEO técnico. 4 a 6 semanas.",
   },
   {
     name: "Landing page",
     list: "$800.000",
     price: "$490.000",
-    detail: "Una página, diseño a medida, formulario y analítica. Entrega en 2 a 3 semanas.",
+    detail: "Una página con diseño a medida y formulario. 2 a 3 semanas.",
   },
   {
     name: "Auditoría de seguridad",
     list: "$300.000",
     price: "$190.000",
-    detail: "Revisión de dependencias, configuraciones y accesos, con informe priorizado.",
+    detail: "Dependencias, accesos y configuraciones. Informe priorizado.",
   },
 ];
 
@@ -43,17 +43,19 @@ export default function Launch() {
                 className="display font-bold"
                 style={{ fontSize: "clamp(32px, 4.5vw, 56px)" }}
               >
-                Los primeros tres proyectos salen a precio de apertura.
+                Tres proyectos a precio de apertura.
               </h2>
             </div>
-            <p
-              className="md:col-span-5 text-[15px] md:text-base leading-relaxed max-w-sm"
-              style={{ color: "rgba(242,242,240,0.7)" }}
-            >
-              Estamos abriendo la cartera y necesitamos proyectos reales que mostrar.
-              El descuento se paga con dos cosas: dejarnos publicar el caso y contestar
-              una llamada de referencia.
-            </p>
+            <div className="md:col-span-5 md:justify-self-end md:text-right">
+              <Link href="/contacto" className="pill-light">
+                Reservar un cupo
+              </Link>
+              <p className="mt-3 text-[13.5px]" style={{ color: "rgba(242,242,240,0.6)" }}>
+                Pesos chilenos, sin IVA.
+                <br />
+                50% al inicio y 50% al entregar.
+              </p>
+            </div>
           </div>
         </ScrollReveal>
 
@@ -87,17 +89,6 @@ export default function Launch() {
           ))}
         </div>
 
-        <ScrollReveal delay={120}>
-          <div className="mt-10 flex flex-col md:flex-row md:items-center gap-5 md:gap-8">
-            <Link href="/contacto" className="pill-light w-fit">
-              Reservar un cupo
-            </Link>
-            <p className="text-[14px]" style={{ color: "rgba(242,242,240,0.6)" }}>
-              Valores en pesos chilenos, sin IVA. 50% al inicio y 50% al entregar.
-              El resto de los servicios queda a precio de lista.
-            </p>
-          </div>
-        </ScrollReveal>
       </div>
     </section>
   );

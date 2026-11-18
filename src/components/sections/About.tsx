@@ -22,10 +22,8 @@ export default function About() {
             <ScrollReveal delay={120}>
               <p className="mt-6 text-base md:text-lg leading-relaxed max-w-xl" style={{ color: "var(--muted)" }}>
                 Somos entre cuatro y seis personas, con experiencia en desarrollo,
-                infraestructura y seguridad. Quien diseña un proyecto es quien lo
-                construye y quien lo mantiene después: no subcontratamos el trabajo.
-                Usamos modelos de lenguaje en el desarrollo; cada entrega pasa por la
-                revisión de otra persona.
+                infraestructura y seguridad. Quien diseña un proyecto lo construye y
+                lo mantiene después.
               </p>
             </ScrollReveal>
           </div>

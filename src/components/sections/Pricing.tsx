@@ -372,9 +372,7 @@ export default function Pricing() {
 
         <ScrollReveal delay={160}>
           <p className="mt-10 text-[14px] leading-relaxed max-w-2xl" style={{ color: "var(--muted)" }}>
-            Todos los proyectos incluyen el código en un repositorio del
-            cliente, la documentación técnica y el traspaso de accesos al
-            terminar.
+            Incluye repositorio del cliente, documentación y traspaso de accesos.
           </p>
         </ScrollReveal>
       </div>

@@ -38,8 +38,7 @@ export default function Hero() {
             style={{ color: "var(--muted)" }}
           >
             Desarrollo de software, infraestructura, seguridad e inteligencia
-            artificial. Trabajamos por proyecto o por horas al mes, con un
-            equipo senior y alcance definido por escrito.
+            artificial. Por proyecto o por horas al mes, con alcance por escrito.
           </p>
         </ScrollReveal>
 
