@@ -26,7 +26,7 @@ const services: ServicePricing[] = [
     tiers: [
       {
         name: "Starter",
-        price: "desde $800.000",
+        price: "desde $1.200.000",
         description: "Landing page profesional",
         features: [
           "Diseño a medida",
@@ -38,7 +38,7 @@ const services: ServicePricing[] = [
       },
       {
         name: "Business",
-        price: "desde $1.500.000",
+        price: "desde $2.400.000",
         description: "Sitio corporativo completo",
         features: [
           "Múltiples páginas y secciones",
@@ -165,7 +165,7 @@ const services: ServicePricing[] = [
     tiers: [
       {
         name: "Básico",
-        price: "desde $300.000",
+        price: "desde $450.000",
         description: "Escaneo de vulnerabilidades",
         features: [
           "Análisis automatizado OWASP",
